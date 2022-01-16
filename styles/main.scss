@@ -1,0 +1,170 @@
+@use './colors' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+}
+
+* {
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in;
+    overflow: hidden;
+    &::-webkit-scrollbar {
+        visibility: collapse;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: transparent;
+    color: $light;
+    padding: 2vw 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $light;
+    div {
+        width: 15%;
+    }
+    ul {
+        width: 40%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2vw;
+        li {
+            padding: 0.5vw;
+            &:hover {
+                border-bottom: 0.01vw solid $light;
+            }
+        }
+        li.active {
+            border-bottom: 0.01vw solid $light;
+        }
+    }
+    ul.social {
+        width: 15%;
+    }
+}
+
+#swipeNav {
+    width: 40%;
+    position: absolute;
+    bottom: 3vw;
+    right: 3vw;
+    z-index: 7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .buttons {
+        width: 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            width: 2.5vw;
+            height: 2.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5vw;
+            background: transparent;
+            border: 0.01vw solid $light;
+            border-radius: 50%;
+            color: $light;
+            cursor: pointer;
+        }
+    }
+    .line {
+        width: 65%;
+        height: 0.02vw;
+        background-color: $light;
+    }
+    h1 {
+        width: 5vw;
+        font-size: 3vw;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            font-size: 3vw;
+            width: 3vw;
+            color: $light;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+    padding-top: 13vh;
+    overflow: hidden;
+}
+
+#slider {
+    width: 5%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    #line {
+        width: 0.1vw;
+        height: 80vh;
+        position: absolute;
+        background: $light;
+    }
+    .elem {
+        transform: scale(1);
+        width: 0.7vw;
+        height: 0.7vw;
+        background: $shadow;
+        border-radius: 0.1vw;
+    }
+    .act {
+        width: 1vw;
+        height: 1vw;
+        border-radius: 0.3vw;
+        background: $light;
+    }
+}
+
+#content {
+    width: 90%;
+    height: 80vh;
+    overflow: hidden;
+    section {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
