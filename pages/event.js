@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react';
 import SiteContext from '../components/SiteContext'
 import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
+import Carousel from 'nuka-carousel';
 
 export default function Event() {
 
@@ -33,8 +34,62 @@ export default function Event() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
-            <div className='left'></div>
-            <div className='right'></div>
+            <div className='center'> 
+            <h2>About Event</h2><br/>
+              <p className='quote'>“Our intelligence is what makes us human, and AI is an extension of
+              that quality.”  — Yann LeCun. </p><br/> 
+              The Center of Excellence in Data Science, CSE department, Institute of Technology, Nirma University
+              presents 48 hours long hackathon that offer opportunities to
+              participants to serve the nation by developing a innovative and
+              smart solution in the field of Healthcare, Agriculture,
+              Transportation System, Industry Automation, Defense, Education, etc.
+              using Artificial Intelligence, Machine Learning, Deep Learning,
+              Computer Vision, Natural Language Processing, Internet of Things,
+              Blockchain, etc. for betterment of human being.
+            </div>
+          </section>
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='carousel'>
+            <h2>Tracks</h2><br/><br/>
+              <div>
+                <Carousel slidesToShow={3} wrapAround>
+                  <div className='item'>
+                    <h3>item 1</h3><br/>
+                    <span>lorem ipsum </span>
+                  </div>
+                  <div className='item'>
+                    <h3>item 2</h3><br/>
+                    <span>lorem ipsum </span>
+                  </div>
+                  <div className='item'>
+                    <h3>item 3</h3><br/>
+                    <span>lorem ipsum </span>
+                  </div>
+                  <div className='item'>
+                    <h3>item 4</h3><br/>
+                    <span>lorem ipsum </span>
+                  </div>
+                  <div className='item'>
+                    <h3>item 5</h3><br/>
+                    <span>lorem ipsum </span>
+                  </div>
+                  <div className='item'>
+                    <h3>item 6</h3><br/>
+                    <span>lorem ipsum </span>
+                  </div>
+                </Carousel>
+              </div>
+            </div>
+          </section>
+
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='center'> 
+            <h2>Schedule</h2><br/>
+            </div>
           </section>
         </div>
 

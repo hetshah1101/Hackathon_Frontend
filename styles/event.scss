@@ -4,3 +4,29 @@
     background: rgb(1, 8, 27);
     color: $light;
 }
+
+.center {
+    font-size: x-large;
+    align-items: center;
+    text-align: justify;
+    padding: 10vh;
+    letter-spacing: 5px;
+    .quote{
+        font-style: italic;
+    }
+    
+}
+
+.carousel{
+    font-size: x-large;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    .item{
+        padding: 20px;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+}
