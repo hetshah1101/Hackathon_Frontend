@@ -17,7 +17,6 @@ body, html {
     margin: 0;
     box-sizing: border-box;
     transition: all 0.5s ease-in;
-    overflow: hidden;
     &::-webkit-scrollbar {
         visibility: collapse;
     }

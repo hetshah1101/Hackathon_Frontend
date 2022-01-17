@@ -22,19 +22,24 @@ export default function MyApp({ Component, pageProps }) {
   const pages = ["", "event", "team", "contact"]
 
   const [current, setcurrent] = useState(0)
+  const [change, setchange] = useState(false)
   const next = () => {
+    setchange(true)
     if(current<3) {
       setcurrent((current+1))
     }
   }
   const prev = () => {
+    setchange(true)
     if(current>0) {
       setcurrent(current-1)
     }
   }
 
   useEffect(() => {
-    router.push(`/${pages[current]}`)
+    if(change) {
+      router.push(`/${pages[current]}`)
+    }
   }, [current])
 
   /*

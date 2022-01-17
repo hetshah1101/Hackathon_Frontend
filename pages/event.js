@@ -4,13 +4,13 @@ import SiteContext from '../components/SiteContext'
 import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
 import Carousel from 'nuka-carousel';
-
 export default function Event() {
 
-  const { current, setcurrent, position } = useContext(SiteContext);
+  const { current, setcurrent, setsections, position } = useContext(SiteContext);
 
   useEffect(() => {
     setcurrent(1)
+    setsections(3)
   }, [])
 
   return (
@@ -35,52 +35,62 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='center'> 
-            <h2>About Event</h2><br/>
-              <p className='quote'>“Our intelligence is what makes us human, and AI is an extension of
-              that quality.”  — Yann LeCun. </p><br/> 
-              The Center of Excellence in Data Science, CSE department, Institute of Technology, Nirma University
-              presents 48 hours long hackathon that offer opportunities to
-              participants to serve the nation by developing a innovative and
-              smart solution in the field of Healthcare, Agriculture,
-              Transportation System, Industry Automation, Defense, Education, etc.
-              using Artificial Intelligence, Machine Learning, Deep Learning,
-              Computer Vision, Natural Language Processing, Internet of Things,
-              Blockchain, etc. for betterment of human being.
+              <h1>About Event</h1>
+              <p className='quote'>
+                &ldquo;Our intelligence is what makes us human, and AI is an extension of
+                that quality.&rdquo;  — Yann LeCun.
+              </p>
+              <p>
+                The Center of Excellence in Data Science, CSE department, Institute of Technology, Nirma University
+                presents 48 hours long hackathon that offer opportunities to
+                participants to serve the nation by developing a innovative and
+                smart solution in the field of Healthcare, Agriculture,
+                Transportation System, Industry Automation, Defense, Education, etc.
+                using Artificial Intelligence, Machine Learning, Deep Learning,
+                Computer Vision, Natural Language Processing, Internet of Things,
+                Blockchain, etc. for betterment of human being.
+              </p>
             </div>
           </section>
+          
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='carousel'>
-            <h2>Tracks</h2><br/><br/>
-              <div>
-                <Carousel slidesToShow={3} wrapAround>
-                  <div className='item'>
-                    <h3>item 1</h3><br/>
-                    <span>lorem ipsum </span>
-                  </div>
-                  <div className='item'>
-                    <h3>item 2</h3><br/>
-                    <span>lorem ipsum </span>
-                  </div>
-                  <div className='item'>
-                    <h3>item 3</h3><br/>
-                    <span>lorem ipsum </span>
-                  </div>
-                  <div className='item'>
-                    <h3>item 4</h3><br/>
-                    <span>lorem ipsum </span>
-                  </div>
-                  <div className='item'>
-                    <h3>item 5</h3><br/>
-                    <span>lorem ipsum </span>
-                  </div>
-                  <div className='item'>
-                    <h3>item 6</h3><br/>
-                    <span>lorem ipsum </span>
-                  </div>
-                </Carousel>
-              </div>
+              <h1>Tracks</h1>
+              <Carousel
+                className='slideshow'
+                slidesToShow={3}
+                slidesToScroll={2}
+                speed={1000}
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
+                )}
+              >
+                <div className='item'>
+                  <h3>item 1</h3>
+                  <span>lorem ipsum </span>
+                </div>
+                <div className='item'>
+                  <h3>item 2</h3>
+                  <span>lorem ipsum </span>
+                </div>
+                <div className='item'>
+                  <h3>item 3</h3>
+                  <span>lorem ipsum </span>
+                </div>
+                <div className='item'>
+                  <h3>item 4</h3>
+                  <span>lorem ipsum </span>
+                </div>
+                <div className='item'>
+                  <h3>item 5</h3>
+                  <span>lorem ipsum </span>
+                </div>
+              </Carousel>
             </div>
           </section>
 
@@ -88,7 +98,7 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='center'> 
-            <h2>Schedule</h2><br/>
+            <h1>Schedule</h1>
             </div>
           </section>
         </div>

@@ -1,7 +1,7 @@
 @use './colors' as *;
 
 #event {
-    background: rgb(1, 8, 27);
+    background: rgba(1, 8, 27, 0.8);
     color: $light;
 }
 
@@ -9,24 +9,66 @@
     font-size: x-large;
     align-items: center;
     text-align: justify;
-    padding: 10vh;
-    letter-spacing: 5px;
+    padding: 0 5vw;
+    h1 {
+        font-size: 3vw;
+        font-weight: 600;
+        margin: 0 0 4vw 0;
+    }
     .quote{
         font-style: italic;
+    }
+    p {
+        font-size: 1.5vw;
+        margin: 2vw 0;
     }
     
 }
 
 .carousel{
-    font-size: x-large;
-    justify-content: space-evenly;
-    height: 100%;
     width: 100%;
-    .item{
-        padding: 20px;
-        text-align: center;
-        height: 100%;
-        width: 100%;
+    h1 {
+        font-size: 3vw;
+        font-weight: 600;
+        margin: 0;
     }
-    
+    .slideshow {
+        width: 100%;
+        height: 50vh !important;
+        padding: 5vw 0;
+        .item {
+            width: 70%;
+            box-shadow: 0 0 0.7vw 0.05vw $shadow;
+            background: $light;
+            color: $dark;
+            padding: 3vw 0;
+            margin: 3vw auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            h3 {
+                width: 60%;
+                font-size: 1.4vw;
+                font-weight: 600;
+            }
+            span {
+                width: 60%;
+                font-size: 1vw;
+            }
+        }
+        .sliderOptions {
+            font-size: 1.4vw;
+            border: none;
+            background: rgba(0,0,0,0.4);
+            color: $light;
+            border-radius: 50%;
+            width: 2.5vw;
+            height: 2.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
 }

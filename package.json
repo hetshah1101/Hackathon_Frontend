@@ -13,6 +13,8 @@
     "nuka-carousel": "^4.8.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-responsive-carousel": "^3.2.22",
+    "react-slick": "^0.28.1",
     "sass": "^1.48.0"
   },
   "devDependencies": {
