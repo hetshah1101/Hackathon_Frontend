@@ -1,0 +1,89 @@
+@use 'colors' as *;
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: transparent;
+    color: $light;
+    padding: 2vw 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $light;
+    div {
+        width: 15%;
+    }
+    ul {
+        width: 40%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2vw;
+        li {
+            padding: 0.5vw;
+            &:hover {
+                border-bottom: 0.01vw solid $light;
+            }
+        }
+        li.active {
+            border-bottom: 0.01vw solid $light;
+        }
+    }
+    ul.social {
+        width: 15%;
+    }
+}
+
+#swipeNav {
+    width: 40%;
+    position: absolute;
+    bottom: 3vw;
+    right: 3vw;
+    z-index: 7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .buttons {
+        width: 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            width: 2.5vw;
+            height: 2.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5vw;
+            background: transparent;
+            border: 0.01vw solid $light;
+            border-radius: 50%;
+            color: $light;
+            cursor: pointer;
+        }
+    }
+    .line {
+        width: 65%;
+        height: 0.02vw;
+        background-color: $light;
+    }
+    h1 {
+        width: 5vw;
+        font-size: 3vw;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            font-size: 3vw;
+            width: 3vw;
+            color: $light;
+        }
+    }
+}

@@ -1,9 +1,16 @@
-import '../styles/main.scss'
-import '../styles/home.scss'
 import SiteContext from '../components/SiteContext'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion";
+
+// Importing stylesheets
+import '../styles/main.scss'
+import '../styles/navbar.scss'
+import '../styles/pages.scss'
+import '../styles/home.scss'
+import '../styles/event.scss'
+import '../styles/team.scss'
+import '../styles/contact.scss'
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
