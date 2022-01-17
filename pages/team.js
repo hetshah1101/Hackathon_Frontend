@@ -6,7 +6,7 @@ import Slider from '../components/Slider'
 
 export default function Team() {
 
-  const { current, setcurrent, next, prev } = useContext(SiteContext);
+  const { current, setcurrent, position } = useContext(SiteContext);
 
   useEffect(() => {
     setcurrent(2)
@@ -30,6 +30,12 @@ export default function Team() {
 
         {/* Main Content here */}
         <div id="content" >
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='left'></div>
+            <div className='right'></div>
+          </section>
         </div>
 
       </main>
