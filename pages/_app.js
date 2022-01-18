@@ -19,6 +19,15 @@ export default function MyApp({ Component, pageProps }) {
   Next/Previous Page Slide
   ----------------------------------
   */
+  const handleKeyPress = e => {
+    console.log(position)
+    if(e.key == "ArrowUp" && position>0 && position<sections) {
+      setposition(position-1)
+    }
+    if(e.key == "ArrowDown" && position>-1 && position<sections-1) {
+      setposition(position+1)
+    }
+  }
   const pages = ["", "event", "team", "contact"]
 
   const [current, setcurrent] = useState(0)
@@ -49,6 +58,7 @@ export default function MyApp({ Component, pageProps }) {
   */
  const [position, setposition] = useState(0)
  const [sections, setsections] = useState(0)
+ const [swipe, setSwipe] = useState(true)
 
   return (
     <AnimatePresence>
@@ -77,7 +87,10 @@ export default function MyApp({ Component, pageProps }) {
           position,
           setposition,
           sections,
-          setsections
+          setsections,
+          swipe,
+          setSwipe,
+          handleKeyPress
         }} >
           <Component {...pageProps} />
         </SiteContext.Provider>

@@ -16,11 +16,12 @@ import third from '../public/prizes/gold-medal3.png';
 
 export default function Event() {
 
-  const { current, setcurrent, setsections, position } = useContext(SiteContext);
+  const { current, setcurrent, setSwipe, setsections, position } = useContext(SiteContext);
 
   useEffect(() => {
     setcurrent(1)
     setsections(6)
+    setSwipe(true)
   }, [])
 
   return (
@@ -82,23 +83,23 @@ export default function Event() {
                 )}
               >
                 <div className='item'>
-                  <h3>Healthcare</h3><img src={health.src} width="100" height="50" /><br/>
+                  <h3>Healthcare</h3><img src={health.src} /><br/>
                   <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
                 </div>
                 <div className='item'>
-                  <h3>Agriculture</h3><img src={agriculture.src} width="100" height="50" /><br/>
+                  <h3>Agriculture</h3><img src={agriculture.src} /><br/>
                   <span>Agriculture is playing a vital role in India's economy. Bringing the technological solution in the framing industry can improve the cultivation and productivity of crops. Recently, innovation in the filed of Bio-Technologies and Artificial intelligence brings resolution in the farming industry.</span>
                 </div>
                 <div className='item'>
-                  <h3>Service to Society</h3><img src={service.src} width="100" height="50" /><br/>
+                  <h3>Service to Society</h3><img src={service.src} /><br/>
                   <span>Bring the technologies in to real like can solve many societal problems. A country like India is facing many challenges like person/woman safety and better living for the elderly and handicaps. Find out a solution that makes the life of every human being better.</span>
                 </div>
                 <div className='item'>
-                  <h3>Automation</h3><img src={automation.src} width="100" height="50" /><br/>
+                  <h3>Automation</h3><img src={automation.src} /><br/>
                   <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT and cognitive computing help to design a better manufacturing process for any industry.</span>
                 </div>
                 <div className='item'>
-                  <h3>Intelligent Transportation Systems</h3><img src={transport.src} width="100" height="50" /><br/>
+                  <h3>Intelligent Transportation Systems</h3><img src={transport.src} /><br/>
                   <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
                 </div>
               </Carousel>
@@ -109,7 +110,7 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='carousel2'> 
-            <h1>Schedule</h1> <br/>
+            <h1>Schedule</h1>
             <Carousel
                 className='slideshow'
                 slidesToShow={1}
@@ -217,7 +218,6 @@ export default function Event() {
                     </tr>
                   </tbody>
                 </table>  
-
               </Carousel>
 
             </div>
@@ -227,25 +227,24 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='prizes'> 
-            <h1>Prizes</h1>
-              <table className='table'>
-                <tr>
-                  <td width="350" height="350"><img src={second.src} width="300" height="300" /></td>
-                  <td width="350" height="350"><img src={first.src} width="350" height="350" /></td>
-                  <td width="350" height="350"><img src={third.src} width="250" height="250" /></td>
-                </tr>
-                <tr>
-                  <td>Second</td>
-                  <td>First</td>
-                  <td>Third</td>
-                </tr>
-                <tr>
-                  <td>&#36;300</td>
-                  <td>&#36;500</td>
-                  <td>&#36;200</td>
-                </tr>
-                
-              </table>
+              <h1>Prizes</h1>
+              <div className='div'>
+                <div className='two'>
+                  <img src={second.src}/>
+                  <h3>Second</h3>
+                  <p>&#36;300</p>
+                </div>
+                <div className='one'>
+                  <img src={first.src}/>
+                  <h3>First</h3>
+                  <p>&#36;500</p>
+                </div>
+                <div className='three'>
+                  <img src={third.src}/>
+                  <h3>Third</h3>
+                  <p>&#36;200</p>
+                </div>
+              </div>
             </div>
           </section>
 

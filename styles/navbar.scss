@@ -14,8 +14,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: $light;
-    div {
-        width: 15%;
+    z-index: 5 !important;
+    .logo {
+        width: 10%;
+        img {
+            width: 100%;
+        }
     }
     ul {
         width: 40%;
@@ -35,8 +39,20 @@ nav {
             border-bottom: 0.01vw solid $light;
         }
     }
-    ul.social {
-        width: 15%;
+    button.register {
+        width: 10%;
+        padding: 0.5vw 2vw;
+        font-size: 1.2vw;
+        border-radius: 0.5vw;
+        border: none;
+        background: none;
+        color: $light;
+        border: 0.01vw solid $light;
+        cursor: pointer;
+        &:hover {
+            color: $dark;
+            background: $light;
+        }
     }
 }
 

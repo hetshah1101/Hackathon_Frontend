@@ -5,11 +5,11 @@ import Navbar from '../components/Navbar';
 
 export default function Register() {
 
-  const { setcurrent, setsections, position } = useContext(SiteContext);
+  const { setcurrent, setSwipe, position } = useContext(SiteContext);
 
   useEffect(() => {
-    setcurrent(0)
-    setsections(4)
+    setcurrent(5)
+    setSwipe(false)
   }, [])
 
   // States for registration

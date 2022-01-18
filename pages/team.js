@@ -6,10 +6,11 @@ import Slider from '../components/Slider'
 
 export default function Team() {
 
-  const { current, setcurrent, position } = useContext(SiteContext);
+  const { current,setSwipe, setcurrent, position } = useContext(SiteContext);
 
   useEffect(() => {
     setcurrent(2)
+    setSwipe(true)
   }, [])
 
   return (

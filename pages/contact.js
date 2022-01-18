@@ -6,10 +6,11 @@ import Slider from '../components/Slider'
 
 export default function Contact() {
 
-  const { current, setcurrent, position } = useContext(SiteContext);
+  const { current, setSwipe, setcurrent, position } = useContext(SiteContext);
 
   useEffect(() => {
     setcurrent(3)
+    setSwipe(true)
   }, [])
 
   return (

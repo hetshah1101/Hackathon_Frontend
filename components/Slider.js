@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import SiteContext from './SiteContext'
 
 const Slider = () => {
-    const { sections, position, setsections, setposition } = useContext(SiteContext);
+    const { sections, position, setsections, setposition, handleKeyPress } = useContext(SiteContext);
     return (
         <div id="slider">
             <div id="line"></div>
