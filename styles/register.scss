@@ -1,0 +1,13 @@
+@use './colors' as *;
+
+#home {
+    background: rgb(1, 8, 27);
+    color: $light;
+}
+
+.form{
+    font-size: x-large;
+    align-items: center;
+    text-align: justify;
+    padding: 0 5vw;
+}
