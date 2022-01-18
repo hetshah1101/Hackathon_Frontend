@@ -216,8 +216,13 @@ export default function Event() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
-            <div className='center'> 
+            <div className='prizes'> 
             <h1>Prizes</h1>
+              <table className='table'>
+                <th>1st</th>
+                <th>2nd</th>
+                <th>3rd</th>
+              </table>
             </div>
           </section>
 
