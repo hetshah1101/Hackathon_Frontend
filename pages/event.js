@@ -82,23 +82,23 @@ export default function Event() {
                 )}
               >
                 <div className='item'>
-                  <h3>Healthcare</h3><img src={health} width="100" height="50" /><br/>
+                  <h3>Healthcare</h3><img src={health.src} width="100" height="50" /><br/>
                   <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
                 </div>
                 <div className='item'>
-                  <h3>Agriculture</h3><img src={agriculture} width="100" height="50" /><br/>
+                  <h3>Agriculture</h3><img src={agriculture.src} width="100" height="50" /><br/>
                   <span>Agriculture is playing a vital role in India's economy. Bringing the technological solution in the framing industry can improve the cultivation and productivity of crops. Recently, innovation in the filed of Bio-Technologies and Artificial intelligence brings resolution in the farming industry.</span>
                 </div>
                 <div className='item'>
-                  <h3>Service to Society</h3><img src={service} width="100" height="50" /><br/>
+                  <h3>Service to Society</h3><img src={service.src} width="100" height="50" /><br/>
                   <span>Bring the technologies in to real like can solve many societal problems. A country like India is facing many challenges like person/woman safety and better living for the elderly and handicaps. Find out a solution that makes the life of every human being better.</span>
                 </div>
                 <div className='item'>
-                  <h3>Automation</h3><img src={automation} width="100" height="50" /><br/>
+                  <h3>Automation</h3><img src={automation.src} width="100" height="50" /><br/>
                   <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT and cognitive computing help to design a better manufacturing process for any industry.</span>
                 </div>
                 <div className='item'>
-                  <h3>Intelligent Transportation Systems</h3><img src={transport} width="100" height="50" /><br/>
+                  <h3>Intelligent Transportation Systems</h3><img src={transport.src} width="100" height="50" /><br/>
                   <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
                 </div>
               </Carousel>
@@ -230,9 +230,9 @@ export default function Event() {
             <h1>Prizes</h1>
               <table className='table'>
                 <tr>
-                  <td><img src={second} width="350" height="350" /></td>
-                  <td><img src={first} width="350" height="350" /></td>
-                  <td><img src={third} width="350" height="350" /></td>
+                  <td width="350" height="350"><img src={second.src} width="300" height="300" /></td>
+                  <td width="350" height="350"><img src={first.src} width="350" height="350" /></td>
+                  <td width="350" height="350"><img src={third.src} width="250" height="250" /></td>
                 </tr>
                 <tr>
                   <td>Second</td>
