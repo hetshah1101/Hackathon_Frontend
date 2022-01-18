@@ -1,9 +1,14 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { useContext, useEffect } from 'react';
-import SiteContext from '../components/SiteContext'
-import Navbar from '../components/Navbar'
-import Slider from '../components/Slider'
+import SiteContext from '../components/SiteContext';
+import Navbar from '../components/Navbar';
+import Slider from '../components/Slider';
 import Carousel from 'nuka-carousel';
+import health from '../public/Track/cardiogram.png';
+import agriculture from '../public/Track/plant.png';
+import service from '../public/Track/service1.png';
+import automation from '../public/Track/Automation_2.png';
+import transport from '../public/Track/shipped.png';
 export default function Event() {
 
   const { current, setcurrent, setsections, position } = useContext(SiteContext);
@@ -72,24 +77,24 @@ export default function Event() {
                 )}
               >
                 <div className='item'>
-                  <h3>item 1</h3>
-                  <span>lorem ipsum </span>
+                  <h3>Healthcare</h3><img src={health} width="100" height="50" /><br/>
+                  <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
                 </div>
                 <div className='item'>
-                  <h3>item 2</h3>
-                  <span>lorem ipsum </span>
+                  <h3>Agriculture</h3><img src={agriculture} width="100" height="50" /><br/>
+                  <span>Agriculture is playing a vital role in India's economy. Bringing the technological solution in the framing industry can improve the cultivation and productivity of crops. Recently, innovation in the filed of Bio-Technologies and Artificial intelligence brings resolution in the farming industry.</span>
                 </div>
                 <div className='item'>
-                  <h3>item 3</h3>
-                  <span>lorem ipsum </span>
+                  <h3>Service to Society</h3><img src={service} width="100" height="50" /><br/>
+                  <span>Bring the technologies in to real like can solve many societal problems. A country like India is facing many challenges like person/woman safety and better living for the elderly and handicaps. Find out a solution that makes the life of every human being better.</span>
                 </div>
                 <div className='item'>
-                  <h3>item 4</h3>
-                  <span>lorem ipsum </span>
+                  <h3>Automation</h3><img src={automation} width="100" height="50" /><br/>
+                  <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT and cognitive computing help to design a better manufacturing process for any industry.</span>
                 </div>
                 <div className='item'>
-                  <h3>item 5</h3>
-                  <span>lorem ipsum </span>
+                  <h3>Intelligent Transportation Systems</h3><img src={transport} width="100" height="50" /><br/>
+                  <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
                 </div>
               </Carousel>
             </div>
