@@ -9,6 +9,11 @@ import agriculture from '../public/Track/plant.png';
 import service from '../public/Track/service1.png';
 import automation from '../public/Track/Automation_2.png';
 import transport from '../public/Track/shipped.png';
+import first from '../public/prizes/gold-medal1.png'; 
+import second from '../public/prizes/gold-medal2.png'; 
+import third from '../public/prizes/gold-medal3.png'; 
+
+
 export default function Event() {
 
   const { current, setcurrent, setsections, position } = useContext(SiteContext);
@@ -224,9 +229,22 @@ export default function Event() {
             <div className='prizes'> 
             <h1>Prizes</h1>
               <table className='table'>
-                <th>1st</th>
-                <th>2nd</th>
-                <th>3rd</th>
+                <tr>
+                  <td><img src={second} width="350" height="350" /></td>
+                  <td><img src={first} width="350" height="350" /></td>
+                  <td><img src={third} width="350" height="350" /></td>
+                </tr>
+                <tr>
+                  <td>Second</td>
+                  <td>First</td>
+                  <td>Third</td>
+                </tr>
+                <tr>
+                  <td>&#36;300</td>
+                  <td>&#36;500</td>
+                  <td>&#36;200</td>
+                </tr>
+                
               </table>
             </div>
           </section>

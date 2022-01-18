@@ -122,4 +122,15 @@
         font-weight: 600;
         margin: 0;
     }
+    .table{
+        border-collapse: separate;
+        border-spacing: 20px 0;
+    }
+   
+    td {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 0;
+      }
 }
