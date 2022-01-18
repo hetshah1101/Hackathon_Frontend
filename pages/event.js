@@ -10,7 +10,7 @@ export default function Event() {
 
   useEffect(() => {
     setcurrent(1)
-    setsections(3)
+    setsections(6)
   }, [])
 
   return (
@@ -63,6 +63,7 @@ export default function Event() {
                 slidesToShow={3}
                 slidesToScroll={2}
                 speed={1000}
+                wrapAround
                 renderCenterLeftControls={({ previousSlide }) => (
                   <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
                 )}
@@ -97,8 +98,142 @@ export default function Event() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
+            <div className='carousel2'> 
+            <h1>Schedule</h1> <br/>
+            <Carousel
+                className='slideshow'
+                slidesToShow={1}
+                slidesToScroll={1}
+                speed={1000}
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
+                )}
+              >
+
+                {/* Day 1 Table */}
+                <table className="table">
+                  <tbody>
+                  <th colspan='2'>Day 1</th>
+                    <tr>
+                      <td className="time">8:40 AM</td>
+                      <td className="content">On Site Registration</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:00 AM - 9:30 AM</td>
+                      <td className="content">Opening ceremony</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:30 AM - 10:00 PM</td>
+                      <td className="content">Keynote Sessions </td>
+                    </tr>
+                    <tr>
+                      <td className="time">10:00 AM</td>
+                      <td className="content">The Hack Starts!</td>
+                    </tr>
+                    <tr>
+                      <td className="time">1:30 PM - 2:30 PM</td>
+                      <td className="content">Lunch</td>
+                    </tr>
+                    <tr>
+                      <td className="time">2:30 PM - 5:30 PM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">5:30 PM - 6:30 PM</td>
+                      <td className="content">First Round of Mentorship!</td>
+                    </tr>
+                    <tr>
+                      <td className="time">5:30 PM - 8:30 PM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">8:30 PM - 9:30 PM</td>
+                      <td className="content">Dinner!</td>
+                    </tr>
+
+                    <tr>
+                      <td className="time">9:30 PM - 12:00 AM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                {/* Day 2 Table */}
+                <table className="table">
+                  <tbody>
+                    <th colspan='2'>Day 2</th>
+                    <tr>
+                      <td className="time">12:00 AM - 1:00 AM</td>
+                      <td className="content">Fun Activity</td>
+                    </tr>
+                    <tr>
+                      <td className="time">1:00 AM - 8:45 AM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">8:45 AM - 9:30 AM</td>
+                      <td className="content">Breakfast</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:30 AM - 1:30 PM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">1:30 PM - 2:30 PM</td>
+                      <td className="content">Lunch</td>
+                    </tr>
+                    <tr>
+                      <td className="time">2:30 PM - 3:00 PM</td>
+                      <td className="content">Final Submittion</td>
+                    </tr>
+                    <tr>
+                      <td className="time">3:00 PM - 4:00 PM</td>
+                      <td className="content">First Judging round</td>
+                    </tr>
+                    <tr>
+                      <td className="time">4:00 PM - 5:00 PM</td>
+                      <td className="content">High Tea and Discussion</td>
+                    </tr>
+
+                    <tr>
+                      <td className="time">5:00 PM onwards</td>
+                      <td className="content">
+                        Final Presentation, Winner's Anouncement and Prize
+                        Distribution
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>  
+
+              </Carousel>
+
+            </div>
+          </section>
+
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
             <div className='center'> 
-            <h1>Schedule</h1>
+            <h1>Prizes</h1>
+            </div>
+          </section>
+
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='center'> 
+            <h1>Winners</h1>
+            </div>
+          </section>
+
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='center'> 
+            <h1>Sponsors</h1>
             </div>
           </section>
         </div>
