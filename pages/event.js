@@ -4,6 +4,7 @@ import SiteContext from '../components/SiteContext';
 import Navbar from '../components/Navbar';
 import Slider from '../components/Slider';
 import Carousel from 'nuka-carousel';
+
 import health from '../public/Track/cardiogram.png';
 import agriculture from '../public/Track/plant.png';
 import service from '../public/Track/service1.png';
@@ -13,6 +14,19 @@ import first from '../public/prizes/gold-medal1.png';
 import second from '../public/prizes/gold-medal2.png'; 
 import third from '../public/prizes/gold-medal3.png'; 
 
+import ITNULogo from "../public/Logos/ITNU_Logo.jpg";
+import BULogo from "../public/Logos/Binghamton_University_logo.png";
+import IndiaNICLogo from "../public/sponsors/india_nic.jpg";
+import HopsLogo from "../public/sponsors/hops_logo.png";
+import JklcLogo from "../public/sponsors/JKLC.png";
+
+import WolframLogo from "../public/sponsors/wolfram.png";
+import DoLogo from "../public/sponsors/DO_Logo_Horizontal_Blue.png";
+import EchoARLogo from "../public/sponsors/echoAR_-_Logo_2020_-_Dark.png";
+import InterviewCakeLogo from "../public/sponsors/interview_cake.png";
+import GMCLogo from "../public/Logos/GMC_logo.png";
+import VoiceFlowLogo from "../public/sponsors/voiceflow.png";
+
 
 export default function Event() {
 
@@ -20,7 +34,7 @@ export default function Event() {
 
   useEffect(() => {
     setcurrent(1)
-    setsections(6)
+    setsections(7)
     setSwipe(true)
   }, [])
 
@@ -251,6 +265,102 @@ export default function Event() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
+            <div className='carousel'>
+              <h1>Perks</h1>
+              <Carousel
+                className='slideshow'
+                slidesToShow={3}
+                slidesToScroll={2}
+                speed={1000}
+                wrapAround
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
+                )}
+              >
+
+                {/* item 1 */}
+                <div className='item'>
+                  <img src={WolframLogo.src} /><br/>
+                  <span>
+                    <h3>For Winners</h3>
+                    <ul>
+                      <li>Wolfram | One Personal worth &#36;375</li>
+                      <li>Wolfram | Alpha Pro worth &#36;375</li>
+                    </ul>
+
+                    <h3>For All Participants</h3>
+                    <ul>
+                      <li>Access to Wolfram | One for 30 days</li>
+                      <li>Wolfram | One includes both Desktop and Cloud access, full access to the Wolfram Language and Knowledgebase, FreeCDF Deployment, 5000 Wolfram|Alpha API calls, 5000 Cloud Credits, 2 installations per user and 2 GB of Cloud Storage. The value of this access is &#36;25.00 per user</li>
+                    </ul>
+                  </span>
+                </div>
+
+                {/* item 2 */}
+                <div className='item'>
+                  <img src={DoLogo.src} /><br/>
+                  <span>
+                    <h3>For Winners</h3>
+                    <ul>
+                      <li>&#36;1000 credits for the first winner and $500 credits for the second winner digital ocean account.</li>
+                    </ul>
+                    <h3>For All Participants</h3>
+                    <ul>
+                      <li>&#36;100, 60-day free trial for all attendees</li>
+                    </ul>
+                  </span>                
+                </div>
+
+                {/* item 3 */}
+                <div className='item'>
+                  <img src={EchoARLogo.src} /><br/>
+                  <span>
+                    <h3>For Winners</h3>
+                    <span>If you are interested to develop solution using Augmented Reality (AR) and Visual Reality (VR) technology and will use EchoAR as platform then winner team will receive :</span>
+                    <ul>
+                      <li>&#36;50 amazon gift card (per team)</li>
+                      <li>3 month free business tier access</li>
+                      <li>Selected projects will be featured on their “inspiration” page.</li>
+                    </ul>
+                    
+                    <h3>For All Participants</h3>
+                    <ul>
+                      <li>1-month free business tier access to EchoAR platform</li>
+                    </ul>
+                  </span>
+                </div>
+
+                {/* item 4 */}
+                <div className='item'>
+                  <img src={VoiceFlowLogo.src} /><br/>
+                  <span>
+                    <h3>For All Participants</h3>
+                    <ul>
+                      <li>Six Month VoiceFlow Pro License</li>
+                    </ul>
+                  </span>
+                </div>
+
+                {/* item 5 */}
+                <div className='item'>
+                  <img src={InterviewCakeLogo.src} /><br/>
+                  <span>
+                    <h3>For All Participants</h3>
+                    <ul>
+                      <li>Full access licenses to all participates for their full coding interview prep course.</li>
+                    </ul>
+                  </span>
+                </div>
+              </Carousel>
+            </div>
+          </section>
+
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
             <div className='center'> 
             <h1>Winners</h1>
             </div>
@@ -259,8 +369,67 @@ export default function Event() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
-            <div className='center'> 
-            <h1>Sponsors</h1>
+            <div className='sponsors'> 
+            <h1>Sponsors</h1> <br/>
+            <table className='titleSponsors'>
+              <tr>
+                <th colspan='2'>Title sponsors</th>
+              </tr>
+              <tr>
+                <td><a href="http://www.nirmauni.ac.in" target="_blank">
+                  <img src={ITNULogo.src} alt="ITNU Logo"></img></a>
+                </td>
+                <td><a href="https://www.binghamton.edu/" target="_blank">
+                  <img src={BULogo.src} alt="BU Logo"></img></a>
+                </td>
+              </tr>
+            </table>
+
+            <table className='goldSponsors'>
+              <tr>
+                <th colspan='3'>Gold sponsors</th>
+              </tr>
+              <tr>
+                <td><a href="https://www.indianic.com/" target="_blank">
+                  <img src={IndiaNICLogo.src} alt="IndiaNIC Logo"></img></a>
+                </td>
+                <td><a href="http://hops.healthcare/" target="_blank">
+                  <img src={HopsLogo.src} alt="HOPS Logo"></img></a>
+                </td>
+                <td><a href="https://www.jklakshmicement.com/" target="_blank">
+                  <img src={JklcLogo.src} alt="JKLC Logo"></img></a>
+                </td>
+              </tr>
+            </table>
+
+            <table className='partners'>
+              <tr>
+                <th colspan='3'>Partners</th>
+              </tr>
+              <tr>
+                <td><a href="https://www.wolfram.com/" target="_blank">
+                  <img src={WolframLogo.src} alt="Wolfram Logo"></img></a>
+                </td>
+                <td><a href="https://www.digitalocean.com/" target="_blank">
+                  <img src={DoLogo.src} alt="Do Logo"></img></a>
+                </td>
+                <td><a href="https://www.echoar.xyz/" target="_blank">
+                  <img src={EchoARLogo.src} alt="EchoAR Logo"></img></a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="https://www.voiceflow.com/" target="_blank">
+                  <img src={VoiceFlowLogo.src} alt="VoiceFlow Logo"></img></a>
+                </td>
+                <td><a href="https://www.interviewcake.com/" target="_blank">
+                  <img src={InterviewCakeLogo.src} alt="Interview Cake Logo"></img></a>
+                </td>
+                <td><a href="https://givemycertificate.com/" target="_blank">
+                  <img src={GMCLogo.src} alt="GMC Logo"></img></a>
+                </td>
+              </tr>
+            </table>
+
             </div>
           </section>
         </div>

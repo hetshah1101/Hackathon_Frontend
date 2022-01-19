@@ -176,19 +176,57 @@
             }
         }
         .one {
+            margin-right: 7vw;
             font-weight: 700;
-            transform: scale(1.2);
+            transform: scale(1.8);
             opacity: 1;
         }
         .two {
+            margin-right: 7.5vw;
             font-weight: 400;
-            transform: scale(1);
+            transform: scale(1.3);
             opacity: 0.7;
         }
         .three {
             font-weight: 100;
-            transform: scale(0.8);
+            transform: scale(1.1);
             opacity: 0.4;
         }
+    }
+}
+
+.sponsors{
+    width: 100%;
+    height: 100%;
+    table{
+        width: 70%;
+        box-shadow: 0 0 0.7vw 0.05vw $shadow;
+        border-radius: 0.5vw;
+        background: $light;
+        color: $dark;
+        padding: 0;
+        margin: 0vw auto;
+        margin-top: 0.5vw;
+        justify-content: center;
+        align-items: center;
+        th {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5vw;
+            padding-bottom: 1.5vw;
+        }
+    }
+    
+    .titleSponsors img{
+        width: 350px;
+        height: 170px;
+    }
+    .goldSponsors img{
+        width: 250px;
+        height: 100px;
+    }
+    .partners img{
+        width: 250px;
+        height: 50px;
     }
 }
