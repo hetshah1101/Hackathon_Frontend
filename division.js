@@ -1,3 +1,5 @@
+import Register from "./pages/register";
+
 const div = {
     Home: [
         "Header",
@@ -21,5 +23,22 @@ const div = {
     Contact: [
         "Links, email + Form",
         "Subscribe to newsletter/notifications"
+    ]
+    Register: [
+        "firstName",
+        "lastName",
+        "mobileNo",
+        "Degree",
+        "BranchName",
+        "currentSemester",
+        "nameOnCertificate",
+        "collegeName",
+        "collegeCity",
+        "collegeState",
+        "linkedinProf",
+        "githubProf",
+        "discordId",
+        "email",
+        "userName"
     ]
 }

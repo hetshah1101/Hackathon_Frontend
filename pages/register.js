@@ -13,36 +13,113 @@ export default function Register() {
   }, [])
 
   // States for registration
-  const [name, setName] = useState('');
+  const [firstname, setFirstName] = useState('');
+  const [lastname, setLastName] = useState('');
+  const [mobileNo, setMobileNo] = useState('');
+  const [deg, setDegree] = useState('');
+  const [branch, setBranch] = useState('');
+  const [sem, setSem] = useState('');
+  const [nameOnCertificate, setNameOnCertificate] = useState('');
+  const [clgname, setClgName] = useState('');
+  const [clgstate, setClgState] = useState('');
+  const [linkedin, setLinkedin] = useState('');
+  const [github, setGithub] = useState('');
+  const [discord, setDiscord] = useState('');
   const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmpassword, setConfirmPassword] = useState('');
+
  
   // States for checking the errors
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
  
-  // Handling the name change
-  const handleName = (e) => {
-    setName(e.target.value);
+  // Handling the state change
+  const handleFirstName = (e) => {
+    setFirstName(e.target.value);
     setSubmitted(false);
   };
- 
-  // Handling the email change
+
+  const handleLastName = (e) => {
+    setLastName(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleMobileNo = (e) => {
+    setMobileNo(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleDegree = (e) => {
+    setDegree(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleBranch= (e) => {
+    setBranch(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleSem= (e) => {
+    setSem(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleNameOnCertificat= (e) => {
+    setNameOnCertificate(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleClgName= (e) => {
+    setClgName(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleClgState= (e) => {
+    setClgState(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleLinkedin= (e) => {
+    setLinkedin(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleGithub= (e) => {
+    setGithub(e.target.value);
+    setSubmitted(false);
+  };
+
+  const handleDiscord= (e) => {
+    setDiscord(e.target.value);
+    setSubmitted(false);
+  };
+  
   const handleEmail = (e) => {
     setEmail(e.target.value);
     setSubmitted(false);
   };
- 
-  // Handling the password change
+
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+    setSubmitted(false);
+  };
+
   const handlePassword = (e) => {
     setPassword(e.target.value);
     setSubmitted(false);
   };
  
+  const handleConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+    setSubmitted(false);
+  };
+
   // Handling the form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name === '' || email === '' || password === '') {
+    if (firstname === '' || lastname === '' || mobileNo === '' || deg === '' || branch === '' || sem === '' || nameOnCertificate === '' || clgname === '' || clgstate === '' || linkedin === '' || github === '' || discord === '' || email === '' || username === '' || password === '' || confirmpassword === '') {
       setError(true);
     } else {
       setSubmitted(true);
@@ -58,7 +135,7 @@ export default function Register() {
         style={{
           display: submitted ? '' : 'none',
         }}>
-        <h1>User {name} successfully registered!!</h1>
+        <h1> {username} successfully registered!!</h1>
       </div>
     );
   };
@@ -98,17 +175,69 @@ export default function Register() {
         
             <form className='form'>
                 {/* Labels and inputs for form data */}
-                <label className="label">Name</label>
-                <input onChange={handleName} className="input"
-                value={name} type="text" /> <br/>
-        
+                <label className="label">FirstName</label>
+                <input onChange={handleFirstName} className="input"
+                value={firstname} type="text" /> <br/>
+
+                <label className="label">LastName</label>
+                <input onChange={handleLastName} className="input"
+                value={lastname} type="text" /> <br/> 
+
+                <label className="label">Mobile No</label>
+                <input onChange={handleMobileNo} className="input"
+                value={mobileNo} type="text" /> <br/>  
+
+                <label className="label">Degree</label>
+                <input onChange={handleDegree} className="input"
+                value={deg} type="text" /> <br/> 
+
+                <label className="label">Branch</label>
+                <input onChange={handleBranch} className="input"
+                value={branch} type="text" /> <br/> 
+
+                <label className="label">Semister</label>
+                <input onChange={handleSem} className="input"
+                value={sem} type="text" /> <br/> 
+
+                <label className="label">Name On Certificate</label>
+                <input onChange={handleNameOnCertificat} className="input"
+                value={nameOnCertificate} type="text" /> <br/>
+
+                <label className="label">College Name</label>
+                <input onChange={handleClgName} className="input"
+                value={clgname} type="text" /> <br/> 
+
+                <label className="label">College State</label>
+                <input onChange={handleClgState} className="input"
+                value={clgstate} type="text" /> <br/>
+
+                <label className="label">Linkedin Profile</label>
+                <input onChange={handleLinkedin} className="input"
+                value={linkedin} type="text" /> <br/>
+
+                <label className="label">Github Profile</label>
+                <input onChange={handleGithub} className="input"
+                value={github} type="text" /> <br/> 
+
+                <label className="label">Discord UserId</label>
+                <input onChange={handleDiscord} className="input"
+                value={discord} type="text" /> <br/>  
+
                 <label className="label">Email</label>
                 <input onChange={handleEmail} className="input"
                 value={email} type="email" />  <br/>
+
+                <label className="label">Username</label>
+                <input onChange={handleUsername} className="input"
+                value={username} type="text" /> <br/>
         
                 <label className="label">Password</label>
                 <input onChange={handlePassword} className="input"
                 value={password} type="password" /> <br/>
+
+                <label className="label">Confirm Password</label>
+                <input onChange={handleConfirmPassword} className="input"
+                value={confirmpassword} type="text" /> <br/>
         
                 <button onClick={handleSubmit} className="btn" type="submit">
                 Submit
