@@ -185,7 +185,7 @@ export default function Register() {
 
                 <label className="label">Mobile No</label>
                 <input onChange={handleMobileNo} className="input"
-                value={mobileNo} type="text" /> <br/>  
+                value={mobileNo} type="number" maxlength="10" /> <br/>  
 
                 <label className="label">Degree</label>
                 <input onChange={handleDegree} className="input"
@@ -197,7 +197,7 @@ export default function Register() {
 
                 <label className="label">Semister</label>
                 <input onChange={handleSem} className="input"
-                value={sem} type="text" /> <br/> 
+                value={sem} type="number" min="1" max="10" /> <br/> 
 
                 <label className="label">Name On Certificate</label>
                 <input onChange={handleNameOnCertificat} className="input"
@@ -225,7 +225,7 @@ export default function Register() {
 
                 <label className="label">Email</label>
                 <input onChange={handleEmail} className="input"
-                value={email} type="email" />  <br/>
+                value={email} type="email"/>  <br/>
 
                 <label className="label">Username</label>
                 <input onChange={handleUsername} className="input"
@@ -237,7 +237,7 @@ export default function Register() {
 
                 <label className="label">Confirm Password</label>
                 <input onChange={handleConfirmPassword} className="input"
-                value={confirmpassword} type="text" /> <br/>
+                value={confirmpassword} type="password" /> <br/>
         
                 <button onClick={handleSubmit} className="btn" type="submit">
                 Submit

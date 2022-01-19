@@ -23,7 +23,7 @@ const div = {
     Contact: [
         "Links, email + Form",
         "Subscribe to newsletter/notifications"
-    ]
+    ],
     Register: [
         "firstName",
         "lastName",
