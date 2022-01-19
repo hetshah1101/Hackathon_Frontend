@@ -24,7 +24,7 @@ const Navbar = () => {
                     <li>Li</li>
                     <li>Tw</li>
                 </ul> */}
-                <button className='register'><Link href="/yregister">Register</Link></button>
+                <button className='register'><Link href="/register">Register</Link></button>
             </nav>
             {swipe ? <div id="swipeNav">
                 <div className='buttons'>

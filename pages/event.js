@@ -96,7 +96,7 @@ export default function Event() {
                 </div>
                 <div className='item'>
                   <h3>Automation</h3><img src={automation.src} /><br/>
-                  <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT and cognitive computing help to design a better manufacturing process for any industry.</span>
+                  <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT &#38; cognitive computing help to design a better manufacturing process for any industry.</span>
                 </div>
                 <div className='item'>
                   <h3>Intelligent Transportation Systems</h3><img src={transport.src} /><br/>
