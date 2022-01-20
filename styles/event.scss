@@ -77,6 +77,63 @@
                 justify-content: center;
             }
         }
+        .perks {
+            width: 75%;
+            box-shadow: 0 0 0.7vw 0.05vw $shadow;
+            border-radius: 0.5vw;
+            background: $light;
+            color: $dark;
+            padding: 1vw;
+            margin: 1vw auto;
+            height: 33vw;
+            display: grid;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: scroll !important;
+            span {
+                margin: 0 auto;
+                width: 90%;
+                font-size: 1.12vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                height: 25vw;
+                padding: 0;
+                h3 {
+                    font-size: 1.3vw;
+                    margin: 0;
+                    padding: 0;
+                }
+                ul {
+                    padding-left: 1.2vw;
+                    margin: 0 auto 1vw 0;
+                    li {
+                        font-size: 1vw;
+                        margin: 0.2vw 0;
+                    }
+                }
+                .info {
+                    font-size: 0.8vw;
+                    font-style: italic;
+                    padding: 0;
+                    margin: 0.3vw 0 1vw 0;
+                    height: auto;
+                }
+            }
+            img {
+                margin: 2vw auto;
+                padding-top: 1vw;
+                max-width: 80%;
+                height: 5vw;
+                object-fit: contain;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                object-position: center;
+            }
+        }
         .table {
             width: 70%;
             box-shadow: 0 0 0.7vw 0.05vw $shadow;
@@ -198,12 +255,13 @@
 .sponsors{
     width: 100%;
     height: 100%;
+    color: $light;
     table{
-        width: 70%;
-        box-shadow: 0 0 0.7vw 0.05vw $shadow;
+        width: 100%;
+        // box-shadow: 0 0 0.7vw 0.05vw $shadow;
         border-radius: 0.5vw;
-        background: $light;
-        color: $dark;
+        // background: $light;
+        color: $light;
         padding: 0;
         margin: 0vw auto;
         margin-top: 0.5vw;
@@ -211,22 +269,31 @@
         align-items: center;
         th {
             width: 100%;
-            text-align: center;
-            font-size: 1.5vw;
-            padding-bottom: 1.5vw;
+            text-align: left;
+            font-size: 2vw;
+            padding-bottom: 0.5vw;
         }
     }
     
-    .titleSponsors img{
-        width: 350px;
-        height: 170px;
-    }
-    .goldSponsors img{
-        width: 250px;
-        height: 100px;
-    }
-    .partners img{
-        width: 250px;
-        height: 50px;
+    .titleSponsors, .goldSponsors, .partners {
+        width: 70%;
+        margin: 1vw 0 3vw 0; 
+        tr {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        img {
+            max-width: 15vw;
+            height: 7vw;
+            object-fit: contain;
+            object-position: center;
+            margin: 0.5vw 2vw 0.5vw 0;
+            background-color: $light;
+            padding: 1vw;
+        }
+        img.nopad {
+            padding: 0;
+        }
     }
 }

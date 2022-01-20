@@ -23,12 +23,15 @@ export default function Home() {
     if(position == 0) {
       setup(false)
     }
+    else {
+      setup(true)
+    }
   },[position])
 
   return (
     <div 
-    onKeyDown={handleKeyPress}
-    tabIndex="0"
+      onKeyDown={handleKeyPress}
+      tabIndex="0"
     >
       <Head>
         <title>MINeD | Home</title>
@@ -39,7 +42,7 @@ export default function Home() {
       {/* Navigation Bar */}
       <Navbar />
       <div className='headerdiv' style={{
-        transform: up ? `translateY(-${100*position}vh)` : 'translateY(0)'
+        transform: up ? `translateY(-${100}vh)` : 'translateY(0)'
       }}>
         {/* <div className='left'> */}
           <div className='imageMask' style={{

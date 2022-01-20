@@ -164,84 +164,116 @@ export default function Register() {
       {/* Navigation Bar */}
       <Navbar />
 
-      <main id="home">
+      <div id="register">
 
         {/* Main Content here */}
-        <div id="content" >
-          <section style={{
-            transform: `translateY(-${position*80}vh)`
-          }}>
+        {/* <div id="content" > */}
+          <section className='register'>
             <h1>User Registration</h1>  <br/>
         
             <form className='form'>
                 {/* Labels and inputs for form data */}
-                <label className="label">FirstName</label>
-                <input onChange={handleFirstName} className="input"
-                value={firstname} type="text" /> <br/>
+                <div>
+                  <label className="label">FirstName</label>
+                  <input onChange={handleFirstName} className="input"
+                  value={firstname} type="text" /> <br/>
+                </div>
 
-                <label className="label">LastName</label>
-                <input onChange={handleLastName} className="input"
-                value={lastname} type="text" /> <br/> 
+                <div>
+                  <label className="label">LastName</label>
+                  <input onChange={handleLastName} className="input"
+                  value={lastname} type="text" /> <br/> 
+                </div>
 
-                <label className="label">Mobile No</label>
-                <input onChange={handleMobileNo} className="input"
-                value={mobileNo} type="number" maxlength="10" /> <br/>  
+                <div>
+                  <label className="label">Mobile No</label>
+                  <input onChange={handleMobileNo} className="input"
+                  value={mobileNo} type="number" maxlength="10" /> <br/>  
+                </div>
 
-                <label className="label">Degree</label>
-                <input onChange={handleDegree} className="input"
-                value={deg} type="text" /> <br/> 
+                <div>
+                  <label className="label">Degree</label>
+                  <input onChange={handleDegree} className="input"
+                  value={deg} type="text" /> <br/> 
+                </div>
 
-                <label className="label">Branch</label>
-                <input onChange={handleBranch} className="input"
-                value={branch} type="text" /> <br/> 
+                <div>
+                  <label className="label">Branch</label>
+                  <input onChange={handleBranch} className="input"
+                  value={branch} type="text" /> <br/> 
+                </div>
 
-                <label className="label">Semister</label>
-                <input onChange={handleSem} className="input"
-                value={sem} type="number" min="1" max="10" /> <br/> 
+                <div>
+                  <label className="label">Semister</label>
+                  <input onChange={handleSem} className="input"
+                  value={sem} type="number" min="1" max="10" /> <br/> 
+                </div>
 
-                <label className="label">Name On Certificate</label>
-                <input onChange={handleNameOnCertificat} className="input"
-                value={nameOnCertificate} type="text" /> <br/>
+                <div>
+                  <label className="label">Name On Certificate</label>
+                  <input onChange={handleNameOnCertificat} className="input"
+                  value={nameOnCertificate} type="text" /> <br/>
+                </div>
 
-                <label className="label">College Name</label>
-                <input onChange={handleClgName} className="input"
-                value={clgname} type="text" /> <br/> 
+                <div>
+                  <label className="label">College Name</label>
+                  <input onChange={handleClgName} className="input"
+                  value={clgname} type="text" /> <br/> 
+                </div>
 
-                <label className="label">College State</label>
-                <input onChange={handleClgState} className="input"
-                value={clgstate} type="text" /> <br/>
+                <div>
+                  <label className="label">College State</label>
+                  <input onChange={handleClgState} className="input"
+                  value={clgstate} type="text" /> <br/>
+                </div>
 
-                <label className="label">Linkedin Profile</label>
-                <input onChange={handleLinkedin} className="input"
-                value={linkedin} type="text" /> <br/>
+                <div>
+                  <label className="label">Linkedin Profile</label>
+                  <input onChange={handleLinkedin} className="input"
+                  value={linkedin} type="text" /> <br/>
+                </div>
 
-                <label className="label">Github Profile</label>
-                <input onChange={handleGithub} className="input"
-                value={github} type="text" /> <br/> 
+                <div>
+                  <label className="label">Github Profile</label>
+                  <input onChange={handleGithub} className="input"
+                  value={github} type="text" /> <br/> 
+                </div>
 
-                <label className="label">Discord UserId</label>
-                <input onChange={handleDiscord} className="input"
-                value={discord} type="text" /> <br/>  
+                <div>
+                  <label className="label">Discord UserId</label>
+                  <input onChange={handleDiscord} className="input"
+                  value={discord} type="text" /> <br/>  
+                </div>
 
-                <label className="label">Email</label>
-                <input onChange={handleEmail} className="input"
-                value={email} type="email"/>  <br/>
+                <div>
+                  <label className="label">Email</label>
+                  <input onChange={handleEmail} className="input"
+                  value={email} type="email"/>  <br/>
+                </div>
 
-                <label className="label">Username</label>
-                <input onChange={handleUsername} className="input"
-                value={username} type="text" /> <br/>
+                <div>
+                  <label className="label">Username</label>
+                  <input onChange={handleUsername} className="input"
+                  value={username} type="text" /> <br/>
+                </div>
         
-                <label className="label">Password</label>
-                <input onChange={handlePassword} className="input"
-                value={password} type="password" /> <br/>
+                <div>
+                  <label className="label">Password</label>
+                  <input onChange={handlePassword} className="input"
+                  value={password} type="password" /> <br/>
+                </div>
 
-                <label className="label">Confirm Password</label>
-                <input onChange={handleConfirmPassword} className="input"
-                value={confirmpassword} type="password" /> <br/>
+                <div>
+                  <label className="label">Confirm Password</label>
+                  <input onChange={handleConfirmPassword} className="input"
+                  value={confirmpassword} type="password" /> <br/>
+                </div>
         
-                <button onClick={handleSubmit} className="btn" type="submit">
-                Submit
-                </button>
+                <div>
+                  <button onClick={handleSubmit} className="btn" type="submit">
+                    Submit
+                  </button>
+                </div>
             </form>
 
             {/* Calling to the methods */}
@@ -253,7 +285,7 @@ export default function Register() {
           </section>
         </div>
 
-      </main>
+      {/* </main> */}
     </div>
   )
 }

@@ -11,16 +11,16 @@ import '../styles/home.scss'
 import '../styles/event.scss'
 import '../styles/team.scss'
 import '../styles/contact.scss'
+import '../styles/register.scss'
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   /*
   ----------------------------------
-  Next/Previous Page Slide
+  Arrow Key / Swipe Control
   ----------------------------------
   */
   const handleKeyPress = e => {
-    console.log(position)
     if(e.key == "ArrowUp" && position>0 && position<sections) {
       setposition(position-1)
     }
@@ -28,6 +28,11 @@ export default function MyApp({ Component, pageProps }) {
       setposition(position+1)
     }
   }
+  /*
+  ----------------------------------
+  Next/Previous Page Slide
+  ----------------------------------
+  */
   const pages = ["", "event", "team", "contact"]
 
   const [current, setcurrent] = useState(0)
