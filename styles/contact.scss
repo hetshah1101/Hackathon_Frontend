@@ -3,6 +3,11 @@
 #contact {
     background: rgb(1, 8, 27);
     color: $light;
+    width: 100%;
+    margin: 0 auto;
+    #content {
+      margin: 0 auto;
+    }
 }
 
 label, h2, span{
@@ -11,17 +16,22 @@ label, h2, span{
 
 input[type=text],input[type=email], select, textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
+    padding: 0.4vw;
+    border: 0.1vw solid #ccc;
+    margin-top: 0.5vw;
+    margin-bottom: 1.5vw;
     resize: vertical;
+  }
+
+  input::placeholder, textarea::placeholder {
+    font-size: 0.8vw !important;
+    font-family: 'montserrat' !important;
   }
   
   input[type=submit] {
     background-color: #04AA6D;
     color: white;
-    padding: 12px 20px;
+    padding: 0.5vw 1vw;
     border: none;
     cursor: pointer;
   }
@@ -32,16 +42,30 @@ input[type=text],input[type=email], select, textarea {
   
   .container {
     height:80%;
-    border-radius: 5px;
+    border-radius: 0.5vw;
     background-color: #f2f2f2;
-    padding: 10px;
+    padding: 2vw;
+    font-size: 1vw;
   }
   
   .column {
     float: left;
     width: 30%;
-    margin-top: 6px;
-    padding: 20px;
+    margin: 0;
+    padding: 2vw;
+    label {
+      line-height: 110%;
+    }
+  }
+  .bold {
+    font-weight: 600;
+  }
+  .email {
+    span {
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
   }
   
   .row:after {  
@@ -52,4 +76,7 @@ input[type=text],input[type=email], select, textarea {
 .contactImg {
     width:5%;
     height: 5%;
+}
+.imgcontact {
+  width: 50%;
 }

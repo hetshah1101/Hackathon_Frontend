@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     setposition(0)
     setcurrent(0)
-    setsections(4)
+    setsections(2)
     setSwipe(true)
   }, [])
 
@@ -88,14 +88,14 @@ export default function Home() {
               <button>Learn More</button>
             </div>
           </section>
-          <section style={{
+          <section className='col' style={{
             transform: `translateY(-${position*80}vh)`
           }}>
             <h1>About Organisers</h1> <br/>
-            <div className='left'>
+            <div className='top'>
             
-              <img src={NULogo.src} className='logo'></img>
-              <a href="http://nirmauni.ac.in" target="_blank">
+              <img src={NULogo.src} className='nopad' ></img>
+              <div><a href="http://nirmauni.ac.in" target="_blank">
                 Nirma University
               </a>{" "}
               , Ahmedabad is a research-oriented, student-centric,
@@ -115,10 +115,11 @@ export default function Home() {
               Centre of Excellence in Data Science (CoE - DS) in collaborated
               with SUNY Binghamton University, USA.
               <button>Learn More</button>
+              </div>
             </div>
-            <div className='right'>
-              <img src={BULogo.src} className='logo'></img>
-              <a href="https://www.binghamton.edu/" target="_blank">
+            <div className='bottom'>
+              <img src={BULogo.src} ></img>
+              <div><a href="https://www.binghamton.edu/" target="_blank">
                 {" "}
                 Binghamton University
               </a>{" "}
@@ -138,9 +139,10 @@ export default function Home() {
               provide a wealth of hands-on experience for graduate and
               undergraduate students alike.
               <button>Learn More</button>
+              </div>
             </div>
           </section>
-          <section style={{
+          {/* <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='left'>
@@ -163,7 +165,7 @@ export default function Home() {
               <h1>MINeD Hackathon 4!</h1>
               <button>Learn More</button>
             </div>
-          </section>
+          </section> */}
         </div>
 
       </main>

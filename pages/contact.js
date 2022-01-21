@@ -10,11 +10,12 @@ import { FaPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact() {
 
-  const { current, setSwipe, setcurrent, position, setposition } = useContext(SiteContext);
+  const { current, setSwipe, setsections, setcurrent, position, setposition } = useContext(SiteContext);
 
   useEffect(() => {
     setposition(0)
     setcurrent(3)
+    setsections(0)
     setSwipe(true)
   }, [])
 
@@ -32,13 +33,11 @@ export default function Contact() {
       <main id="contact">
 
         {/* Left Slider */}
-        <Slider />
+        {/* <Slider /> */}
 
         {/* Main Content here */}
         <div id="content" >
-          <section style={{
-            transform: `translateY(-${position*80}vh)`
-          }}>
+          <section>
 
             <div className="container">
               <div>
@@ -46,25 +45,25 @@ export default function Contact() {
               </div>
               <div className="row">
                 <div className="column">
-                  <img src={NirmaLogo.src} float="right"></img><br/>
+                  <img src={NirmaLogo.src} className="imgcontact"></img><br/>
                     <label>Institute Of Technology,<br/> Nirma University,<br/>Ahmedabad, Gujarat,
                     India. <br/>Pincode : 382481</label>
                 </div>
 
                 <div className="column">
                   <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' />{/* add phone icon */}
-                  <label>Dvijesh Bhatt: </label>
-                  <a href="tel:9725985288" > <span> 9725985288 </span> </a>
+                  <label className='bold'>Dvijesh Bhatt: </label>
+                  <a href="tel:9725985288" > <span className='bold'> 9725985288 </span> </a>
                   <br/><br/>
 
                   <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' />{/* add phone icon */}
-                  <label>Sapan Mankad: </label>
-                  <a href="tel:9824149256" > <span> 9824149256 </span> </a>
+                  <label className='bold'>Sapan Mankad: </label>
+                  <a href="tel:9824149256" > <span className='bold'> 9824149256 </span> </a>
                   <br/><br/>
 
                   <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' /> {/* add mail icon */}
                   
-                  <a href="mailto:coe.ds@nirmauni.ac.in" > <span> coe.ds@nirmauni.ac.in </span> </a>
+                  <a className="email" href="mailto:coe.ds@nirmauni.ac.in" > <span className='bold'> coe.ds@nirmauni.ac.in </span> </a>
                   <br/><br/>
                 </div>
 
