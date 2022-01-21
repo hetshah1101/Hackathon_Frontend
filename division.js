@@ -4,7 +4,6 @@ const div = {
     Home: [
         "Header",
         "About org",
-        "FAQs",
         "Contact Us (Minimal Form)"
     ],
     Event: [
@@ -22,7 +21,7 @@ const div = {
     ],
     Contact: [
         "Links, email + Form",
-        "Subscribe to newsletter/notifications"
+        "FAQ"
     ],
     Register: [
         "firstName",

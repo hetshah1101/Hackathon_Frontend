@@ -8,6 +8,9 @@ import logo from '../public/MINed_LOGO.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
+import NULogo from '../public/Logos/ITNU_Logo.jpg';
+import BULogo from '../public/Logos/Binghamton_University_logo.png';
+
 export default function Home() {
 
   const { setcurrent, setSwipe, setsections, setposition, position, handleKeyPress } = useContext(SiteContext);
@@ -75,6 +78,7 @@ export default function Home() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
+            
             <div className='left'>
               <h1>MINeD Hackathon 2!</h1>
               <button>Learn More</button>
@@ -87,12 +91,52 @@ export default function Home() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
+            <h1>About Organisers</h1> <br/>
             <div className='left'>
-              <h1>MINeD Hackathon 2!</h1>
+            
+              <img src={NULogo.src} className='logo'></img>
+              <a href="http://nirmauni.ac.in" target="_blank">
+                Nirma University
+              </a>{" "}
+              , Ahmedabad is a research-oriented, student-centric,
+              multidisciplinary, not-for-profit state private university. Within
+              a short period of its existence, it has emerged as a nationally
+              renowned higher education institution. The University and its
+              constituent institutes are highly ranked by different ranking
+              agencies. Institute of Technology, Nirma University is the first
+              self-financed engineering college of the State of Gujarat.
+              Department of Computer Science and Engineering (CSE), ITNU is
+              known for its strength in Theoretical Computer Science, Image
+              Processing and Computer Vision, High Performance Computing,
+              Artificial Intelligence and Deep Learning, Internet of Things,
+              Data Science, Cloud Computing, Networking and Cyber Security. We
+              at the Department of Computer Science and Engineering, Institute
+              of Technology, Nirma University have recently established the
+              Centre of Excellence in Data Science (CoE - DS) in collaborated
+              with SUNY Binghamton University, USA.
               <button>Learn More</button>
             </div>
             <div className='right'>
-              <h1>MINeD Hackathon 2!</h1>
+              <img src={BULogo.src} className='logo'></img>
+              <a href="https://www.binghamton.edu/" target="_blank">
+                {" "}
+                Binghamton University
+              </a>{" "}
+              is a world-class institution that offers students a broad,
+              interdisciplinary education with an international perspective and
+              one of the most vibrant research programs in the nation. The
+              Thomas J. Watson College of Engineering and Applied Science
+              provides a top-ranked engineering and computer science education
+              in upstate New York. Our exceptional faculty members are both
+              innovative researchers and supportive professors. Students come to
+              Watson College from all over the world and represent a wide range
+              of backgrounds and interests. They graduate with broad-based
+              skills and the entrepreneurial spirit to succeed in fields ranging
+              from mechanical engineering to hospital operations to the law. We
+              are in the high-tech heart of upstate New York state with industry
+              partnerships, class projects and internship opportunities that
+              provide a wealth of hands-on experience for graduate and
+              undergraduate students alike.
               <button>Learn More</button>
             </div>
           </section>
