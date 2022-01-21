@@ -4,3 +4,52 @@
     background: rgb(1, 8, 27);
     color: $light;
 }
+
+label, h2, span{
+    color: black;
+}
+
+input[type=text],input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #294dc4;
+  }
+  
+  .container {
+    height:80%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .column {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  .row:after {  
+    content: "";
+    display: table;
+    clear: both;
+  }
+.contactImg {
+    width:5%;
+    height: 5%;
+}

@@ -14,6 +14,7 @@ export default function Home() {
   const [up, setup] = useState(false)
 
   useEffect(() => {
+    setposition(0)
     setcurrent(0)
     setsections(4)
     setSwipe(true)

@@ -30,9 +30,10 @@ import VoiceFlowLogo from "../public/sponsors/voiceflow.png";
 
 export default function Event() {
 
-  const { current, setcurrent, setSwipe, setsections, position, handleKeyPress } = useContext(SiteContext);
+  const { current, setcurrent, setSwipe, setsections, position, handleKeyPress, setposition } = useContext(SiteContext);
 
   useEffect(() => {
+    setposition(0)
     setcurrent(1)
     setsections(7)
     setSwipe(true)

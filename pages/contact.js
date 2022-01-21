@@ -4,11 +4,16 @@ import SiteContext from '../components/SiteContext'
 import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
 
+import NirmaLogo from "../public/Contact Us/nirma_logo.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+
 export default function Contact() {
 
-  const { current, setSwipe, setcurrent, position } = useContext(SiteContext);
+  const { current, setSwipe, setcurrent, position, setposition } = useContext(SiteContext);
 
   useEffect(() => {
+    setposition(0)
     setcurrent(3)
     setSwipe(true)
   }, [])
@@ -34,8 +39,50 @@ export default function Contact() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
-            <div className='left'></div>
-            <div className='right'></div>
+
+            <div className="container">
+              <div>
+                <h2>Contact Us</h2>
+              </div>
+              <div className="row">
+                <div className="column">
+                  <img src={NirmaLogo.src} float="right"></img><br/>
+                    <label>Institute Of Technology,<br/> Nirma University,<br/>Ahmedabad, Gujarat,
+                    India. <br/>Pincode : 382481</label>
+                </div>
+
+                <div className="column">
+                  <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' />{/* add phone icon */}
+                  <label>Dvijesh Bhatt: </label>
+                  <a href="tel:9725985288" > <span> 9725985288 </span> </a>
+                  <br/><br/>
+
+                  <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' />{/* add phone icon */}
+                  <label>Sapan Mankad: </label>
+                  <a href="tel:9824149256" > <span> 9824149256 </span> </a>
+                  <br/><br/>
+
+                  <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' /> {/* add mail icon */}
+                  
+                  <a href="mailto:coe.ds@nirmauni.ac.in" > <span> coe.ds@nirmauni.ac.in </span> </a>
+                  <br/><br/>
+                </div>
+
+                <div className="column">
+                  <form action="/action_page.php">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name.."/>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email.."/>
+              
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                    <input type="submit" value="Submit"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+
           </section>
         </div>
 

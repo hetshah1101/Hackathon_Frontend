@@ -1,13 +1,14 @@
 import Head from 'next/head';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, setposition } from 'react';
 import SiteContext from '../components/SiteContext';
 import Navbar from '../components/Navbar';
 
 export default function Register() {
 
-  const { setcurrent, setSwipe, position } = useContext(SiteContext);
+  const { setcurrent, setSwipe, position, setposition } = useContext(SiteContext);
 
   useEffect(() => {
+    setposition(0)
     setcurrent(5)
     setSwipe(false)
   }, [])
