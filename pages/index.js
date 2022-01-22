@@ -114,7 +114,6 @@ export default function Home() {
               of Technology, Nirma University have recently established the
               Centre of Excellence in Data Science (CoE - DS) in collaborated
               with SUNY Binghamton University, USA.
-              <button>Learn More</button>
               </div>
             </div>
             <div className='bottom'>
@@ -138,7 +137,6 @@ export default function Home() {
               partnerships, class projects and internship opportunities that
               provide a wealth of hands-on experience for graduate and
               undergraduate students alike.
-              <button>Learn More</button>
               </div>
             </div>
           </section>
