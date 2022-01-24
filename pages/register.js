@@ -2,291 +2,657 @@ import Head from 'next/head';
 import { useContext, useEffect, useState, setposition } from 'react';
 import SiteContext from '../components/SiteContext';
 import Navbar from '../components/Navbar';
+import { useFormik, ErrorMessage } from "formik";
+import * as Yup from 'yup'
 
-export default function Register() {
+export default function FormValidation() {
 
-  const { setcurrent, setSwipe, position, setposition } = useContext(SiteContext);
+    const [buttonClicked, setButtonClicked] = useState(false);
+    const [previousClicked, setPreviousClicked] = useState(false);
+    const [currentStep, setCurrentStep] = useState(0);
 
-  useEffect(() => {
-    setposition(0)
-    setcurrent(5)
-    setSwipe(false)
-  }, [])
+    const formik = useFormik({
+        initialValues: {
+          firstName: "",
+          lastName: "",
+          email: "",
+          userName: "",
+          password: "",
+          repassword: "",
+          mobileNo: "",
+          collegeName: "",
+          collegeCity: "",
+          collegeState: "",
+          degree: "",
+          branchName: "",
+          semester: "",
+          nameOnCertificate: "",
+          linkedIn: "",
+          github: "",
+          discord: "",
+        },
+        validationSchema: Yup.object({
+        firstName: Yup.string()
+            .max(50, "Must be 50 characters or less")
+            .required("Required"),
+        lastName: Yup.string()
+            .max(50, "Must be 50 characters or less")
+            .required("Required"),
+        collegeName: Yup.string()
+            .max(100, "Must be 100 characters or less")
+            .required("Required"),
+        userName: Yup.string()
+            .max(100, "Must be 100 characters or less")
+            .min(3, "Must be 3 characters or more")
+            .required("Required"),
+        password: Yup.string()
+            .max(15, "Must be 15 characters or less")
+            .min(8, "Must be minimum 8 characters")
+            .matches(
+              /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&_])[A-Za-z\d@$!%*#?&_]{8,}$/,
+              "Must Contain One Uppercase, One Lowercase, One Number and one special Character(@ $ ! % * # ? & _)"
+            )
+            .required("Required"),
+        repassword: Yup.string()
+            .when("password", {
+              is: (val) => !!(val && val.length > 0),
+              then: Yup.string().oneOf(
+                [Yup.ref("password")],
+                "Both password need to be the same"
+              ),
+            })
+            .required("Required"),
+        collegeCity: Yup.string()
+            .max(100, "Must be 100 characters or less")
+            .required("Required"),
+        collegeState: Yup.string()
+            .max(100, "Must be 100 characters or less")
+            .required("Required"),
+        email: Yup.string().email("Invalid email address").required("Required"),
+        mobileNo: Yup.string()
+            .matches(/^[5-9]\d{9}$/, "Invalid Mobile Number")
+            .required("Required"),
+        degree: Yup.string()
+            .max(50, "Must be 50 characters or less")
+            .required("Required"),
+        branchName: Yup.string()
+            .max(50, "Must be 50 characters or less")
+            .required("Required"),
+        semester: Yup.string()
+          .matches(/^([1-9]|1[0-6])$/, "Invalid Semester")
+          .required("Required"),
+        nameOnCertificate: Yup.string()
+            .max(100, "Must be 100 characters or less")
+            .required("Required"),
+        linkedIn: Yup.string()
+            .max(30, "Must be 30 characters or less")
+            .min(3, "Must be 3 characters or more")
+            .required("Required"),
+        github: Yup.string()
+            .max(30, "Must be 30 characters or less")
+            .min(3, "Must be 3 characters or more")
+            .required("Required"),
+        discord: Yup.string()
+            .max(30, "Must be 30 characters or less")
+            .min(3, "Must be 3 characters or more")
+            .required("Required"),
+        }),
+        onSubmit: async (values) => {
+            setButtonClicked(true);
+            // console.log("HELLO");
+            delete values.repassword;
+        },
+    });
+    const nextPage = () => {
+        if (Object.keys(formik.errors).length === 7 || previousClicked) {
+          setCurrentStep(1);
+          formik.errors.email = "";
+          formik.errors.userName = "";
+          formik.errors.password = "";
+          formik.errors.repassword = "";
+          formik.errors.linkedIn = "";
+          formik.errors.github = "";
+          formik.errors.discord = "";
+          setPreviousClicked(false);
+        } else {
+          formik.submitForm();
+        }
+      };
+    
 
-  // States for registration
-  const [firstname, setFirstName] = useState('');
-  const [lastname, setLastName] = useState('');
-  const [mobileNo, setMobileNo] = useState('');
-  const [deg, setDegree] = useState('');
-  const [branch, setBranch] = useState('');
-  const [sem, setSem] = useState('');
-  const [nameOnCertificate, setNameOnCertificate] = useState('');
-  const [clgname, setClgName] = useState('');
-  const [clgstate, setClgState] = useState('');
-  const [linkedin, setLinkedin] = useState('');
-  const [github, setGithub] = useState('');
-  const [discord, setDiscord] = useState('');
-  const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmpassword, setConfirmPassword] = useState('');
+      return (<div>
+        {currentStep==0 ? 
+        (<div>
+            <Head>
+            <title>MINeD | Register</title>
+            <meta name="description" content="Generated by create next app" />
+            <link rel="icon" href="/favicon.ico" />
+            </Head>
 
- 
-  // States for checking the errors
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
- 
-  // Handling the state change
-  const handleFirstName = (e) => {
-    setFirstName(e.target.value);
-    setSubmitted(false);
-  };
+            {/* Navigation Bar */}
+            <Navbar />
 
-  const handleLastName = (e) => {
-    setLastName(e.target.value);
-    setSubmitted(false);
-  };
+            <div id="register">
 
-  const handleMobileNo = (e) => {
-    setMobileNo(e.target.value);
-    setSubmitted(false);
-  };
+            {/* Main Content here */}
+            {/* <div id="content" > */}
+                <section className='register'>
+                <h1>User Registration</h1>  <br/>
+                    
+                    <form onSubmit={formik.handleSubmit}>
+                        <div className="form-group">
+                            <label className="label">First Name</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.firstName &&
+                                  formik.errors.firstName
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="First Name"
+                              name="firstName"
+                              onChange={formik.handleChange}
+                              value={formik.values.firstName}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.firstName &&
+                            formik.errors.firstName ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.firstName}
+                              </div>
+                            ) : null} 
 
-  const handleDegree = (e) => {
-    setDegree(e.target.value);
-    setSubmitted(false);
-  };
+                        </div>
 
-  const handleBranch= (e) => {
-    setBranch(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">Last Name</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.lastName &&
+                                  formik.errors.lastName
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="Last Name"
+                              name="lastName"
+                              onChange={formik.handleChange}
+                              value={formik.values.lastName}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.lastName &&
+                            formik.errors.lastName ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.lastName}
+                              </div>
+                            ) : null} 
+                        </div>
+                        
+                        <div className="form-group">
+                            <label className="label">Mobile Number</label>
+                            <input 
+                            type="number" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.mobileNo &&
+                                  formik.errors.mobileNo
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="Mobile No"
+                              name="mobileNo"
+                              onChange={formik.handleChange}
+                              value={formik.values.mobileNo}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.mobileNo &&
+                            formik.errors.mobileNo ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.mobileNo}
+                              </div>
+                            ) : null}
+                        </div>
 
-  const handleSem= (e) => {
-    setSem(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">College Name</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.collegeName &&
+                                  formik.errors.collegeName
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="College Name"
+                              name="collegeName"
+                              onChange={formik.handleChange}
+                              value={formik.values.collegeName}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.collegeName &&
+                            formik.errors.collegeName ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.collegeName}
+                              </div>
+                            ) : null} 
+                        </div>
 
-  const handleNameOnCertificat= (e) => {
-    setNameOnCertificate(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">College City</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.collegeCity &&
+                                  formik.errors.collegeCity
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="College City"
+                              name="collegeCity"
+                              onChange={formik.handleChange}
+                              value={formik.values.firstName}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.collegeCity &&
+                            formik.errors.collegeCity ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.collegeCity}
+                              </div>
+                            ) : null} 
+                        </div>
 
-  const handleClgName= (e) => {
-    setClgName(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">College State</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.collegeState &&
+                                  formik.errors.collegeState
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="College State"
+                              name="collegeState"
+                              onChange={formik.handleChange}
+                              value={formik.values.collegeState}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.collegeState &&
+                            formik.errors.collegeState ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.collegeState}
+                              </div>
+                            ) : null}
+                        </div>
 
-  const handleClgState= (e) => {
-    setClgState(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">Degree</label>
+                            <input type="text" className={
+                                "form-control " +
+                                `${
+                                  formik.touched.degree &&
+                                  formik.errors.degree
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="Degree"
+                              name="degree"
+                              onChange={formik.handleChange}
+                              value={formik.values.degree}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.degree &&
+                            formik.errors.degree ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.degree}
+                              </div>
+                            ) : null} 
+                        </div>
 
-  const handleLinkedin= (e) => {
-    setLinkedin(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">Branch Name</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.branchName &&
+                                  formik.errors.branchName
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="Branch Name"
+                              name="branchName"
+                              onChange={formik.handleChange}
+                              value={formik.values.branchName}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.branchName &&
+                            formik.errors.branchName ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.branchName}
+                              </div>
+                            ) : null} 
+                        </div>
 
-  const handleGithub= (e) => {
-    setGithub(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">Semester</label>
+                            <input 
+                            type="number" 
+                            className={
+                                "form-control " +
+                                `${
+                                  formik.touched.semester &&
+                                  formik.errors.semester
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="Semester"
+                              name="semester"
+                              onChange={formik.handleChange}
+                              value={formik.values.semester}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.semester &&
+                            formik.errors.semester ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.semester}
+                              </div>
+                            ) : null} 
+                        </div>
 
-  const handleDiscord= (e) => {
-    setDiscord(e.target.value);
-    setSubmitted(false);
-  };
-  
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <label className="label">Name On Certificate</label>
+                            <input type="text" className={
+                                "form-control " +
+                                `${
+                                  formik.touched.nameOnCertificate &&
+                                  formik.errors.nameOnCertificate
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                              }
+                              placeholder="Name On Certificate"
+                              name="nameOnCertificate"
+                              onChange={formik.handleChange}
+                              value={formik.values.nameOnCertificate}
+                              onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.nameOnCertificate &&
+                            formik.errors.nameOnCertificate ? (
+                              <div className="invalid-feedback">
+                                {formik.errors.nameOnCertificate}
+                              </div>
+                            ) : null} 
+                        </div>
 
-  const handleUsername = (e) => {
-    setUsername(e.target.value);
-    setSubmitted(false);
-  };
+                        <div className="form-group">
+                            <button
+                              type="button"
+                              className="btn btn-primary form-control"
+                              name="next"
+                              onClick={nextPage}
+                            >
+                              Next
+                            </button>   
+                        </div> 
+                    </form>
+                </section>
 
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
-    setSubmitted(false);
-  };
- 
-  const handleConfirmPassword = (e) => {
-    setConfirmPassword(e.target.value);
-    setSubmitted(false);
-  };
-
-  // Handling the form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (firstname === '' || lastname === '' || mobileNo === '' || deg === '' || branch === '' || sem === '' || nameOnCertificate === '' || clgname === '' || clgstate === '' || linkedin === '' || github === '' || discord === '' || email === '' || username === '' || password === '' || confirmpassword === '') {
-      setError(true);
-    } else {
-      setSubmitted(true);
-      setError(false);
-    }
-  };
- 
-  // Showing success message
-  const successMessage = () => {
-    return (
-      <div
-        className="success"
-        style={{
-          display: submitted ? '' : 'none',
-        }}>
-        <h1> {username} successfully registered!!</h1>
-      </div>
-    );
-  };
- 
-  // Showing error message if error is true
-  const errorMessage = () => {
-    return (
-      <div
-        className="error"
-        style={{
-          display: error ? '' : 'none',
-        }}>
-        <h1>Please enter all the fields</h1>
-      </div>
-    );
-  };
-
-  return (
-    <div>
-      <Head>
-        <title>MINeD | Register</title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      {/* Navigation Bar */}
-      <Navbar />
-
-      <div id="register">
-
-        {/* Main Content here */}
-        {/* <div id="content" > */}
-          <section className='register'>
-            <h1>User Registration</h1>  <br/>
-        
-            <form className='form'>
-                {/* Labels and inputs for form data */}
-                <div>
-                  <label className="label">FirstName</label>
-                  <input onChange={handleFirstName} className="input"
-                  value={firstname} type="text" /> <br/>
-                </div>
-
-                <div>
-                  <label className="label">LastName</label>
-                  <input onChange={handleLastName} className="input"
-                  value={lastname} type="text" /> <br/> 
-                </div>
-
-                <div>
-                  <label className="label">Mobile No</label>
-                  <input onChange={handleMobileNo} className="input"
-                  value={mobileNo} type="number" maxlength="10" /> <br/>  
-                </div>
-
-                <div>
-                  <label className="label">Degree</label>
-                  <input onChange={handleDegree} className="input"
-                  value={deg} type="text" /> <br/> 
-                </div>
-
-                <div>
-                  <label className="label">Branch</label>
-                  <input onChange={handleBranch} className="input"
-                  value={branch} type="text" /> <br/> 
-                </div>
-
-                <div>
-                  <label className="label">Semister</label>
-                  <input onChange={handleSem} className="input"
-                  value={sem} type="number" min="1" max="10" /> <br/> 
-                </div>
-
-                <div>
-                  <label className="label">Name On Certificate</label>
-                  <input onChange={handleNameOnCertificat} className="input"
-                  value={nameOnCertificate} type="text" /> <br/>
-                </div>
-
-                <div>
-                  <label className="label">College Name</label>
-                  <input onChange={handleClgName} className="input"
-                  value={clgname} type="text" /> <br/> 
-                </div>
-
-                <div>
-                  <label className="label">College State</label>
-                  <input onChange={handleClgState} className="input"
-                  value={clgstate} type="text" /> <br/>
-                </div>
-
-                <div>
-                  <label className="label">Linkedin Profile</label>
-                  <input onChange={handleLinkedin} className="input"
-                  value={linkedin} type="text" /> <br/>
-                </div>
-
-                <div>
-                  <label className="label">Github Profile</label>
-                  <input onChange={handleGithub} className="input"
-                  value={github} type="text" /> <br/> 
-                </div>
-
-                <div>
-                  <label className="label">Discord UserId</label>
-                  <input onChange={handleDiscord} className="input"
-                  value={discord} type="text" /> <br/>  
-                </div>
-
-                <div>
-                  <label className="label">Email</label>
-                  <input onChange={handleEmail} className="input"
-                  value={email} type="email"/>  <br/>
-                </div>
-
-                <div>
-                  <label className="label">Username</label>
-                  <input onChange={handleUsername} className="input"
-                  value={username} type="text" /> <br/>
-                </div>
-        
-                <div>
-                  <label className="label">Password</label>
-                  <input onChange={handlePassword} className="input"
-                  value={password} type="password" /> <br/>
-                </div>
-
-                <div>
-                  <label className="label">Confirm Password</label>
-                  <input onChange={handleConfirmPassword} className="input"
-                  value={confirmpassword} type="password" /> <br/>
-                </div>
-        
-                <div>
-                  <button onClick={handleSubmit} className="btn" type="submit">
-                    Submit
-                  </button>
-                </div>
-            </form>
-
-            {/* Calling to the methods */}
-            <div className="messages">
-                {errorMessage()}
-                {successMessage()}
-            </div>  <br/>
-
-          </section>
+            {/* </main> */}
         </div>
+        </div>
+        ) :
+        (
+        <div>
+            <Head>
+            <title>MINeD | Register</title>
+            <meta name="description" content="Generated by create next app" />
+            <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      {/* </main> */}
-    </div>
-  )
+            {/* Navigation Bar */}
+            <Navbar />
+
+            <div id="register">
+
+            {/* Main Content here */}
+            {/* <div id="content" > */}
+                <section className='register'>
+                 <h1>User Registration</h1>  <br/>
+                    <form onSubmit={formik.handleSubmit}>
+                        <div className="form-group">
+                            <label className="label">Email</label>
+                            <input 
+                            type="email" 
+                            className={
+                            "form-control " +
+                            `${
+                                formik.touched.email &&
+                                formik.errors.email
+                                ? "is-invalid"
+                                : ""
+                            }`
+                            }
+                            placeholder="Email"
+                            name="email"
+                            onChange={formik.handleChange}
+                            value={formik.values.email}
+                            onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.email &&
+                            formik.errors.email ? (
+                                <div className="invalid-feedback">
+                                {formik.errors.email}
+                                </div>
+                            ) : null} 
+                        </div>
+
+                        <div className="form-group">
+                            <label className="label">UserName</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                    formik.touched.userName &&
+                                    formik.errors.userName
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                            }
+                            placeholder="UserName"
+                            name="userName"
+                            onChange={formik.handleChange}
+                            value={formik.values.userName}
+                            onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.userName &&
+                            formik.errors.userName ? (
+                                <div className="invalid-feedback">
+                                {formik.errors.userName}
+                                </div>
+                            ) : null} 
+                        </div>
+
+                        <div className="form-group">
+                            <label className="label">Password</label>
+                            <input 
+                            type="password" 
+                            className={
+                                "form-control " +
+                                `${
+                                    formik.touched.password &&
+                                    formik.errors.password
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                                }
+                                placeholder="Password"
+                                name="password"
+                                onChange={formik.handleChange}
+                                value={formik.values.password}
+                                onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.password &&
+                            formik.errors.password ? (
+                                <div className="invalid-feedback">
+                                {formik.errors.password}
+                                </div>
+                            ) : null} 
+                        </div>
+
+                        <div className="form-group">
+                            <label className="label">Confirm Password</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                    formik.touched.repassword &&
+                                    formik.errors.repassword
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                                }
+                                placeholder="Confirm Password"
+                                name="repassword"
+                                onChange={formik.handleChange}
+                                value={formik.values.repassword}
+                                onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.repassword &&
+                            formik.errors.repassword ? (
+                                <div className="invalid-feedback">
+                                {formik.errors.repassword}
+                                </div>
+                            ) : null}
+                        </div>
+
+                        <div className="form-group">
+                            <label className="label">Linkedin</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                    formik.touched.linkedIn &&
+                                    formik.errors.linkedIn
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                                }
+                                placeholder="LinkedIn"
+                                name="linkedIn"
+                                onChange={formik.handleChange}
+                                value={formik.values.linkedIn}
+                                onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.linkedIn &&
+                            formik.errors.linkedIn ? (
+                                <div className="invalid-feedback">
+                                {formik.errors.linkedIn}
+                                </div>
+                            ) : null} 
+                        </div>
+
+                        <div className="form-group">
+                            <label className="label">Github</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                    formik.touched.github &&
+                                    formik.errors.github
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                                }
+                                placeholder="GitHub "
+                                name="github"
+                                onChange={formik.handleChange}
+                                value={formik.values.github}
+                                onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.github &&
+                            formik.errors.github ? (
+                                <div className="invalid-feedback">
+                                {formik.errors.github}
+                                </div>
+                            ) : null} 
+                        </div>
+
+                        <div className="form-group">
+                            <label className="label">Discord</label>
+                            <input 
+                            type="text" 
+                            className={
+                                "form-control " +
+                                `${
+                                    formik.touched.discord &&
+                                    formik.errors.discord
+                                    ? "is-invalid"
+                                    : ""
+                                }`
+                                }
+                                placeholder="Discord"
+                                name="discord"
+                                onChange={formik.handleChange}
+                                value={formik.values.discord}
+                                onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.discord &&
+                            formik.errors.discord ? (
+                                <div className="invalid-feedback">
+                                {formik.errors.discord}
+                                </div>
+                            ) : null} 
+                        </div>
+
+                        <div className="form-group">
+                        <input
+                              type="button"
+                              className="btn btn-secondary form-control"
+                              value="previous"
+                              name="prev"
+                              onClick={() => {
+                                setCurrentStep(0);
+                                setPreviousClicked(true);
+                              }}
+                            />   
+                        </div>
+
+                        <div className="form-group">
+                            <button type="submit">Submit</button>
+                        </div> 
+                    </form>
+                    
+                </section>
+            {/* </main> */}
+            </div>
+        </div>
+    )}
+    </div>)
 }
