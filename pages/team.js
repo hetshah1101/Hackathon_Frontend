@@ -72,7 +72,7 @@ export default function Team() {
                 <a href='https://www.linkedin.com/in/htrap94/' target="_blank">
                 <div className='card'>
                   <img src={parth.src} className='profile'/>
-                  <h3>Parth Agrawal <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3> 
+                  <h3>Parth Agrawal <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
                   <p>GCP 1x Data Engineer</p>
 
                 </div>
@@ -81,7 +81,7 @@ export default function Team() {
                 <a href='https://www.linkedin.com/in/jaldeep-vasavada-4545602a/' target="_blank">
                 <div className='card'>
                   <img src={jaldeep.src} className='profile'/>
-                  <h3>Jaldeep Vasavada <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3> 
+                  <h3>Jaldeep Vasavada <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
                   <p>Sr.SDE at Microsoft</p>
                 </div>
                 </a>
@@ -89,7 +89,7 @@ export default function Team() {
                 <a href='https://www.linkedin.com/in/jay-shah-delivery/' target="_blank">
                 <div className='card'>
                   <img src={jay.src} className='profile'/>
-                  <h3>Jay Shah <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Jay Shah <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   <p>Principal Consultant at InidaNIC</p>
                 </div>
                 </a>
@@ -105,98 +105,98 @@ export default function Team() {
 
             <div className='team'> 
               <h1>Team</h1>
-              <div class="grid-container">
-                <div class="grid-item">
+              <div className="grid-container">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/rajesh-patel-b5144256/' target="_blank">
                   <img src={rnpatel.src} className='profile'></img>
-                  <h3>Dr. Rajesh Patel <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Dr. Rajesh Patel <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   
                   <h5>Advisor</h5>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/sang-won-yoon-bb886722/' target="_blank">
                   <img src={dryoon.src} className='profile'></img>
-                  <h3>Dr. Sang Won Yoon <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Dr. Sang Won Yoon <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   
                   <h5>Advisor</h5>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/dr-madhuri-gujar-bhavsar-3bb61a6/' target="_blank">
                   <img src={drmadhuribhavsar.src} className='profile'></img>
-                  <h3>Dr. Madhuri Bhavsar <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Dr. Madhuri Bhavsar <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   
                   <h5>Advisor</h5>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/sapan-mankad-4815601a/' target="_blank">
                   <img src={sapanmakad.src} className='profile'></img>
-                  <h3>Sapan Mankad <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Sapan Mankad <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   
                   <h5>Coordinator</h5>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/dvijesh-bhatt-76283920/' target="_blank">
                   <img src={dwijeshbhatt.src} className='profile'></img>
-                  <h3>Dvijesh Bhatt <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Dvijesh Bhatt <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   
                   <h5>Coordinator</h5>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/priyank-thakkar-4701689b/' target="_blank">
                   <img src={priyankthakker.src} className='profile'></img>
-                  <h3>Priyank Thakkar <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Priyank Thakkar <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/dr-vijay-ukani-705a48a8/' target="_blank">
                     <img src={vijayukani.src} className='profile'></img>
-                    <h3>Vijay Ukani <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Vijay Ukani <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://in.linkedin.com/in/swati-jain-54845311' target="_blank">
                     <img src={swatijain.src} className='profile'></img>
-                    <h3>Swati Jain <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Swati Jain <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://technology.nirmauni.ac.in/author/ankit/' target="_blank">
                     <img src={ankitthakkar.src} className='profile'></img>
-                    <h3>Ankit Thakkar <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Ankit Thakkar <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/gaurang-raval-919b0017/' target="_blank">
                     <img src={gaurangraval.src} className='profile'></img>
-                    <h3>Gaurang Raval <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Gaurang Raval <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://in.linkedin.com/in/zunnun-narmawala-54690b57' target="_blank">
                     <img src={zunnunnarmawala.src} className='profile'></img>
-                    <h3>Zunnun Narmawala <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Zunnun Narmawala <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                   <a href='https://technology.nirmauni.ac.in/author/jaiprakash/' target="_blank">
                     <img src={jaiprakashverma.src} className='profile'></img>
-                    <h3>JaiPrakash Verma <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>JaiPrakash Verma <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
               </div> 
@@ -209,33 +209,33 @@ export default function Team() {
 
             <div className='developers'> 
               <h1>Developers</h1>
-              <div class="grid-container">
+              <div className="grid-container">
 
-                <div class="grid-item">
+                <div className="grid-item">
                 <a href='https://www.linkedin.com/in/hetshah1101/' target="_blank">
                   <img src={hetshah.src} className='profile'></img>
-                  <h3>Het Shah <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Het Shah <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                 <a href='https://www.linkedin.com/in/janmejay-shastri/' target="_blank">
                   <img src={janmejayshastri.src} className='profile'></img>
-                  <h3>Janmejay Shastri <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Janmejay Shastri <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
                   </a>
                 </div>
                 
-                <div class="grid-item">
+                <div className="grid-item">
                 <a href='https://www.linkedin.com/in/vishal-chaudhary-95b2571a6' target="_blank">
                   <img src={vishalchaudhary.src} className='profile'></img>
-                  <h3>Vishal Chaudhary <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Vishal Chaudhary <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
                   </a>
                 </div>
 
-                <div class="grid-item">
+                <div className="grid-item">
                 <a href='https://www.linkedin.com/in/kuldip-chaudhari-726b651a3' target="_blank">
                   <img src={kuldipchaudhari.src} className='profile'></img>
-                  <h3>Kuldip Chaudhari <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Kuldip Chaudhari <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
                   </a>
                 </div>
               </div>
