@@ -55,7 +55,7 @@ export default function Home() {
             <div className='header'>
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
-              <h1>Tagline Goes Here!</h1>
+              {/* <h1>Tagline Goes Here!</h1> */}
               <button onClick={() => {
                 setup(true);
                 setposition(position+1);
