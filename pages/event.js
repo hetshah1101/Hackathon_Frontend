@@ -30,7 +30,7 @@ import VoiceFlowLogo from "../public/sponsors/voiceflow.png";
 
 export default function Event() {
 
-  const { current, setcurrent, setSwipe, setsections, position, handleKeyPress, setposition } = useContext(SiteContext);
+  const { current, setcurrent, scrollFunc, setSwipe, setsections, position, handleKeyPress, setposition } = useContext(SiteContext);
 
   useEffect(() => {
     setposition(0)
@@ -43,6 +43,7 @@ export default function Event() {
     <div
       onKeyDown={handleKeyPress}
       tabIndex="0"
+      onWheel={scrollFunc}
     >
       <Head>
         <title>MINeD | Event</title>

@@ -28,6 +28,24 @@ export default function MyApp({ Component, pageProps }) {
       setposition(position+1)
     }
   }
+  const [scroll, setscroll] = useState(true)
+  const scrollFunc = e => {
+    // console.log(e)
+    if(scroll) {
+      if(e.deltaY < 0) {
+        if(position>0) {
+          setposition(position-1)
+        }
+        setscroll(false)
+      }
+      else if(e.deltaY > 0) {
+        if(position<sections-1) {
+          setposition(position+1)
+        }
+        setscroll(false)
+      }
+    }
+  }
   /*
   ----------------------------------
   Next/Previous Page Slide
@@ -64,6 +82,11 @@ export default function MyApp({ Component, pageProps }) {
  const [position, setposition] = useState(0)
  const [sections, setsections] = useState(0)
  const [swipe, setSwipe] = useState(true)
+ useEffect(() => {
+  setTimeout(()=>{
+    setscroll(true)
+  },2000)
+},[position])
 
   return (
     <AnimatePresence>
@@ -95,7 +118,9 @@ export default function MyApp({ Component, pageProps }) {
           setsections,
           swipe,
           setSwipe,
-          handleKeyPress
+          handleKeyPress,
+          scrollFunc,
+          setscroll
         }} >
           <Component {...pageProps} />
         </SiteContext.Provider>
