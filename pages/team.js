@@ -25,7 +25,7 @@ import jaiprakashverma from '../public/profiles/jai_prakash_varma.jpg';
 import hetshah from '../public/developers/HetShah.jpg';
 import janmejayshastri from '../public/developers/janmejayshastri.jpg';
 import vishalchaudhary from '../public/developers/vishalchaudhary.jpeg';
-import kuldipchaudhari from '../public/developers/vishalchaudhary.jpeg'
+import kuldipchaudhari from '../public/developers/kuldipchaudhari.jpg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
