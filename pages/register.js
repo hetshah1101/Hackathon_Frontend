@@ -5,12 +5,15 @@ import Navbar from '../components/Navbar';
 import { useFormik, ErrorMessage } from "formik";
 import * as Yup from 'yup'
 
-export default function FormValidation() {
-
+export default function FormValidation(props) {
+    const { current,setSwipe, setcurrent, setsections, handleKeyPress, position, setposition } = useContext(SiteContext);
     const [buttonClicked, setButtonClicked] = useState(false);
     const [previousClicked, setPreviousClicked] = useState(false);
     const [currentStep, setCurrentStep] = useState(0);
-
+    
+    useEffect(()=>{
+      setSwipe(false)
+    },[])
     const formik = useFormik({
         initialValues: {
           firstName: "",
@@ -130,7 +133,7 @@ export default function FormValidation() {
             </Head>
 
             {/* Navigation Bar */}
-            <Navbar />
+            <Navbar hidePage={true} />
 
             <div id="register">
 
@@ -159,12 +162,13 @@ export default function FormValidation() {
                               value={formik.values.firstName}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.firstName &&
                             formik.errors.firstName ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.firstName}
-                              </div>
+                                formik.errors.firstName
                             ) : null} 
+                              </div>
 
                         </div>
 
@@ -187,12 +191,13 @@ export default function FormValidation() {
                               value={formik.values.lastName}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.lastName &&
                             formik.errors.lastName ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.lastName}
-                              </div>
+                                formik.errors.lastName
                             ) : null} 
+                              </div>
                         </div>
                         
                         <div className="form-group">
@@ -214,12 +219,13 @@ export default function FormValidation() {
                               value={formik.values.mobileNo}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.mobileNo &&
                             formik.errors.mobileNo ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.mobileNo}
-                              </div>
+                                formik.errors.mobileNo
                             ) : null}
+                              </div>
                         </div>
 
                         <div className="form-group">
@@ -241,12 +247,13 @@ export default function FormValidation() {
                               value={formik.values.collegeName}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.collegeName &&
                             formik.errors.collegeName ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.collegeName}
-                              </div>
+                                formik.errors.collegeName
                             ) : null} 
+                              </div>
                         </div>
 
                         <div className="form-group">
@@ -268,12 +275,12 @@ export default function FormValidation() {
                               value={formik.values.firstName}
                               onBlur={formik.handleBlur}
                             />
+                            <div className="invalid-feedback">
                             {formik.touched.collegeCity &&
                             formik.errors.collegeCity ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.collegeCity}
-                              </div>
+                                formik.errors.collegeCity
                             ) : null} 
+                            </div>
                         </div>
 
                         <div className="form-group">
@@ -295,12 +302,13 @@ export default function FormValidation() {
                               value={formik.values.collegeState}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.collegeState &&
                             formik.errors.collegeState ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.collegeState}
-                              </div>
+                                formik.errors.collegeState
                             ) : null}
+                              </div>
                         </div>
 
                         <div className="form-group">
@@ -320,12 +328,13 @@ export default function FormValidation() {
                               value={formik.values.degree}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.degree &&
                             formik.errors.degree ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.degree}
-                              </div>
+                                formik.errors.degree
                             ) : null} 
+                              </div>
                         </div>
 
                         <div className="form-group">
@@ -347,12 +356,13 @@ export default function FormValidation() {
                               value={formik.values.branchName}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.branchName &&
                             formik.errors.branchName ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.branchName}
-                              </div>
+                                formik.errors.branchName
                             ) : null} 
+                              </div>
                         </div>
 
                         <div className="form-group">
@@ -374,12 +384,13 @@ export default function FormValidation() {
                               value={formik.values.semester}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.semester &&
                             formik.errors.semester ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.semester}
-                              </div>
+                                formik.errors.semester
                             ) : null} 
+                              </div>
                         </div>
 
                         <div className="form-group">
@@ -399,12 +410,13 @@ export default function FormValidation() {
                               value={formik.values.nameOnCertificate}
                               onBlur={formik.handleBlur}
                             />
+                            
+                              <div className="invalid-feedback">
                             {formik.touched.nameOnCertificate &&
                             formik.errors.nameOnCertificate ? (
-                              <div className="invalid-feedback">
-                                {formik.errors.nameOnCertificate}
+                                formik.errors.nameOnCertificate
+                            ) : null}
                               </div>
-                            ) : null} 
                         </div>
 
                         <div className="form-group">
@@ -461,12 +473,13 @@ export default function FormValidation() {
                             value={formik.values.email}
                             onBlur={formik.handleBlur}
                             />
+                            
+                                <div className="invalid-feedback">
                             {formik.touched.email &&
                             formik.errors.email ? (
-                                <div className="invalid-feedback">
-                                {formik.errors.email}
-                                </div>
+                                formik.errors.email
                             ) : null} 
+                                </div>
                         </div>
 
                         <div className="form-group">
@@ -488,12 +501,13 @@ export default function FormValidation() {
                             value={formik.values.userName}
                             onBlur={formik.handleBlur}
                             />
+                            
+                                <div className="invalid-feedback">
                             {formik.touched.userName &&
                             formik.errors.userName ? (
-                                <div className="invalid-feedback">
-                                {formik.errors.userName}
-                                </div>
+                                formik.errors.userName
                             ) : null} 
+                                </div>
                         </div>
 
                         <div className="form-group">
@@ -515,12 +529,13 @@ export default function FormValidation() {
                                 value={formik.values.password}
                                 onBlur={formik.handleBlur}
                             />
+                            
+                                <div className="invalid-feedback">
                             {formik.touched.password &&
                             formik.errors.password ? (
-                                <div className="invalid-feedback">
-                                {formik.errors.password}
-                                </div>
+                                formik.errors.password
                             ) : null} 
+                                </div>
                         </div>
 
                         <div className="form-group">
@@ -542,12 +557,13 @@ export default function FormValidation() {
                                 value={formik.values.repassword}
                                 onBlur={formik.handleBlur}
                             />
+                            
+                                <div className="invalid-feedback">
                             {formik.touched.repassword &&
                             formik.errors.repassword ? (
-                                <div className="invalid-feedback">
-                                {formik.errors.repassword}
-                                </div>
+                                formik.errors.repassword
                             ) : null}
+                                </div>
                         </div>
 
                         <div className="form-group">
@@ -569,12 +585,13 @@ export default function FormValidation() {
                                 value={formik.values.linkedIn}
                                 onBlur={formik.handleBlur}
                             />
+                            
+                                <div className="invalid-feedback">
                             {formik.touched.linkedIn &&
                             formik.errors.linkedIn ? (
-                                <div className="invalid-feedback">
-                                {formik.errors.linkedIn}
-                                </div>
+                                formik.errors.linkedIn
                             ) : null} 
+                                </div>
                         </div>
 
                         <div className="form-group">
@@ -596,12 +613,13 @@ export default function FormValidation() {
                                 value={formik.values.github}
                                 onBlur={formik.handleBlur}
                             />
+                            
+                                <div className="invalid-feedback">
                             {formik.touched.github &&
                             formik.errors.github ? (
-                                <div className="invalid-feedback">
-                                {formik.errors.github}
-                                </div>
+                                formik.errors.github
                             ) : null} 
+                                </div>
                         </div>
 
                         <div className="form-group">
@@ -623,12 +641,13 @@ export default function FormValidation() {
                                 value={formik.values.discord}
                                 onBlur={formik.handleBlur}
                             />
+                            
+                                <div className="invalid-feedback">
                             {formik.touched.discord &&
                             formik.errors.discord ? (
-                                <div className="invalid-feedback">
-                                {formik.errors.discord}
-                                </div>
+                                formik.errors.discord
                             ) : null} 
+                                </div>
                         </div>
 
                         <div className="form-group">

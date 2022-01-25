@@ -33,7 +33,7 @@ section.register {
     align-items: center;
 }
 
-.form { 
+form { 
     width:70%;
     margin: 2vw auto 0 auto;
     font-size: 1.3vw;
@@ -45,24 +45,36 @@ section.register {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    div {
-        width: 50%;
+    .form-group {
+        width: 40%;
         padding: 0.5vw 3vw 0.5vw 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         text-align: left;
-        margin: 0.5vw 0;
+        margin: 0.3vw 0;
         label {
             color: white;
-            width: 60%;
+            width: 100%;
             font-size: 1vw;
             text-align: left;
             margin-bottom: 0.4vw;
         }
         input {
-            width: 60%;
+            width: 100%;
+            padding: 0.5vw 1vw;
+            background: white;
+            border: none;
+            margin: 0;
+        }
+        .invalid-feedback {
+            font-size: 0.75vw;
+            width: 100%;
+            font-weight: 700;
+            letter-spacing: 0.05vw;
+            color: rgb(180,180,180);
+            height: 1vw;
         }
         button {
             width: 30%;
