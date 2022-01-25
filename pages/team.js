@@ -24,6 +24,8 @@ import jaiprakashverma from '../public/profiles/jai_prakash_varma.jpg';
 
 import hetshah from '../public/developers/HetShah.jpg';
 import janmejayshastri from '../public/developers/janmejayshastri.jpg';
+import vishalchaudhary from '../public/developers/vishalchaudhary.jpeg';
+import kuldipchaudhari from '../public/developers/vishalchaudhary.jpeg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -115,7 +117,7 @@ export default function Team() {
                 <div class="grid-item">
                   <a href='https://www.linkedin.com/in/sang-won-yoon-bb886722/' target="_blank">
                   <img src={dryoon.src} className='profile'></img>
-                  <h3>Dr. Sang Won Yoon<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Dr. Sang Won Yoon <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   
                   <h5>Advisor</h5>
                   </a>
@@ -124,7 +126,7 @@ export default function Team() {
                 <div class="grid-item">
                   <a href='https://www.linkedin.com/in/dr-madhuri-gujar-bhavsar-3bb61a6/' target="_blank">
                   <img src={drmadhuribhavsar.src} className='profile'></img>
-                  <h3>Dr. Madhuri Bhavsar<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Dr. Madhuri Bhavsar <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   
                   <h5>Advisor</h5>
                   </a>
@@ -133,7 +135,7 @@ export default function Team() {
                 <div class="grid-item">
                   <a href='https://www.linkedin.com/in/sapan-mankad-4815601a/' target="_blank">
                   <img src={sapanmakad.src} className='profile'></img>
-                  <h3>Sapan Mankad<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Sapan Mankad <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   
                   <h5>Coordinator</h5>
                   </a>
@@ -142,7 +144,7 @@ export default function Team() {
                 <div class="grid-item">
                   <a href='https://www.linkedin.com/in/dvijesh-bhatt-76283920/' target="_blank">
                   <img src={dwijeshbhatt.src} className='profile'></img>
-                  <h3>Dvijesh Bhatt<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                  <h3>Dvijesh Bhatt <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   
                   <h5>Coordinator</h5>
                   </a>
@@ -151,49 +153,49 @@ export default function Team() {
                 <div class="grid-item">
                   <a href='https://www.linkedin.com/in/priyank-thakkar-4701689b/' target="_blank">
                   <img src={priyankthakker.src} className='profile'></img>
-                  <h3>Priyank Thakkar<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Priyank Thakkar <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
                   </a>
                 </div>
 
                 <div class="grid-item">
                   <a href='https://www.linkedin.com/in/dr-vijay-ukani-705a48a8/' target="_blank">
                     <img src={vijayukani.src} className='profile'></img>
-                    <h3>Vijay Ukani<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Vijay Ukani <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   </a>
                 </div>
 
                 <div class="grid-item">
                   <a href='https://in.linkedin.com/in/swati-jain-54845311' target="_blank">
                     <img src={swatijain.src} className='profile'></img>
-                    <h3>Swati Jain<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Swati Jain <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   </a>
                 </div>
 
                 <div class="grid-item">
                   <a href='https://technology.nirmauni.ac.in/author/ankit/' target="_blank">
                     <img src={ankitthakkar.src} className='profile'></img>
-                    <h3>Ankit Thakkar<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Ankit Thakkar <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   </a>
                 </div>
 
                 <div class="grid-item">
                   <a href='https://www.linkedin.com/in/gaurang-raval-919b0017/' target="_blank">
                     <img src={gaurangraval.src} className='profile'></img>
-                    <h3>Gaurang Raval<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Gaurang Raval <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   </a>
                 </div>
 
                 <div class="grid-item">
                   <a href='https://in.linkedin.com/in/zunnun-narmawala-54690b57' target="_blank">
                     <img src={zunnunnarmawala.src} className='profile'></img>
-                    <h3>Zunnun Narmawala<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>Zunnun Narmawala <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   </a>
                 </div>
 
                 <div class="grid-item">
                   <a href='https://technology.nirmauni.ac.in/author/jaiprakash/' target="_blank">
                     <img src={jaiprakashverma.src} className='profile'></img>
-                    <h3>JaiPrakash Verma<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
+                    <h3>JaiPrakash Verma <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>
                   </a>
                 </div>
               </div> 
@@ -211,28 +213,28 @@ export default function Team() {
                 <div class="grid-item">
                 <a href='https://www.linkedin.com/in/hetshah1101/' target="_blank">
                   <img src={hetshah.src} className='profile'></img>
-                  <h3>Het Shah<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Het Shah <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
                   </a>
                 </div>
 
                 <div class="grid-item">
                 <a href='https://www.linkedin.com/in/janmejay-shastri/' target="_blank">
                   <img src={janmejayshastri.src} className='profile'></img>
-                  <h3>Janmejay Shastri<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                  <h3>Janmejay Shastri <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
                   </a>
                 </div>
                 
                 <div class="grid-item">
-                <a href='https://www.linkedin.com/in/hetshah1101/' target="_blank">
-                  <img src={hetshah.src} className='profile'></img>
-                  <h3>Het Shah<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                <a href='https://www.linkedin.com/in/vishal-chaudhary-95b2571a6' target="_blank">
+                  <img src={vishalchaudhary.src} className='profile'></img>
+                  <h3>Vishal Chaudhary <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
                   </a>
                 </div>
 
                 <div class="grid-item">
-                <a href='https://www.linkedin.com/in/hetshah1101/' target="_blank">
-                  <img src={hetshah.src} className='profile'></img>
-                  <h3>Het Shah<FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
+                <a href='https://www.linkedin.com/in/kuldip-chaudhari-726b651a3' target="_blank">
+                  <img src={kuldipchaudhari.src} className='profile'></img>
+                  <h3>Kuldip Chaudhari <FontAwesomeIcon icon={faLinkedin} class='logo' /></h3>                  
                   </a>
                 </div>
               </div>

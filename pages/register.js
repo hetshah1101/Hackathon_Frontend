@@ -272,7 +272,7 @@ export default function FormValidation(props) {
                               placeholder="College City"
                               name="collegeCity"
                               onChange={formik.handleChange}
-                              value={formik.values.firstName}
+                              value={formik.values.collegeCity}
                               onBlur={formik.handleBlur}
                             />
                             <div className="invalid-feedback">
@@ -541,7 +541,7 @@ export default function FormValidation(props) {
                         <div className="form-group">
                             <label className="label">Confirm Password</label>
                             <input 
-                            type="text" 
+                            type="password" 
                             className={
                                 "form-control " +
                                 `${
