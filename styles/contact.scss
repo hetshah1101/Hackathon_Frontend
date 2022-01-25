@@ -9,6 +9,16 @@
       margin: 0 auto;
     }
 }
+.column {
+  form {
+    width: 100%;
+    margin: 0;
+    label, input{
+      width: 100%;
+      font-size: 1vw;
+    }
+  }
+}
 
 label, h2, span{
     color: black;
@@ -52,7 +62,7 @@ input[type=text],input[type=email], select, textarea {
     float: left;
     width: 30%;
     margin: 0;
-    padding: 2vw;
+    padding: 2vw 0;
     label {
       line-height: 110%;
     }

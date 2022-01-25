@@ -69,12 +69,12 @@ export default function Contact() {
 
                 <div className="column">
                   <form action="/action_page.php">
-                    <label for="name">Name</label>
+                    <label htmlFor="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your name.."/>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email.."/>
               
-                    <label for="subject">Subject</label>
+                    <label htmlFor="subject">Subject</label>
                     <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
                     <input type="submit" value="Submit"/>
                   </form>
