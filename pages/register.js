@@ -20,8 +20,8 @@ export default function FormValidation(props) {
           lastName: "",
           email: "",
           userName: "",
-          password: "",
-          repassword: "",
+          //password: "",
+          //repassword: "",
           mobileNo: "",
           collegeName: "",
           collegeCity: "",
@@ -107,12 +107,12 @@ export default function FormValidation(props) {
         },
     });
     const nextPage = () => {
-        if (Object.keys(formik.errors).length === 7 || previousClicked) {
+        if (Object.keys(formik.errors).length === 5 || previousClicked) {
           setCurrentStep(1);
           formik.errors.email = "";
           formik.errors.userName = "";
-          formik.errors.password = "";
-          formik.errors.repassword = "";
+          //formik.errors.password = "";
+          //formik.errors.repassword = "";
           formik.errors.linkedIn = "";
           formik.errors.github = "";
           formik.errors.discord = "";
@@ -510,6 +510,7 @@ export default function FormValidation(props) {
                                 </div>
                         </div>
 
+                      {/*
                         <div className="form-group">
                             <label className="label">Password</label>
                             <input 
@@ -557,7 +558,7 @@ export default function FormValidation(props) {
                                 value={formik.values.repassword}
                                 onBlur={formik.handleBlur}
                             />
-                            
+                      
                                 <div className="invalid-feedback">
                             {formik.touched.repassword &&
                             formik.errors.repassword ? (
@@ -565,7 +566,7 @@ export default function FormValidation(props) {
                             ) : null}
                                 </div>
                         </div>
-
+                      */}
                         <div className="form-group">
                             <label className="label">Linkedin</label>
                             <input 
