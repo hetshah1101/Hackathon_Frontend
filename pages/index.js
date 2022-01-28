@@ -45,12 +45,13 @@ export default function Home() {
           name="keywords"
           content="MINeD Hackathon,MINeD,Hackathon,mined Hackathon,mined,mined 2022,mined hackathon 2022"
         />
-      <meta 
-        name="author" 
-        content="Centre of Excellence in Data Science at Nirma University" />
-      <meta 
-        name="description" 
-        content="MINeD is a national level Hackathon organized by Centre of Excellence in Data Science at Nirma University in collabration with SUNY Binghamton University where you can participate, innovate and win exciting prizes."></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta 
+          name="author" 
+          content="Centre of Excellence in Data Science at Nirma University" />
+        <meta 
+          name="description" 
+          content="MINeD is a national level Hackathon organized by Centre of Excellence in Data Science at Nirma University in collabration with SUNY Binghamton University where you can participate, innovate and win exciting prizes."></meta>
       </Head>
 
       {/* Navigation Bar */}
