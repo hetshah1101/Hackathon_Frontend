@@ -5,13 +5,14 @@ import Navbar from '../components/Navbar';
 import { useFormik, ErrorMessage } from "formik";
 import * as Yup from 'yup'
 import axios from 'axios'
+import { useRouter } from 'next/router';
 
 export default function FormValidation(props) {
     const { current,setSwipe, setcurrent, setsections, handleKeyPress, position, setposition } = useContext(SiteContext);
     const [buttonClicked, setButtonClicked] = useState(false);
     const [previousClicked, setPreviousClicked] = useState(false);
     const [currentStep, setCurrentStep] = useState(0);
-    
+    const router = useRouter();
     useEffect(()=>{
       setSwipe(false)
     },[])
@@ -107,6 +108,7 @@ export default function FormValidation(props) {
             axios.post(`https://apis.mined2022.tech/api/registrations`, values)
             .then(res => {
               alert(res.data.message)
+              router.push('/')
             })
             .catch(err => {
               alert('Something Went Wrong!')

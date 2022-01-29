@@ -35,7 +35,7 @@ export default function Event() {
   useEffect(() => {
     setposition(0)
     setcurrent(1)
-    setsections(7)
+    setsections(6)
     setSwipe(true)
   }, [])
 
@@ -91,7 +91,7 @@ export default function Event() {
             </div>
           </section>
           
-          <section style={{
+          <section id="desktop" style={{
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='carousel'>
@@ -101,6 +101,49 @@ export default function Event() {
                 slidesToShow={3}
                 slidesToScroll={2}
                 speed={1000}
+                id="desktop"
+                wrapAround
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
+                )}
+              >
+                <div className='item'>
+                  <h3>Healthcare</h3><img src={health.src} /><br/>
+                  <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
+                </div>
+                <div className='item'>
+                  <h3>Agriculture</h3><img src={agriculture.src} /><br/>
+                  <span>Agriculture is playing a vital role in India's economy. Bringing the technological solution in the framing industry can improve the cultivation and productivity of crops. Recently, innovation in the filed of Bio-Technologies and Artificial intelligence brings resolution in the farming industry.</span>
+                </div>
+                <div className='item'>
+                  <h3>Service to Society</h3><img src={service.src} /><br/>
+                  <span>Bring the technologies in to real like can solve many societal problems. A country like India is facing many challenges like person/woman safety and better living for the elderly and handicaps. Find out a solution that makes the life of every human being better.</span>
+                </div>
+                <div className='item'>
+                  <h3>Automation</h3><img src={automation.src} /><br/>
+                  <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT &#38; cognitive computing help to design a better manufacturing process for any industry.</span>
+                </div>
+                <div className='item'>
+                  <h3>Intelligent Transportation Systems</h3><img src={transport.src} /><br/>
+                  <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
+                </div>
+              </Carousel>
+            </div>
+          </section>
+          <section id="mobile" style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='carousel'>
+              <h1>Tracks</h1>
+              <Carousel
+                className='slideshow'
+                slidesToShow={1}
+                slidesToScroll={1}
+                speed={1000}
+                id="desktop"
                 wrapAround
                 renderCenterLeftControls={({ previousSlide }) => (
                   <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
@@ -154,7 +197,7 @@ export default function Event() {
                 {/* Day 1 Table */}
                 <table className="table">
                   <tbody>
-                  <th colspan='2'>Day 1</th>
+                  <th colSpan='2'>Day 1</th>
                     <tr>
                       <td className="time">8:40 AM</td>
                       <td className="content">On Site Registration</td>
@@ -202,7 +245,7 @@ export default function Event() {
                 {/* Day 2 Table */}
                 <table className="table">
                   <tbody>
-                    <th colspan='2'>Day 2</th>
+                    <th colSpan='2'>Day 2</th>
                     <tr>
                       <td className="time">12:00 AM - 1:00 AM</td>
                       <td className="content">Fun Activity</td>
@@ -282,7 +325,7 @@ export default function Event() {
             {/* <h1>Sponsors</h1> <br/> */}
             <table className='titleSponsors'>
               <tr>
-                <th colspan='2'>Title sponsors</th>
+                <th colSpan='2'>Title sponsors</th>
               </tr>
               <tr>
                 <td><a href="http://www.nirmauni.ac.in" target="_blank">
@@ -296,7 +339,7 @@ export default function Event() {
 
             <table className='goldSponsors'>
               <tr>
-                <th colspan='3'>Gold sponsors</th>
+                <th colSpan='3'>Gold sponsors</th>
               </tr>
               <tr>
                 <td><a href="https://www.indianic.com/" target="_blank">
@@ -313,7 +356,7 @@ export default function Event() {
 
             <table className='partners'>
               <tr>
-                <th colspan='3'>Partners</th>
+                <th colSpan='3'>Partners</th>
               </tr>
               <tr>
                 <td><a href="https://www.wolfram.com/" target="_blank">
@@ -436,13 +479,13 @@ export default function Event() {
             </div>
           </section>
 
-          <section style={{
+          {/* <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='center'> 
             <h1>Winners</h1>
             </div>
-          </section>
+          </section> */}
         </div>
 
       </main>

@@ -23,7 +23,12 @@
     }
     
 }
-
+#desktop {
+    display: flex !important;
+}
+#mobile {
+    display: none !important;
+}
 .carousel, .carousel2 {
     width: 100%;
     h1 {
@@ -331,7 +336,12 @@
         }
         
     }
-    
+    #desktop {
+        display: none !important;
+    }
+    #mobile {
+        display: flex !important;
+    }
     .carousel, .carousel2 {
         width: 100%;
         h1 {

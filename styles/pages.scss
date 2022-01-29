@@ -39,6 +39,36 @@ main {
     }
 }
 
+@media screen and (max-width: 700px) {
+    #slider {
+        width: 5%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        #line {
+            width: 0.1vw;
+            height: 80vh;
+            position: absolute;
+            background: $light;
+        }
+        .elem {
+            transform: scale(1);
+            width: 2vw;
+            height: 2vw;
+            background: $shadow;
+            border-radius: 0.1vw;
+        }
+        .act {
+            width: 3.5vw;
+            height: 3.5vw;
+            border-radius: 0.3vw;
+            background: $light;
+        }
+    }   
+}
+
 #content {
     width: 90%;
     height: 80vh;
