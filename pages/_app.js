@@ -79,14 +79,52 @@ export default function MyApp({ Component, pageProps }) {
   Next/Previous Internal Scroll
   ----------------------------------
   */
- const [position, setposition] = useState(0)
- const [sections, setsections] = useState(0)
- const [swipe, setSwipe] = useState(true)
- useEffect(() => {
-  setTimeout(()=>{
-    setscroll(true)
-  },2000)
-},[position])
+  const [position, setposition] = useState(0)
+  const [sections, setsections] = useState(0)
+  const [swipe, setSwipe] = useState(true)
+  useEffect(() => {
+    setTimeout(()=>{
+      setscroll(true)
+    },2000)
+  },[position])
+
+  const getTouches = e => {
+    return e.touches || e.originalEvent.touches
+  }
+
+  const handleTouchStart = e => {
+    const first = getTouches(e)[0]
+    xDown = first.clientX
+    yDown = first.clientY
+  }
+  const handleTouchMove = e => {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = e.touches[0].clientX;                                    
+    var yUp = e.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                        
+    if ( Math.abs( yDiff ) > Math.abs( xDiff ) ) {
+      if(yDiff > 0) {
+        if(position>0) {
+          setposition(position-1)
+        }
+        setscroll(false)
+      }
+      else if(yDiff < 0) {
+        if(position<sections-1) {
+          setposition(position+1)
+        }
+        setscroll(false)
+      }                       
+    }
+    xDown = null;
+    yDown = null;      
+  }
 
   return (
     <AnimatePresence>
@@ -120,7 +158,9 @@ export default function MyApp({ Component, pageProps }) {
           setSwipe,
           handleKeyPress,
           scrollFunc,
-          setscroll
+          setscroll,
+          handleTouchMove,
+          handleTouchStart
         }} >
           <Component {...pageProps} />
         </SiteContext.Provider>

@@ -13,7 +13,7 @@ import BULogo from '../public/Logos/Binghamton_University_logo.png';
 
 export default function Home() {
 
-  const { setcurrent, scrollFunc, setSwipe, setsections, setposition, position, handleKeyPress } = useContext(SiteContext);
+  const { setcurrent, handleTouchStart, handleTouchMove, scrollFunc, setSwipe, setsections, setposition, position, handleKeyPress } = useContext(SiteContext);
   const [up, setup] = useState(false)
 
   useEffect(() => {
@@ -37,6 +37,8 @@ export default function Home() {
       onKeyDown={handleKeyPress}
       tabIndex="0"
       onWheel={scrollFunc}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
     >
       <Head>
         <title>MINeD | Home</title>
