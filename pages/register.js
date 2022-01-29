@@ -4,6 +4,7 @@ import SiteContext from '../components/SiteContext';
 import Navbar from '../components/Navbar';
 import { useFormik, ErrorMessage } from "formik";
 import * as Yup from 'yup'
+import axios from 'axios'
 
 export default function FormValidation(props) {
     const { current,setSwipe, setcurrent, setsections, handleKeyPress, position, setposition } = useContext(SiteContext);
@@ -19,20 +20,18 @@ export default function FormValidation(props) {
           firstName: "",
           lastName: "",
           email: "",
-          userName: "",
-          //password: "",
-          //repassword: "",
-          mobileNo: "",
+          wantAutoTeamAssign: "",
+          mobile: "",
           collegeName: "",
-          collegeCity: "",
-          collegeState: "",
+          collageCity: "",
+          collageState: "",
           degree: "",
-          branchName: "",
+          branch: "",
           semester: "",
           nameOnCertificate: "",
           linkedIn: "",
           github: "",
-          discord: "",
+          discordId: "",
         },
         validationSchema: Yup.object({
         firstName: Yup.string()
@@ -44,7 +43,7 @@ export default function FormValidation(props) {
         collegeName: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
-        userName: Yup.string()
+        wantAutoTeamAssign: Yup.string()
             .max(100, "Must be 100 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
@@ -67,20 +66,20 @@ export default function FormValidation(props) {
             })
             .required("Required"),
             */
-        collegeCity: Yup.string()
+        collageCity: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
-        collegeState: Yup.string()
+        collageState: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
         email: Yup.string().email("Invalid email address").required("Required"),
-        mobileNo: Yup.string()
+        mobile: Yup.string()
             .matches(/^[5-9]\d{9}$/, "Invalid Mobile Number")
             .required("Required"),
         degree: Yup.string()
             .max(50, "Must be 50 characters or less")
             .required("Required"),
-        branchName: Yup.string()
+        branch: Yup.string()
             .max(50, "Must be 50 characters or less")
             .required("Required"),
         semester: Yup.string()
@@ -97,13 +96,21 @@ export default function FormValidation(props) {
             .max(30, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
-        discord: Yup.string()
+        discordId: Yup.string()
             .max(30, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         }),
         onSubmit: async (values) => {
             setButtonClicked(true);
+            console.log(values)
+            axios.post(`https://apis.mined2022.tech/api/registrations`, values)
+            .then(res => {
+              alert(res.data.message)
+            })
+            .catch(err => {
+              alert('Something Went Wrong!')
+            })
             // console.log("HELLO");
             //delete values.repassword;
         },
@@ -112,12 +119,12 @@ export default function FormValidation(props) {
         if (Object.keys(formik.errors).length === 5 || previousClicked) {
           setCurrentStep(1);
           formik.errors.email = "";
-          formik.errors.userName = "";
+          formik.errors.wantAutoTeamAssign = "";
           //formik.errors.password = "";
           //formik.errors.repassword = "";
           formik.errors.linkedIn = "";
           formik.errors.github = "";
-          formik.errors.discord = "";
+          formik.errors.discordId = "";
           setPreviousClicked(false);
         } else {
           formik.submitForm();
@@ -215,23 +222,23 @@ export default function FormValidation(props) {
                             className={
                                 "form-control " +
                                 `${
-                                  formik.touched.mobileNo &&
-                                  formik.errors.mobileNo
+                                  formik.touched.mobile &&
+                                  formik.errors.mobile
                                     ? "is-invalid"
                                     : ""
                                 }`
                               }
                               placeholder="Mobile No"
-                              name="mobileNo"
+                              name="mobile"
                               onChange={formik.handleChange}
-                              value={formik.values.mobileNo}
+                              value={formik.values.mobile}
                               onBlur={formik.handleBlur}
                             />
                             
                               <div className="invalid-feedback">
-                            {formik.touched.mobileNo &&
-                            formik.errors.mobileNo ? (
-                                formik.errors.mobileNo
+                            {formik.touched.mobile &&
+                            formik.errors.mobile ? (
+                                formik.errors.mobile
                             ) : null}
                               </div>
                         </div>
@@ -271,22 +278,22 @@ export default function FormValidation(props) {
                             className={
                                 "form-control " +
                                 `${
-                                  formik.touched.collegeCity &&
-                                  formik.errors.collegeCity
+                                  formik.touched.collageCity &&
+                                  formik.errors.collageCity
                                     ? "is-invalid"
                                     : ""
                                 }`
                               }
                               placeholder="College City"
-                              name="collegeCity"
+                              name="collageCity"
                               onChange={formik.handleChange}
-                              value={formik.values.collegeCity}
+                              value={formik.values.collageCity}
                               onBlur={formik.handleBlur}
                             />
                             <div className="invalid-feedback">
-                            {formik.touched.collegeCity &&
-                            formik.errors.collegeCity ? (
-                                formik.errors.collegeCity
+                            {formik.touched.collageCity &&
+                            formik.errors.collageCity ? (
+                                formik.errors.collageCity
                             ) : null} 
                             </div>
                         </div>
@@ -298,23 +305,23 @@ export default function FormValidation(props) {
                             className={
                                 "form-control " +
                                 `${
-                                  formik.touched.collegeState &&
-                                  formik.errors.collegeState
+                                  formik.touched.collageState &&
+                                  formik.errors.collageState
                                     ? "is-invalid"
                                     : ""
                                 }`
                               }
                               placeholder="College State"
-                              name="collegeState"
+                              name="collageState"
                               onChange={formik.handleChange}
-                              value={formik.values.collegeState}
+                              value={formik.values.collageState}
                               onBlur={formik.handleBlur}
                             />
                             
                               <div className="invalid-feedback">
-                            {formik.touched.collegeState &&
-                            formik.errors.collegeState ? (
-                                formik.errors.collegeState
+                            {formik.touched.collageState &&
+                            formik.errors.collageState ? (
+                                formik.errors.collageState
                             ) : null}
                               </div>
                         </div>
@@ -352,23 +359,23 @@ export default function FormValidation(props) {
                             className={
                                 "form-control " +
                                 `${
-                                  formik.touched.branchName &&
-                                  formik.errors.branchName
+                                  formik.touched.branch &&
+                                  formik.errors.branch
                                     ? "is-invalid"
                                     : ""
                                 }`
                               }
                               placeholder="Branch Name"
-                              name="branchName"
+                              name="branch"
                               onChange={formik.handleChange}
-                              value={formik.values.branchName}
+                              value={formik.values.branch}
                               onBlur={formik.handleBlur}
                             />
                             
                               <div className="invalid-feedback">
-                            {formik.touched.branchName &&
-                            formik.errors.branchName ? (
-                                formik.errors.branchName
+                            {formik.touched.branch &&
+                            formik.errors.branch ? (
+                                formik.errors.branch
                             ) : null} 
                               </div>
                         </div>
@@ -491,29 +498,29 @@ export default function FormValidation(props) {
                         </div>
 
                         <div className="form-group">
-                            <label className="label">UserName</label>
+                            <label className="label">wantAutoTeamAssign</label>
                             <input 
                             type="text" 
                             className={
                                 "form-control " +
                                 `${
-                                    formik.touched.userName &&
-                                    formik.errors.userName
+                                    formik.touched.wantAutoTeamAssign &&
+                                    formik.errors.wantAutoTeamAssign
                                     ? "is-invalid"
                                     : ""
                                 }`
                             }
-                            placeholder="UserName"
-                            name="userName"
+                            placeholder="wantAutoTeamAssign"
+                            name="wantAutoTeamAssign"
                             onChange={formik.handleChange}
-                            value={formik.values.userName}
+                            value={formik.values.wantAutoTeamAssign}
                             onBlur={formik.handleBlur}
                             />
                             
                                 <div className="invalid-feedback">
-                            {formik.touched.userName &&
-                            formik.errors.userName ? (
-                                formik.errors.userName
+                            {formik.touched.wantAutoTeamAssign &&
+                            formik.errors.wantAutoTeamAssign ? (
+                                formik.errors.wantAutoTeamAssign
                             ) : null} 
                                 </div>
                         </div>
@@ -632,29 +639,29 @@ export default function FormValidation(props) {
                         </div>
 
                         <div className="form-group">
-                            <label className="label">Discord</label>
+                            <label className="label">DiscordId</label>
                             <input 
                             type="text" 
                             className={
                                 "form-control " +
                                 `${
-                                    formik.touched.discord &&
-                                    formik.errors.discord
+                                    formik.touched.discordId &&
+                                    formik.errors.discordId
                                     ? "is-invalid"
                                     : ""
                                 }`
                                 }
-                                placeholder="Discord"
-                                name="discord"
+                                placeholder="DiscordId"
+                                name="discordId"
                                 onChange={formik.handleChange}
-                                value={formik.values.discord}
+                                value={formik.values.discordId}
                                 onBlur={formik.handleBlur}
                             />
                             
                                 <div className="invalid-feedback">
-                            {formik.touched.discord &&
-                            formik.errors.discord ? (
-                                formik.errors.discord
+                            {formik.touched.discordId &&
+                            formik.errors.discordId ? (
+                                formik.errors.discordId
                             ) : null} 
                                 </div>
                         </div>
