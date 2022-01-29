@@ -21,7 +21,7 @@ export default function FormValidation(props) {
           firstName: "",
           lastName: "",
           email: "",
-          wantAutoTeamAssign: "",
+          //wantAutoTeamAssign: "",
           mobile: "",
           collegeName: "",
           collageCity: "",
@@ -44,11 +44,12 @@ export default function FormValidation(props) {
         collegeName: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
+        /*
         wantAutoTeamAssign: Yup.string()
             .max(100, "Must be 100 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
-            /*
+            
         password: Yup.string()
             .max(15, "Must be 15 characters or less")
             .min(8, "Must be minimum 8 characters")
