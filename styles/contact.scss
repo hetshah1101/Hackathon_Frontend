@@ -91,7 +91,7 @@ input[type=text],input[type=email], select, textarea {
   width: 50%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   #contact {
     background: rgb(1, 8, 27);
     color: $light;

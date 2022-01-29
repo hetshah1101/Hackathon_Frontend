@@ -278,6 +278,71 @@ export default function Event() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
+            <div className='sponsors'> 
+            {/* <h1>Sponsors</h1> <br/> */}
+            <table className='titleSponsors'>
+              <tr>
+                <th colspan='2'>Title sponsors</th>
+              </tr>
+              <tr>
+                <td><a href="http://www.nirmauni.ac.in" target="_blank">
+                  <img className='nopad' src={ITNULogo.src} alt="ITNU Logo"></img></a>
+                </td>
+                <td><a href="https://www.binghamton.edu/" target="_blank">
+                  <img src={BULogo.src} alt="BU Logo"></img></a>
+                </td>
+              </tr>
+            </table>
+
+            <table className='goldSponsors'>
+              <tr>
+                <th colspan='3'>Gold sponsors</th>
+              </tr>
+              <tr>
+                <td><a href="https://www.indianic.com/" target="_blank">
+                  <img className='nopad' src={IndiaNICLogo.src} alt="IndiaNIC Logo"></img></a>
+                </td>
+                <td><a href="http://hops.healthcare/" target="_blank">
+                  <img src={HopsLogo.src} alt="HOPS Logo"></img></a>
+                </td>
+                <td><a href="https://www.jklakshmicement.com/" target="_blank">
+                  <img className='nopad' src={JklcLogo.src} alt="JKLC Logo"></img></a>
+                </td>
+              </tr>
+            </table>
+
+            <table className='partners'>
+              <tr>
+                <th colspan='3'>Partners</th>
+              </tr>
+              <tr>
+                <td><a href="https://www.wolfram.com/" target="_blank">
+                  <img src={WolframLogo.src} alt="Wolfram Logo"></img></a>
+                </td>
+                <td><a href="https://www.digitalocean.com/" target="_blank">
+                  <img src={DoLogo.src} alt="Do Logo"></img></a>
+                </td>
+                <td><a href="https://www.echoar.xyz/" target="_blank">
+                  <img src={EchoARLogo.src} alt="EchoAR Logo"></img></a>
+                </td>
+                <td><a href="https://www.voiceflow.com/" target="_blank">
+                  <img src={VoiceFlowLogo.src} alt="VoiceFlow Logo"></img></a>
+                </td>
+                <td><a href="https://www.interviewcake.com/" target="_blank">
+                  <img src={InterviewCakeLogo.src} alt="Interview Cake Logo"></img></a>
+                </td>
+                <td><a href="https://givemycertificate.com/" target="_blank">
+                  <img src={GMCLogo.src} alt="GMC Logo"></img></a>
+                </td>
+              </tr>
+            </table>
+
+            </div>
+          </section>
+
+          <section style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
             <div className='carousel'>
               <h1>Perks</h1>
               <Carousel
@@ -376,71 +441,6 @@ export default function Event() {
           }}>
             <div className='center'> 
             <h1>Winners</h1>
-            </div>
-          </section>
-
-          <section style={{
-            transform: `translateY(-${position*80}vh)`
-          }}>
-            <div className='sponsors'> 
-            {/* <h1>Sponsors</h1> <br/> */}
-            <table className='titleSponsors'>
-              <tr>
-                <th colspan='2'>Title sponsors</th>
-              </tr>
-              <tr>
-                <td><a href="http://www.nirmauni.ac.in" target="_blank">
-                  <img className='nopad' src={ITNULogo.src} alt="ITNU Logo"></img></a>
-                </td>
-                <td><a href="https://www.binghamton.edu/" target="_blank">
-                  <img src={BULogo.src} alt="BU Logo"></img></a>
-                </td>
-              </tr>
-            </table>
-
-            <table className='goldSponsors'>
-              <tr>
-                <th colspan='3'>Gold sponsors</th>
-              </tr>
-              <tr>
-                <td><a href="https://www.indianic.com/" target="_blank">
-                  <img className='nopad' src={IndiaNICLogo.src} alt="IndiaNIC Logo"></img></a>
-                </td>
-                <td><a href="http://hops.healthcare/" target="_blank">
-                  <img src={HopsLogo.src} alt="HOPS Logo"></img></a>
-                </td>
-                <td><a href="https://www.jklakshmicement.com/" target="_blank">
-                  <img className='nopad' src={JklcLogo.src} alt="JKLC Logo"></img></a>
-                </td>
-              </tr>
-            </table>
-
-            <table className='partners'>
-              <tr>
-                <th colspan='3'>Partners</th>
-              </tr>
-              <tr>
-                <td><a href="https://www.wolfram.com/" target="_blank">
-                  <img src={WolframLogo.src} alt="Wolfram Logo"></img></a>
-                </td>
-                <td><a href="https://www.digitalocean.com/" target="_blank">
-                  <img src={DoLogo.src} alt="Do Logo"></img></a>
-                </td>
-                <td><a href="https://www.echoar.xyz/" target="_blank">
-                  <img src={EchoARLogo.src} alt="EchoAR Logo"></img></a>
-                </td>
-                <td><a href="https://www.voiceflow.com/" target="_blank">
-                  <img src={VoiceFlowLogo.src} alt="VoiceFlow Logo"></img></a>
-                </td>
-                <td><a href="https://www.interviewcake.com/" target="_blank">
-                  <img src={InterviewCakeLogo.src} alt="Interview Cake Logo"></img></a>
-                </td>
-                <td><a href="https://givemycertificate.com/" target="_blank">
-                  <img src={GMCLogo.src} alt="GMC Logo"></img></a>
-                </td>
-              </tr>
-            </table>
-
             </div>
           </section>
         </div>
