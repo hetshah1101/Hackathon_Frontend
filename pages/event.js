@@ -16,7 +16,7 @@ import third from '../public/prizes/gold-medal3.png';
 
 import ITNULogo from "../public/Logos/ITNU_Logo.jpg";
 import BULogo from "../public/Logos/Binghamton_University_logo.png";
-import IndiaNICLogo from "../public/sponsors/india_nic.jpg";
+import cactusLogo from "../public/sponsors/cactusglobal.png";
 import HopsLogo from "../public/sponsors/hops_logo.png";
 import JklcLogo from "../public/sponsors/JKLC.png";
 
@@ -197,7 +197,7 @@ export default function Event() {
                 {/* Day 1 Table */}
                 <table className="table">
                   <tbody>
-                  <th colSpan='2'>Day 1</th>
+                  <th colSpan='2'>Day 1 - 3rd March</th>
                     <tr>
                       <td className="time">8:40 AM</td>
                       <td className="content">On Site Registration</td>
@@ -245,7 +245,88 @@ export default function Event() {
                 {/* Day 2 Table */}
                 <table className="table">
                   <tbody>
-                    <th colSpan='2'>Day 2</th>
+                    <th colSpan='2'>Day 2 - 4th March</th>
+                    <tr>
+                      <td className="time">12:00 AM - 1:00 AM</td>
+                      <td className="content">Fun Activity</td>
+                    </tr>
+                    <tr>
+                      <td className="time">1:00 AM - 8:45 AM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">8:45 AM - 9:30 AM</td>
+                      <td className="content">Breakfast</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:30 AM - 1:30 PM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">1:30 PM - 2:30 PM</td>
+                      <td className="content">Lunch</td>
+                    </tr>
+                    <tr>
+                      <td className="time">2:30 PM - 3:00 PM</td>
+                      <td className="content">Final Submittion</td>
+                    </tr>
+                    <tr>
+                      <td className="time">3:00 PM - 4:00 PM</td>
+                      <td className="content">First Judging round</td>
+                    </tr>
+                    <tr>
+                      <td className="time">4:00 PM - 5:00 PM</td>
+                      <td className="content">High Tea and Discussion</td>
+                    </tr>
+                    {/*
+                    <tr>
+                      <td className="time">12:00 AM - 1:00 AM</td>
+                      <td className="content">Fun Activity</td>
+                    </tr>
+                    <tr>
+                      <td className="time">1:00 AM - 8:45 AM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">8:45 AM - 9:30 AM</td>
+                      <td className="content">Breakfast</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:30 AM - 1:30 PM</td>
+                      <td className="content">Hacking Continues</td>
+                    </tr>
+                    <tr>
+                      <td className="time">1:30 PM - 2:30 PM</td>
+                      <td className="content">Lunch</td>
+                    </tr>
+                    <tr>
+                      <td className="time">2:30 PM - 3:00 PM</td>
+                      <td className="content">Final Submittion</td>
+                    </tr>
+                    <tr>
+                      <td className="time">3:00 PM - 4:00 PM</td>
+                      <td className="content">First Judging round</td>
+                    </tr>
+                    <tr>
+                      <td className="time">4:00 PM - 5:00 PM</td>
+                      <td className="content">High Tea and Discussion</td>
+                    </tr>
+
+                    <tr>
+                      <td className="time">5:00 PM onwards</td>
+                      <td className="content">
+                        Final Presentation, Winner's Anouncement and Prize
+                        Distribution
+                      </td>
+                    </tr>
+                    */}
+                  </tbody>
+                </table>  
+
+                {/* Day 3 Table */}
+                <table className="table">
+                  <tbody>
+                    <th colSpan='2'>Day 3 - 5th March</th>
                     <tr>
                       <td className="time">12:00 AM - 1:00 AM</td>
                       <td className="content">Fun Activity</td>
@@ -342,8 +423,8 @@ export default function Event() {
                 <th colSpan='3'>Gold sponsors</th>
               </tr>
               <tr>
-                <td><a href="https://www.indianic.com/" target="_blank">
-                  <img className='nopad' src={IndiaNICLogo.src} alt="IndiaNIC Logo"></img></a>
+                <td><a href="https://cactusglobal.com" target="_blank">
+                  <img className='nopad' src={cactusLogo.src} alt="cactusglobal Logo"></img></a>
                 </td>
                 <td><a href="http://hops.healthcare/" target="_blank">
                   <img src={HopsLogo.src} alt="HOPS Logo"></img></a>

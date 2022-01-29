@@ -498,7 +498,8 @@ export default function FormValidation(props) {
                             ) : null} 
                                 </div>
                         </div>
-
+                        
+                      {/*
                         <div className="form-group">
                             <label className="label">wantAutoTeamAssign</label>
                             <input 
@@ -527,7 +528,7 @@ export default function FormValidation(props) {
                                 </div>
                         </div>
 
-                      {/*
+                      
                         <div className="form-group">
                             <label className="label">Password</label>
                             <input 
