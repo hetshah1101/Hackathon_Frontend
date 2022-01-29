@@ -119,10 +119,10 @@ export default function FormValidation(props) {
         },
     });
     const nextPage = () => {
-        if (Object.keys(formik.errors).length === 5 || previousClicked) {
+        if (Object.keys(formik.errors).length === 4 || previousClicked) {
           setCurrentStep(1);
           formik.errors.email = "";
-          formik.errors.wantAutoTeamAssign = "";
+          //formik.errors.wantAutoTeamAssign = "";
           //formik.errors.password = "";
           //formik.errors.repassword = "";
           formik.errors.linkedIn = "";
