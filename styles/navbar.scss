@@ -103,3 +103,111 @@ nav {
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12vh;
+        background: transparent;
+        color: $light;
+        padding: 2vw 3vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: $light;
+        z-index: 5 !important;
+        .logo {
+            width: 18%;
+            img {
+                width: 100%;
+            }
+        }
+        ul {
+            width: 60%;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 3vw;
+            li {
+                padding: 2vw;
+                &:hover {
+                    border-bottom: 0.01vw solid $light;
+                }
+            }
+            li.active {
+                border-bottom: 0.01vw solid $light;
+            }
+        }
+        button.register {
+            width: 18%;
+            padding: 0.5vw 2vw;
+            font-size: 3vw;
+            border-radius: 0.5vw;
+            border: none;
+            background: none;
+            color: $light;
+            border: 0.01vw solid $light;
+            cursor: pointer;
+            &:hover {
+                color: $dark;
+                background: $light;
+            }
+        }
+    }
+    
+    #swipeNav {
+        width: 40%;
+        position: absolute;
+        bottom: 6vw;
+        right: 3vw;
+        z-index: 7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .buttons {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            button {
+                width: 8vw;
+                height: 8vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3vw;
+                background: transparent;
+                border: 0.1vw solid $light;
+                border-radius: 50%;
+                color: $light;
+                cursor: pointer;
+                margin-left: 1vw;
+                margin-right: 1vw;
+            }
+        }
+        .line {
+            width: 65%;
+            height: 0.02vw;
+            background-color: $light;
+        }
+        h1 {
+            width: 5vw;
+            font-size: 3vw;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+                font-size: 3vw;
+                width: 3vw;
+                color: $light;
+            }
+        }
+    }
+}
