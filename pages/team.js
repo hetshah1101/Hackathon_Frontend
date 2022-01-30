@@ -140,6 +140,13 @@ export default function Team() {
                 </div>
 
                 <div className="grid-item">
+                  <a href='https://www.linkedin.com/in/priyank-thakkar-4701689b/' target="_blank">
+                  <img src={priyankthakker.src} className='profile'></img>
+                  <h3>Priyank Thakkar <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
+                  </a>
+                </div>
+
+                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/sapan-mankad-4815601a/' target="_blank">
                   <img src={sapanmakad.src} className='profile'></img>
                   <h3>Sapan Mankad <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
@@ -158,16 +165,9 @@ export default function Team() {
                 </div>
 
                 <div className="grid-item">
-                  <a href='https://www.linkedin.com/in/priyank-thakkar-4701689b/' target="_blank">
-                  <img src={priyankthakker.src} className='profile'></img>
-                  <h3>Priyank Thakkar <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
-                  </a>
-                </div>
-
-                <div className="grid-item">
                   <a href='https://www.linkedin.com/in/dr-vijay-ukani-705a48a8/' target="_blank">
                     <img src={vijayukani.src} className='profile'></img>
-                    <h3>Vijay Ukani <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
+                    <h3>Vishal Parikh<FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
