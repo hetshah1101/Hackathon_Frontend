@@ -84,13 +84,13 @@ export default function Team() {
                 </div>
                 </a>
 
-                <a href='https://www.linkedin.com/in/jaldeep-vasavada-4545602a/' target="_blank">
+                {/* <a href='https://www.linkedin.com/in/jaldeep-vasavada-4545602a/' target="_blank">
                 <div className='card'>
                   <img src={user.src} className='profile'/>
                   <h3>Jaldeep Vasavada <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
                   <p>Sr.SDE at Microsoft</p>
                 </div>
-                </a>
+                </a> */}
                 {/* 
                 <a href='https://www.linkedin.com/in/jay-shah-delivery/' target="_blank">
                 <div className='card'>
