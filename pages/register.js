@@ -76,7 +76,7 @@ export default function FormValidation(props) {
             .required("Required"),
         email: Yup.string().email("Invalid email address").required("Required"),
         mobile: Yup.string()
-            .matches(/^[5-9]\d{9}$/, "Invalid Mobile Number")
+            .matches(/^([+]\d{2})?\d{10}$/, "Invalid Mobile Number")
             .required("Required"),
         degree: Yup.string()
             .max(50, "Must be 50 characters or less")
@@ -91,15 +91,12 @@ export default function FormValidation(props) {
             .max(100, "Must be 100 characters or less")
             .required("Required"),
         linkedIn: Yup.string()
-            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         github: Yup.string()
-            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         discordId: Yup.string()
-            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         }),

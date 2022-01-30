@@ -16,6 +16,9 @@ nav {
     color: $light;
     z-index: 5 !important;
     .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         width: 10%;
         img {
             width: 100%;
