@@ -6,8 +6,6 @@ import Slider from '../components/Slider'
 
 import parth from '../public/profiles/Parth_mentor.jpg';
 import jaldeep from '../public/profiles/mentor_jaldeep_vasavadajpg.jpg';
-import jay from '../public/profiles/jay_shah.jpg';
-import linkedinLogo from '../public/linkedin.jpeg';
 
 import rnpatel from '../public/profiles/dr_rn_patel.jpg';
 import dryoon from '../public/profiles/dr_yoon.jpg';
@@ -93,7 +91,7 @@ export default function Team() {
                   <p>Sr.SDE at Microsoft</p>
                 </div>
                 </a>
-
+                {/* 
                 <a href='https://www.linkedin.com/in/jay-shah-delivery/' target="_blank">
                 <div className='card'>
                   <img src={jay.src} className='profile'/>
@@ -101,7 +99,7 @@ export default function Team() {
                   <p>Principal Consultant at InidaNIC</p>
                 </div>
                 </a>
-                
+                */}
               </div>
             </div>
 

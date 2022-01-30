@@ -21,7 +21,7 @@ export default function FormValidation(props) {
           firstName: "",
           lastName: "",
           email: "",
-          wantAutoTeamAssign: "",
+          //wantAutoTeamAssign: "",
           mobile: "",
           collegeName: "",
           collageCity: "",
@@ -44,11 +44,12 @@ export default function FormValidation(props) {
         collegeName: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
+        /*
         wantAutoTeamAssign: Yup.string()
             .max(100, "Must be 100 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
-            /*
+            
         password: Yup.string()
             .max(15, "Must be 15 characters or less")
             .min(8, "Must be minimum 8 characters")
@@ -84,21 +85,21 @@ export default function FormValidation(props) {
             .max(50, "Must be 50 characters or less")
             .required("Required"),
         semester: Yup.string()
-          .matches(/^([1-9]|1[0-6])$/, "Invalid Semester")
+          .matches(/^([1-9]|10)$/, "Invalid Semester")
           .required("Required"),
         nameOnCertificate: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
         linkedIn: Yup.string()
-            .max(30, "Must be 30 characters or less")
+            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         github: Yup.string()
-            .max(30, "Must be 30 characters or less")
+            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         discordId: Yup.string()
-            .max(30, "Must be 30 characters or less")
+            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         }),
@@ -118,10 +119,10 @@ export default function FormValidation(props) {
         },
     });
     const nextPage = () => {
-        if (Object.keys(formik.errors).length === 5 || previousClicked) {
+        if (Object.keys(formik.errors).length === 4 || previousClicked) {
           setCurrentStep(1);
           formik.errors.email = "";
-          formik.errors.wantAutoTeamAssign = "";
+          //formik.errors.wantAutoTeamAssign = "";
           //formik.errors.password = "";
           //formik.errors.repassword = "";
           formik.errors.linkedIn = "";
@@ -220,7 +221,7 @@ export default function FormValidation(props) {
                         <div className="form-group">
                             <label className="label">Mobile Number</label>
                             <input 
-                            type="number" 
+                            type="string" 
                             className={
                                 "form-control " +
                                 `${
@@ -385,7 +386,7 @@ export default function FormValidation(props) {
                         <div className="form-group">
                             <label className="label">Semester</label>
                             <input 
-                            type="number" 
+                            type="string" 
                             className={
                                 "form-control " +
                                 `${
@@ -499,7 +500,8 @@ export default function FormValidation(props) {
                             ) : null} 
                                 </div>
                         </div>
-
+                        
+                      {/*
                         <div className="form-group">
                             <label className="label">wantAutoTeamAssign</label>
                             <input 
@@ -528,7 +530,7 @@ export default function FormValidation(props) {
                                 </div>
                         </div>
 
-                      {/*
+                      
                         <div className="form-group">
                             <label className="label">Password</label>
                             <input 
