@@ -109,7 +109,8 @@ export default function FormValidation(props) {
               router.push('/')
             })
             .catch(err => {
-              alert('Something Went Wrong!')
+              console.log(err.response ? err.response : err)
+              alert(err.response ? err.response.data.message : "Something Went Wrong!")
             })
             // console.log("HELLO");
             //delete values.repassword;
