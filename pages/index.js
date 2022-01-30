@@ -68,7 +68,7 @@ export default function Home() {
             <div className='header'>
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
-              {/* <h1>Tagline Goes Here!</h1> */}
+              <h1>MINeD Hackathon !</h1>
               <button onClick={() => {
                 setup(true);
                 setposition(position+1);
@@ -108,7 +108,7 @@ export default function Home() {
             <div className='top'>
             
               <img src={NULogo.src} className='nopad' ></img>
-              <div><a href="http://nirmauni.ac.in" target="_blank">
+              <div><p><a href="http://nirmauni.ac.in" target="_blank">
                 Nirma University
               </a>{" "}
               , Ahmedabad is a research-oriented, student-centric,
@@ -126,12 +126,12 @@ export default function Home() {
               at the Department of Computer Science and Engineering, Institute
               of Technology, Nirma University have recently established the
               Centre of Excellence in Data Science (CoE - DS) in collaborated
-              with SUNY Binghamton University, USA.
+              with SUNY Binghamton University, USA.</p>
               </div>
             </div>
             <div className='bottom'>
               <img src={BULogo.src} ></img>
-              <div><a href="https://www.binghamton.edu/" target="_blank">
+              <div><p><a href="https://www.binghamton.edu/" target="_blank">
                 {" "}
                 Binghamton University
               </a>{" "}
@@ -149,7 +149,7 @@ export default function Home() {
               are in the high-tech heart of upstate New York state with industry
               partnerships, class projects and internship opportunities that
               provide a wealth of hands-on experience for graduate and
-              undergraduate students alike.
+              undergraduate students alike.</p>
               </div>
             </div>
           </section>

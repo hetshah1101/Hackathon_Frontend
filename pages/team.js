@@ -6,7 +6,7 @@ import Slider from '../components/Slider'
 
 import parth from '../public/profiles/Parth_mentor.jpg';
 import jaldeep from '../public/profiles/mentor_jaldeep_vasavadajpg.jpg';
-
+import user from '../public/profiles/user.png'
 import rnpatel from '../public/profiles/dr_rn_patel.jpg';
 import dryoon from '../public/profiles/dr_yoon.jpg';
 import drmadhuribhavsar from '../public/profiles/dr_madhuri_bhavsar.jpg';
@@ -14,7 +14,7 @@ import sapanmakad from '../public/profiles/sapan_mankad.jpg';
 import dwijeshbhatt from '../public/profiles/dvijesh_bhatt.jpg';
 import priyankthakker from '../public/profiles/priyank_thakkar.jpg';
 import vijayukani from '../public/profiles/vijay_ukani.jpg';
-import swatijain from '../public/profiles/swati_jain.jpg';
+import pooja_shah from '../public/profiles/pooja_shah.jpg';
 import ankitthakkar from '../public/profiles/ankit_thakkar.jpg';
 import gaurangraval from '../public/profiles/gaurang_raval.jpg';
 import zunnunnarmawala from '../public/profiles/zunnun_narmawala.jpg';
@@ -86,7 +86,7 @@ export default function Team() {
 
                 <a href='https://www.linkedin.com/in/jaldeep-vasavada-4545602a/' target="_blank">
                 <div className='card'>
-                  <img src={jaldeep.src} className='profile'/>
+                  <img src={user.src} className='profile'/>
                   <h3>Jaldeep Vasavada <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
                   <p>Sr.SDE at Microsoft</p>
                 </div>
@@ -173,12 +173,12 @@ export default function Team() {
 
                 <div className="grid-item">
                   <a href='https://in.linkedin.com/in/swati-jain-54845311' target="_blank">
-                    <img src={swatijain.src} className='profile'></img>
-                    <h3>Swati Jain <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
+                    <img src={pooja_shah.src} className='profile'></img>
+                    <h3>Pooja Shah<FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
-                <div className="grid-item">
+                {/* <div className="grid-item">
                   <a href='https://technology.nirmauni.ac.in/author/ankit/' target="_blank">
                     <img src={ankitthakkar.src} className='profile'></img>
                     <h3>Ankit Thakkar <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
@@ -204,7 +204,7 @@ export default function Team() {
                     <img src={jaiprakashverma.src} className='profile'></img>
                     <h3>JaiPrakash Verma <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
-                </div>
+                </div> */}
               </div> 
             </div>
           </section>

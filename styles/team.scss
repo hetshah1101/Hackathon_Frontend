@@ -93,11 +93,12 @@
         height: 70vh;
         display: grid;
         grid-gap: 1vw;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto;
         padding: 1vw;
       }
       
       .grid-item {
+        width: 100%;
         text-align: center;
         margin: 0.5vw 0;
         .profile {
