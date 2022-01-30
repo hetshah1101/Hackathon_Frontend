@@ -468,7 +468,11 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='carousel'>
+              {/*
               <h1>Perks</h1>
+              */}
+              <h1 className='comingSoon'> Coming Soon ! </h1>
+              {/* 
               <Carousel
                 className='slideshow'
                 slidesToShow={3}
@@ -483,7 +487,6 @@ export default function Event() {
                 )}
               >
 
-                {/* item 1 */}
                 <div className='perks'>
                   <img src={WolframLogo.src} /><br/>
                   <span>
@@ -501,7 +504,6 @@ export default function Event() {
                   </span>
                 </div>
 
-                {/* item 2 */}
                 <div className='perks'>
                   <img src={DoLogo.src} /><br/>
                   <span>
@@ -516,7 +518,6 @@ export default function Event() {
                   </span>                
                 </div>
 
-                {/* perks 3 */}
                 <div className='perks'>
                   <img src={EchoARLogo.src} /><br/>
                   <span>
@@ -535,7 +536,6 @@ export default function Event() {
                   </span>
                 </div>
 
-                {/* perks 4 */}
                 <div className='perks'>
                   <img src={VoiceFlowLogo.src} /><br/>
                   <span>
@@ -546,7 +546,6 @@ export default function Event() {
                   </span>
                 </div>
 
-                {/* perks 5 */}
                 <div className='perks'>
                   <img src={InterviewCakeLogo.src} /><br/>
                   <span>
@@ -557,6 +556,7 @@ export default function Event() {
                   </span>
                 </div>
               </Carousel>
+              */}
             </div>
           </section>
 
@@ -566,7 +566,8 @@ export default function Event() {
             <div className='center'> 
             <h1>Winners</h1>
             </div>
-          </section> */}
+          </section> 
+          */}
         </div>
 
       </main>
