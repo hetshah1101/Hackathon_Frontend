@@ -13,7 +13,7 @@ import drmadhuribhavsar from '../public/profiles/dr_madhuri_bhavsar.jpg';
 import sapanmakad from '../public/profiles/sapan_mankad.jpg';
 import dwijeshbhatt from '../public/profiles/dvijesh_bhatt.jpg';
 import priyankthakker from '../public/profiles/priyank_thakkar.jpg';
-import vijayukani from '../public/profiles/vijay_ukani.jpg';
+import vishalparikh from '../public/profiles/vishalparikh.jpg';
 import pooja_shah from '../public/profiles/pooja_shah.jpg';
 import ankitthakkar from '../public/profiles/ankit_thakkar.jpg';
 import gaurangraval from '../public/profiles/gaurang_raval.jpg';
@@ -165,14 +165,14 @@ export default function Team() {
                 </div>
 
                 <div className="grid-item">
-                  <a href='https://www.linkedin.com/in/dr-vijay-ukani-705a48a8/' target="_blank">
-                    <img src={vijayukani.src} className='profile'></img>
+                  <a href='https://technology.nirmauni.ac.in/author/vishalparikh/' target="_blank">
+                    <img src={vishalparikh.src} className='profile'></img>
                     <h3>Vishal Parikh<FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>
                 </div>
 
                 <div className="grid-item">
-                  <a href='https://in.linkedin.com/in/swati-jain-54845311' target="_blank">
+                  <a href='https://www.linkedin.com/in/dr-pooja-shah-97491516/' target="_blank">
                     <img src={pooja_shah.src} className='profile'></img>
                     <h3>Pooja Shah<FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>
                   </a>

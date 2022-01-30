@@ -68,7 +68,7 @@ export default function Home() {
             <div className='header'>
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
-              <h1>MINeD Hackathon !</h1>
+              <h1>3rd March - 5th March</h1>
               <button onClick={() => {
                 setup(true);
                 setposition(position+1);
@@ -85,7 +85,7 @@ export default function Home() {
 
         {/* Left Slider */}
         <Slider />
-
+  
         {/* Main Content here */}
         <div id="content">
           <section style={{
