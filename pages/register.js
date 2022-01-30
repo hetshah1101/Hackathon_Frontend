@@ -85,21 +85,21 @@ export default function FormValidation(props) {
             .max(50, "Must be 50 characters or less")
             .required("Required"),
         semester: Yup.string()
-          .matches(/^([1-9]|1[0-6])$/, "Invalid Semester")
+          .matches(/^([1-9]|10)$/, "Invalid Semester")
           .required("Required"),
         nameOnCertificate: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
         linkedIn: Yup.string()
-            .max(30, "Must be 30 characters or less")
+            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         github: Yup.string()
-            .max(30, "Must be 30 characters or less")
+            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         discordId: Yup.string()
-            .max(30, "Must be 30 characters or less")
+            .max(200, "Must be 30 characters or less")
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         }),
@@ -221,7 +221,7 @@ export default function FormValidation(props) {
                         <div className="form-group">
                             <label className="label">Mobile Number</label>
                             <input 
-                            type="number" 
+                            type="string" 
                             className={
                                 "form-control " +
                                 `${
@@ -386,7 +386,7 @@ export default function FormValidation(props) {
                         <div className="form-group">
                             <label className="label">Semester</label>
                             <input 
-                            type="number" 
+                            type="string" 
                             className={
                                 "form-control " +
                                 `${
