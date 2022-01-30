@@ -2,14 +2,16 @@ import React, {useContext} from 'react'
 import Link from 'next/link';
 import SiteContext from './SiteContext'
 import logoNav from '../public/MINed_LOGO.png'
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+    const router = useRouter();
     const { current, swipe, setcurrent, next, prev } = useContext(SiteContext);
     return (
         <div>
             <nav>
                 <div className='logo'>
-                    <img src={logoNav.src} />
+                    <img src={logoNav.src} onClick={() => router.push('/')} />
                     {/* <h1>Logo</h1> */}
                 </div>
                 <ul className='routes'>
