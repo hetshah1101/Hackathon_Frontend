@@ -167,6 +167,7 @@ form {
                 padding: 0.5vw 1vw;
                 background: white;
                 border: none;
+                font-size: 3vw;
                 margin: 0;
             }
             .invalid-feedback {
@@ -179,15 +180,24 @@ form {
                 height: 1vw;
             }
             button {
-                width: 40%;
+                width: 100%;
                 padding: 0.5vw 0;
-                background: $light;
-                color: $dark;
-                border: none;
-                border-radius: 0.5vw;
+                background: rgba(255,255,255,0.2);
+                color: $light;
+                border: 0.01vw solid $light;
+                border-radius: 1vw;
                 font-size: 4vw;
                 font-weight: 600;
                 cursor: pointer;
+            }
+            #next, #previous {
+                border-radius: 1vw;
+                font-size: 3vw;
+                cursor: pointer;
+                border: none;
+                padding: 1vw;
+                border: none;
+                margin: 0;
             }
         }
     }    
