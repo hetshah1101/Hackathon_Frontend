@@ -77,11 +77,11 @@ form {
             height: 1vw;
         }
         button {
-            width: 30%;
+            width: 100%;
             padding: 0.5vw 0;
-            background: $light;
-            color: $dark;
-            border: none;
+            background: rgba(255,255,255,0.2);
+            color: $light;
+            border: 0.01vw solid $light;
             border-radius: 0.5vw;
             font-size: 1.1vw;
             font-weight: 600;
@@ -91,9 +91,11 @@ form {
             width: 100%;
             background: rgb(150,150,150);
             color: white;
+            font-weight: 400;
             border-radius: 1vw;
             font-size: 1.2vw;
             cursor: pointer;
+            border: none;
         }
     }
 }
