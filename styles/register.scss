@@ -87,6 +87,14 @@ form {
             font-weight: 600;
             cursor: pointer;
         }
+        #next, #previous {
+            width: 100%;
+            background: rgb(150,150,150);
+            color: white;
+            border-radius: 1vw;
+            font-size: 1.2vw;
+            cursor: pointer;
+        }
     }
 }
 

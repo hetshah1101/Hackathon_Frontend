@@ -438,6 +438,7 @@ export default function FormValidation(props) {
 
                         <div className="form-group">
                             <button
+                              id="next"
                               type="button"
                               className="btn btn-primary form-control"
                               name="next"
@@ -671,8 +672,9 @@ export default function FormValidation(props) {
                         <div className="form-group">
                         <input
                               type="button"
+                              id="previous"
                               className="btn btn-secondary form-control"
-                              value="previous"
+                              value="Previous"
                               name="prev"
                               onClick={() => {
                                 setCurrentStep(0);
