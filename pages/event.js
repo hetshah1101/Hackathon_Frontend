@@ -10,6 +10,8 @@ import agriculture from '../public/Track/plant.png';
 import service from '../public/Track/service1.png';
 import automation from '../public/Track/Automation_2.png';
 import transport from '../public/Track/shipped.png';
+import ai from '../public/Track/ai.png';
+import comingsoon from '../public/Track/comingsoon.png';
 import first from '../public/prizes/gold-medal1.png'; 
 import second from '../public/prizes/gold-medal2.png'; 
 import third from '../public/prizes/gold-medal3.png'; 
@@ -110,6 +112,7 @@ export default function Event() {
                   <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
                 )}
               >
+                {/* 
                 <div className='item'>
                   <h3>Healthcare</h3><img src={health.src} /><br/>
                   <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
@@ -129,6 +132,50 @@ export default function Event() {
                 <div className='item'>
                   <h3>Intelligent Transportation Systems</h3><img src={transport.src} /><br/>
                   <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
+                </div>
+                */}
+
+                <div className='item'>
+                  <h3>Healthcare by ops</h3><img src={health.src} /><br/>
+                  <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
+                </div>
+                {/* 
+                <div className='item'>
+                  <h3>Agriculture</h3><img src={agriculture.src} /><br/>
+                  <span>Agriculture is playing a vital role in India's economy. Bringing the technological solution in the framing industry can improve the cultivation and productivity of crops. Recently, innovation in the filed of Bio-Technologies and Artificial intelligence brings resolution in the farming industry.</span>
+                </div>
+                <div className='item'>
+                  <h3>Service to Society</h3><img src={service.src} /><br/>
+                  <span>Bring the technologies in to real like can solve many societal problems. A country like India is facing many challenges like person/woman safety and better living for the elderly and handicaps. Find out a solution that makes the life of every human being better.</span>
+                </div>
+                
+                <div className='item'>
+                  <h3>Automation</h3><img src={automation.src} /><br/>
+                  <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT &#38; cognitive computing help to design a better manufacturing process for any industry.</span>
+                </div>
+                <div className='item'>
+                  <h3>Intelligent Transportation Systems</h3><img src={transport.src} /><br/>
+                  <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
+                </div>
+                  */}
+                <div className='item'>
+                  <h3>Making scientific research accessible using AI and Big data by cactus</h3><img src={automation.src} /><br/>
+                  <span>AI can identify data types, find possible connections among datasets, and recognize knowledge using natural language processing. It can be used to automate and accelerate data preparation tasks, including the generation of data models, and assist in data exploration.</span>
+                </div>
+
+                <div className='item'>
+                  <h3>Applied ML for Manufacturing Industry's Problem by JK Laxmi</h3><img src={ai.src} /><br/>
+                  <span>The manufacturing process can be time-consuming and expensive for companies that don't have the right tools in place to develop their products. In recent years, machine learning (ML) has become more prevalent in building and assembling items, using advanced technology to reduce the length and cost of manufacturing.</span>
+                </div>
+
+                <div className='item'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span>coming soon !</span>
+                </div>
+
+                <div className='item'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span>coming soon !</span>
                 </div>
               </Carousel>
             </div>
@@ -153,9 +200,10 @@ export default function Event() {
                 )}
               >
                 <div className='item'>
-                  <h3>Healthcare</h3><img src={health.src} /><br/>
+                  <h3>Healthcare by ops</h3><img src={health.src} /><br/>
                   <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
                 </div>
+                {/* 
                 <div className='item'>
                   <h3>Agriculture</h3><img src={agriculture.src} /><br/>
                   <span>Agriculture is playing a vital role in India's economy. Bringing the technological solution in the framing industry can improve the cultivation and productivity of crops. Recently, innovation in the filed of Bio-Technologies and Artificial intelligence brings resolution in the farming industry.</span>
@@ -164,6 +212,7 @@ export default function Event() {
                   <h3>Service to Society</h3><img src={service.src} /><br/>
                   <span>Bring the technologies in to real like can solve many societal problems. A country like India is facing many challenges like person/woman safety and better living for the elderly and handicaps. Find out a solution that makes the life of every human being better.</span>
                 </div>
+                
                 <div className='item'>
                   <h3>Automation</h3><img src={automation.src} /><br/>
                   <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT &#38; cognitive computing help to design a better manufacturing process for any industry.</span>
@@ -172,6 +221,27 @@ export default function Event() {
                   <h3>Intelligent Transportation Systems</h3><img src={transport.src} /><br/>
                   <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
                 </div>
+                  */}
+                <div className='item'>
+                  <h3>Making scientific research accessible using AI and Big data by cactus</h3><img src={automation.src} /><br/>
+                  <span>AI can identify data types, find possible connections among datasets, and recognize knowledge using natural language processing. It can be used to automate and accelerate data preparation tasks, including the generation of data models, and assist in data exploration.</span>
+                </div>
+
+                <div className='item'>
+                  <h3>Applied ML for Manufacturing Industry's Problem by JK Laxmi</h3><img src={ai.src} /><br/>
+                  <span>The manufacturing process can be time-consuming and expensive for companies that don't have the right tools in place to develop their products. In recent years, machine learning (ML) has become more prevalent in building and assembling items, using advanced technology to reduce the length and cost of manufacturing.</span>
+                </div>
+
+                <div className='item'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span></span>
+                </div>
+
+                <div className='item'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span></span>
+                </div>
+                
               </Carousel>
             </div>
           </section>
