@@ -94,10 +94,13 @@ export default function MyApp({ Component, pageProps }) {
 
   const handleTouchStart = e => {
     const first = getTouches(e)[0]
-    xDown = first.clientX
-    yDown = first.clientY
+    var xDown = first.clientX
+    var yDown = first.clientY
   }
   const handleTouchMove = e => {
+    const first = getTouches(e)[0]
+    var xDown = first.clientX
+    var yDown = first.clientY
     if ( ! xDown || ! yDown ) {
         return;
     }

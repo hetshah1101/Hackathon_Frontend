@@ -65,11 +65,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 3vw;
+                height: 5vw;
                 text-align: center;
                 width: 95%;
                 margin: 0 auto;
-                font-size: 1.5vw;
+                font-size: 1.2vw;
                 font-weight: 600;
             }
             span {
@@ -392,6 +392,7 @@
     .comingSoon{
         margin: 10vw;
         text-align: center;
+    }
 
     .carousel, .carousel2 {
         width: 100%;
@@ -401,11 +402,9 @@
             font-weight: 600;
             margin: 0;
         }
-        
-        }
         .slideshow {
             width: 100%;
-            height: 90% !important;
+            height: 70vh !important;
             padding: 2vw 0;
             .item {
                 width: 75%;
@@ -415,7 +414,7 @@
                 color: $dark;
                 padding: 1vw;
                 margin: 1vw auto;
-                height: 50vw;
+                height: 50vh !important;
                 display: grid;
                 grid-template-columns: "100%";
                 grid-template-rows: "1fr 1fr 10fr";
@@ -429,23 +428,38 @@
                     text-align: center;
                     width: 100%;
                     margin: 1vw auto;
-                    font-size: 2.4vw;
+                    font-size: 4vw;
                     font-weight: 600;
+                    height: 10vh;
                 }
                 span {
                     margin: 0 auto;
                     width: 90%;
-                    font-size: 1.8vw;
-                    height: 50vw;
+                    font-size: 2vw;
+                    height: 30vh;
                 }
                 img {
                     margin: 1vw auto;
-                    width: 8vw;
-                    height: 8vw;
+                    width: 12vw;
+                    height: 12vw;
                     object-fit: contain;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                }
+            }
+            .track {
+                h3 {
+                    height: 10vh;
+                }
+                img {
+                    width: auto;
+                    height: auto;
+                    max-width: 90%;
+                    max-height: 10vh;
+                }
+                span {
+                    height: 40vh;
                 }
             }
 

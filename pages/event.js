@@ -430,7 +430,7 @@ export default function Event() {
                 )}
               >
                 
-                <div className='item'>
+                <div className='item track'>
                   <img src={HopsLogo.src} /><br/>
                   <span>
                     <h3>Healthcare by Hops</h3>
@@ -442,7 +442,7 @@ export default function Event() {
                    </span> 
                 </div>
                
-                <div className='item'>
+                <div className='item track'>
                   <img src={cactusLogo.src} /><br/>
                   <span>
                     <h3>Healthcare by Hops</h3>
@@ -455,7 +455,7 @@ export default function Event() {
                    </span> 
                 </div>
 
-                <div className='item'>
+                <div className='item track'>
                 <img src={JklcLogo.src} /><br/>
                   <span>
                     <h3>Healthcare by Hops</h3>
@@ -467,12 +467,83 @@ export default function Event() {
                    </span> 
                 </div>
 
-                <div className='item'>
+                <div className='item track'>
                   <h3></h3><img src={comingsoon.src} /><br/>
                   <span>coming soon !</span>
                 </div>
 
-                <div className='item'>
+                <div className='item track'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span>coming soon !</span>
+                </div>
+              </Carousel>
+            </div>
+          </section>
+
+
+          <section id="mobile" style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='carousel'>
+              <h1>Track Prizes</h1>
+              <Carousel
+                className='slideshow'
+                slidesToShow={1}
+                slidesToScroll={1}
+                speed={1000}
+                // id="mobile"
+                wrapAround
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
+                )}
+              >
+                
+                <div className='item track'>
+                  <img src={HopsLogo.src} /><br/>
+                  <span>
+                    <h3>Healthcare by Hops</h3>
+                    <ul>
+                      <li>First prize is &#8377;10000</li>
+                      <li>Second prize &#8377;5000</li>
+                    </ul>
+                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                   </span> 
+                </div>
+               
+                <div className='item track'>
+                  <img src={cactusLogo.src} /><br/>
+                  <span>
+                    <h3>Healthcare by Hops</h3>
+                    <ul>
+                      <li>First prize is &#8377;15000</li>
+                      <li>Second prize &#8377;10000</li>
+                      <li>Third prize (Honorary) &#8377;5000</li>
+                    </ul>
+                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                   </span> 
+                </div>
+
+                <div className='item track'>
+                <img src={JklcLogo.src} /><br/>
+                  <span>
+                    <h3>Healthcare by Hops</h3>
+                    <ul>
+                      <li>First prize is &#8377;10000</li>
+                      <li>Second prize &#8377;5000</li>
+                    </ul>
+                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                   </span> 
+                </div>
+
+                <div className='item track'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span>coming soon !</span>
+                </div>
+
+                <div className='item track'>
                   <h3></h3><img src={comingsoon.src} /><br/>
                   <span>coming soon !</span>
                 </div>

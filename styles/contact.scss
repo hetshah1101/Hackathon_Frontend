@@ -23,14 +23,17 @@
 label, h2, span{
     color: black;
 }
-
 input[type=text],input[type=email], select, textarea {
     width: 100%;
     padding: 0.4vw;
     border: 0.1vw solid #ccc;
     margin-top: 0.5vw;
     margin-bottom: 1.5vw;
-    resize: vertical;
+    font-size: 1vw;
+    resize: none;
+  }
+  textarea {
+    height: 10vh;
   }
 
   input::placeholder, textarea::placeholder {
@@ -63,6 +66,7 @@ input[type=text],input[type=email], select, textarea {
     width: 30%;
     margin: 0;
     padding: 2vw 0;
+    font-size: 1.2vw;
     label {
       line-height: 110%;
     }
@@ -102,6 +106,7 @@ input[type=text],input[type=email], select, textarea {
     }
 }
 .column {
+  width: 100%;
   form {
     width: 100%;
     margin: 0;
@@ -129,11 +134,13 @@ input[type=text],input[type=email], select, textarea {
     border: 0.1vw solid #ccc;
     margin-top: 0.5vw;
     margin-bottom: 1.5vw;
-    resize: vertical;
   }
-
+textarea {
+  height: 5vh;
+}
   input::placeholder, textarea::placeholder {
-    font-size: 2vw !important;
+    font-size: 1.5vw !important;
+    line-height: 110% !important;
     font-family: 'montserrat' !important;
   }
   
