@@ -473,9 +473,8 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='carousel'>
-              {/*
-              <h1>Perks</h1>
-              */}
+
+              <h1 className='comingSoon'>Perks</h1><br/>
               <h1 className='comingSoon'> Coming Soon ! </h1>
               {/* 
               <Carousel
