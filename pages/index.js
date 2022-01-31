@@ -69,6 +69,7 @@ export default function Home() {
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
               <h1>3rd March - 5th March</h1>
+              <h1>Last Year's Registratons - 632</h1>
               <button onClick={() => {
                 setup(true);
                 setposition(position+1);
