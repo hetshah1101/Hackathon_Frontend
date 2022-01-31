@@ -27,7 +27,7 @@ export default function Contact() {
   const submitForm = () => {
     if (details.email.value != /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/)
     {
-      alert(err.response ? err.response.data.message : "Invalid Email format")
+      alert("Invalid Email format")
     }
     else{
       axios.post(`https://apis.mined2022.tech/api/contact`, details)
