@@ -19,9 +19,156 @@ export default function Home() {
   useEffect(() => {
     setposition(0)
     setcurrent(0)
-    setsections(2)
+    setsections(3)
     setSwipe(true)
   }, [])
+
+  let faqs = [
+    {
+      Question: "What is Hackathon ?",
+      Answer:
+      
+          "Hackathon is an interdisciplinary event where coders team up to solve problems around the world.",
+      
+    },
+    {
+      Question: "Why should I participate in hackathon ?",
+      ListAnswer: [
+        `Hackathon has plenty of benefits:`,
+        `1) You will usually meet people at a hackathon event who have the same goals and skills as you. This type of event helps improve your networking experience.`,
+        `2) Hackathon participation looks really impressive at your resume or CV. It signals to people that you have expertise in programming, experience performing in intense environments, and find a way to win.`,
+        `3) Intense problem-solving environments such as hackathons promote the development of new ideas and concepts. You have to collaborate with individuals from diverse fields, with different interests and skills, all working together to solve the same problem.`,
+        `4) Opportunities to develop a career as many companies offer a job to the hackathon winner.`,
+        `5) Pair programming is awesome if you want to concentrate on getting as much done as possible in a limited time, and you'd love talking to your partner about problems. It's best to find someone with a similar level of ability, and take turns "driving" (typing) and advising.`
+      ]
+    },
+    {
+      Question: "Is this Hackathon online or offline ?",
+      Answer: "This version of Hackathon is online only." 
+    },
+    {
+      Question: "Who can participate in this event ?",
+      Answer:
+      
+          "Any student enrolled in any college in India and having the attitude and passion towards building solutions to address challenging real life problems is eligible to participate.",
+      
+    },
+    {
+      Question: "What should be the team size ?",
+      Answer: "Team Size may be of 3-5 members." 
+    },
+    {
+      Question: "Do I need to register for participating in this event ?",
+      Answer:
+      
+          "Yes, ofcourse. You need to register with your team details and the track for which you would be participating.",
+      
+    },
+    {
+      Question: "Should I have a team formed prior to registration ?",
+      Answer:
+      
+          "No. It's not mandatory but it is good for you if team members are already known to you",
+      
+    },
+    {
+      Question: "What is the registration fee ?",
+      Answer:
+       "There is no registration fee for participating in this event.",
+      
+    },
+    {
+      Question: "Is this event limited to students of Gujarat only ?",
+      Answer:
+      
+          "No, the event is open to all students from across the country.",
+      
+    },
+    {
+      Question:
+        "Only students that belong to same College/ Branch can form a team ?",
+      Answer:
+      
+          "No. A team can consist of members belonging to any college as well as any discipline. Though every team member needs to be individually registered before forming a team.",
+      
+    },
+    {
+      Question: "Can I register for more than one tracks ?",
+      Answer: "No, one team can register only for a single track." 
+    },
+    {
+      Question: "Can I change the track after the registration ?",
+      Answer:
+      
+          "No, discuss with all team members and choose the track wisely before submitting your registration details.",
+      
+    },
+    {
+      Question: "Will I get any certificate of participation ?",
+      Answer:
+      
+          "Yes, e-certificates will be issued to all participants of this event who appear for the event.",
+      
+    },
+    {
+      Question: "When will the problem definitions be provided ?",
+      Answer:
+      
+          "Problem definitions specific to various tracks will be available from 20th February onwards.",
+      
+    },
+    {
+      Question: "What is the procedure to cancel the registration ?",
+      Answer:
+      
+          "If you feel that you will not be able to participate in the event after registering, just throw an email to coe.ds@nirmauni.ac.in stating the same.",
+      
+    },
+    {
+      Question: "Will the submission entries be scrutinized ?",
+      Answer:
+      
+          "No, there is no scrutiny. All entries will directly be able to work on the problem definitions as long as they follow the eligibility criteria.",
+      
+    },
+    {
+      Question:
+        "I am working at a company. Am I eligible to participate in the event ?",
+      Answer:
+      
+          "No, this season of the event is applicable only for students. ",
+      
+    },
+    {
+      Question: "Is there any track specific prize money ?",
+      Answer:
+      
+          "Track specific prize money depends on industries sponsoring specific track. ",
+      
+    },
+    {
+      Question: "Will there be any perks offered to me ?",
+      Answer:
+      
+          "In addition to gaining experience in working with peers in a competitive environment on real life problems, our sponsor partners are offering exciting perks / complementary product subscriptions to winners and/or participants.",
+      
+    },
+    {
+      Question: "Can I be part of two teams ?",
+      Answer:
+      
+          "Yes, you can be part of multiple teams from different tracks. But only one team will be eligible for price.",
+      
+    },
+    {
+      Question:
+        "My query is not listed in this FAQs section. What should I do ?",
+      Answer:
+      
+          "Please write to us at coe.ds@nirmauni.ac.in or join us on our social media platform.",
+      
+    },
+  ];
 
   useEffect(() => {
     if(position == 0) {
@@ -68,8 +215,8 @@ export default function Home() {
             <div className='header'>
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
-              <h1>3rd March - 5th March</h1>
-              <h1>Last Year's Registratons - 632</h1>
+              <h1>A Chance to Win Prizes worth Rs 1,00,000+</h1>
+              {/* <h1>Last Year's Registratons - 632</h1> */}
               <button onClick={() => {
                 setup(true);
                 setposition(position+1);
@@ -158,30 +305,22 @@ export default function Home() {
               </div>
             </div>
           </section>
-          {/* <section style={{
-            transform: `translateY(-${position*80}vh)`
-          }}>
-            <div className='left'>
-              <h1>MINeD Hackathon 3!</h1>
-              <button>Learn More</button>
-            </div>
-            <div className='right'>
-              <h1>MINeD Hackathon 3!</h1>
-              <button>Learn More</button>
-            </div>
-          </section>
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
-            <div className='left'>
-              <h1>MINeD Hackathon 4!</h1>
-              <button>Learn More</button>
+            <div className="faq">
+              {faqs.map(item => {
+                return (<div className='faq-Item'>
+                  <h3>{item.Question}</h3>
+                  <p>{item.Answer}</p>
+                  {item.ListAnswer ? item.ListAnswer.map(lst => <li>
+                    {lst}
+                  </li>) 
+                   : ""}
+                </div>)
+              })}
             </div>
-            <div className='right'>
-              <h1>MINeD Hackathon 4!</h1>
-              <button>Learn More</button>
-            </div>
-          </section> */}
+          </section>
         </div>
 
       </main>

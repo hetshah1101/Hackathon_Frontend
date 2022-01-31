@@ -68,13 +68,14 @@
             padding-left: 15vw;
             h1 {
                 text-align: center;
-                width: 36%;
+                width: 50%;
                 color: $light;
                 font-size: 1.6vw;
                 font-weight: 500;
                 font-family: 'Poppins';
                 letter-spacing: 0.2vw;
                 margin-bottom: 0.5vw;
+                margin-left: -5vw;
             }
             button {
                 width: 30%;
@@ -106,6 +107,24 @@
 .logo {
     width: 50%;
     height: 50%;
+}
+
+.faq {
+    height: 70vh;
+    overflow-y: auto;
+    .faq-Item {
+        margin-bottom: 3vw;
+        h3 {
+            font-size: 2vw;
+            font-weight: 500;
+            margin-bottom: 0.5vw;
+        }
+        p, li {
+            list-style: none;
+            font-size: 1.2vw;
+            line-height: 110%;
+        }
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -173,13 +192,14 @@
                 padding-left: 15vw;
                 h1 {
                     text-align: center;
-                    width: 30%;
+                    width: 100%;
                     color: $light;
-                    font-size: 1.6vw;
+                    font-size: 1.8vw;
                     font-weight: 500;
                     font-family: 'Poppins';
                     letter-spacing: 0.2vw;
                     margin-bottom: 0.5vw;
+                    margin-left: -7vw;
                 }
                 button {
                     width: 30%;
@@ -212,5 +232,20 @@
     .logo {
         width: 50%;
         height: 50%;
+    }
+
+    .faq {
+        height: 70vh;
+        overflow-y: auto;
+        .faq-Item {
+            margin-bottom: 5vw;
+            h3 {
+                font-size: 3.4vw;
+                margin-bottom: 0.5vw;
+            }
+            p, li {
+                font-size: 2vw;
+            }
+        }
     }
 }
