@@ -549,7 +549,7 @@ export default function Event() {
 
             </div>
           </section>
-
+          {/* 
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
@@ -557,7 +557,7 @@ export default function Event() {
 
               <h1 className='comingSoon'>Perks</h1><br/>
               <h1 className='comingSoon'> Coming Soon ! </h1>
-              {/* 
+              
               <Carousel
                 className='slideshow'
                 slidesToShow={3}
@@ -641,10 +641,10 @@ export default function Event() {
                   </span>
                 </div>
               </Carousel>
-              */}
+              
             </div>
           </section>
-
+          */}
           {/* <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
