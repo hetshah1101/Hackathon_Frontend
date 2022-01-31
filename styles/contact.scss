@@ -41,7 +41,7 @@ input[type=text],input[type=email], select, textarea {
     font-family: 'montserrat' !important;
   }
   
-  input[type=submit] {
+  input[type=button] {
     background-color: #04AA6D;
     color: white;
     padding: 0.5vw 1vw;
@@ -49,7 +49,7 @@ input[type=text],input[type=email], select, textarea {
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
+  input[type=button]:hover {
     background-color: #294dc4;
   }
   
@@ -144,7 +144,7 @@ textarea {
     font-family: 'montserrat' !important;
   }
   
-  input[type=submit] {
+  input[type=button] {
     background-color: #04AA6D;
     color: white;
     padding: 0.5vw 1vw;
@@ -152,7 +152,7 @@ textarea {
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
+  input[type=button]:hover {
     background-color: #294dc4;
   }
   

@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import { useContext, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import SiteContext from '../components/SiteContext'
 import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
-
+import axios from 'axios'
 import NirmaLogo from "../public/Contact Us/nirma_logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaPhoneAlt } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +11,28 @@ import { FaPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 export default function Contact() {
 
   const { current, setSwipe, setsections, setcurrent, position, setposition } = useContext(SiteContext);
+
+  const [details, setdetails] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
+
+  const handleChange = e => {
+    setdetails({...details, 
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const submitForm = () => {
+    axios.post(`https://apis.mined2022.tech/api/contact`, details)
+    .then(res => {
+      alert(res.data.message)
+    })
+    .catch(err => {
+      alert(err.response ? err.response.data.message : "Something Went Wrong!")
+    })
+  }
 
   useEffect(() => {
     setposition(0)
@@ -76,13 +98,13 @@ export default function Contact() {
                 <div className="column">
                   <form action="/action_page.php">
                     <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name.."/>
+                    <input onChange={handleChange} value={details.name} type="text" id="name" name="name" placeholder="Your name.."/>
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email.."/>
+                    <input onChange={handleChange} value={details.email} type="email" id="email" name="email" placeholder="Your Email.."/>
               
                     <label htmlFor="query">Query</label>
-                    <textarea id="query" name="query" placeholder="Write something.."></textarea>
-                    <input type="submit" value="Submit"/>
+                    <textarea onChange={handleChange} value={details.message} id="query" name="message" placeholder="Write something.."></textarea>
+                    <input onClick={() => submitForm()} type="button" value="Submit" />
                   </form>
                 </div>
               </div>
