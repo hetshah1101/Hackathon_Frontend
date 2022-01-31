@@ -43,7 +43,20 @@ nav {
             border-bottom: 0.01vw solid $light;
         }
     }
+    @keyframes glowing {
+        0% {
+          box-shadow: 0 0 1vw $dark;
+        }
+        50% {
+          box-shadow: 0 0 2vw $light;
+        }
+        100% {
+          box-shadow: 0 0 1vw $dark;
+        }
+      }
+
     button.register {
+        animation: glowing 1200ms infinite;
         width: 10%;
         padding: 0.5vw 2vw;
         font-size: 1.2vw;
@@ -148,7 +161,19 @@ nav {
                 border-bottom: 0.01vw solid $light;
             }
         }
+        @keyframes glowing {
+            0% {
+              box-shadow: 0 0 1vw $dark;
+            }
+            50% {
+              box-shadow: 0 0 2vw $light;
+            }
+            100% {
+              box-shadow: 0 0 1vw $dark;
+            }
+          }
         button.register {
+            animation: glowing 1200ms infinite;
             width: 18%;
             padding: 0.5vw 2vw;
             font-size: 3vw;

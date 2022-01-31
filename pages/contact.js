@@ -80,8 +80,8 @@ export default function Contact() {
                     <label htmlFor="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email.."/>
               
-                    <label htmlFor="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                    <label htmlFor="query">Query</label>
+                    <textarea id="query" name="query" placeholder="Write something.."></textarea>
                     <input type="submit" value="Submit"/>
                   </form>
                 </div>

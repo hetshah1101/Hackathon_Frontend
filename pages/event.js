@@ -80,9 +80,9 @@ export default function Event() {
               </p>
               <p>
                 The Center of Excellence in Data Science, CSE department, Institute of Technology, Nirma University
-                presents 48 hours long hackathon that offer opportunities to
-                participants to serve the nation by developing a innovative and
-                smart solution in the field of Healthcare, Agriculture,
+                presents 48 hours long hackathon that offers opportunities to
+                participants to serve the nation by developing innovative and
+                smart solutions in the field of Healthcare, Agriculture,
                 Transportation System, Industry Automation, Defense, Education, etc.
                 using Artificial Intelligence, Machine Learning, Deep Learning,
                 Computer Vision, Natural Language Processing, Internet of Things,
@@ -378,7 +378,7 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='prizes'> 
-              <h1>Prizes</h1>
+              <h1>Grand Prizes</h1>
               <div className='div'>
                 <div className='two'>
                   <img src={second.src}/>
@@ -439,6 +439,10 @@ export default function Event() {
               <tr>
                 <th colSpan='3'>Partners</th>
               </tr>
+              
+                <h1 className='comingSoon'>Coming Soon!</h1>
+              
+              {/* 
               <tr>
                 <td><a href="https://www.wolfram.com/" target="_blank">
                   <img src={WolframLogo.src} alt="Wolfram Logo"></img></a>
@@ -459,6 +463,7 @@ export default function Event() {
                   <img src={GMCLogo.src} alt="GMC Logo"></img></a>
                 </td>
               </tr>
+              */}
             </table>
 
             </div>

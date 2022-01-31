@@ -93,18 +93,22 @@ export default function Home() {
           }}>
             
             <div className='left'>
+              {/* 
               <h1>MINeD Hackathon 2!</h1>
               <button>Learn More</button>
+              */}
             </div>
             <div className='right'>
+              {/*
               <h1>MINeD Hackathon 2!</h1>
               <button>Learn More</button>
+              */}
             </div>
           </section>
           <section className='col' style={{
             transform: `translateY(-${position*80}vh)`
           }}>
-            <h1>About Organisers</h1> <br/>
+            <h1>About Organizers</h1> <br/>
             <div className='top'>
             
               <img src={NULogo.src} className='nopad' ></img>

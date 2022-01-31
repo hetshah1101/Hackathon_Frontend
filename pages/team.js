@@ -75,22 +75,36 @@ export default function Team() {
             <div className='mentors'> 
               <h1>Mentors</h1>
               <div className='div'>
+                <a href='' target="_blank">
+                <div className='card'>
+                  <img src={user.src} className='profile'/>
+                  <h3>To Be Announced Soon</h3>
+                  {/* 
+                  <h3><FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
+                  <p></p>
+                  */}
+                </div>
+                </a> 
+
                 <a href='https://www.linkedin.com/in/htrap94/' target="_blank">
                 <div className='card'>
                   <img src={parth.src} className='profile'/>
                   <h3>Parth Agrawal <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
-                  <p>GCP 1x Data Engineer</p>
+                  <p>AI Evangelist, Cactus Communications</p>
 
                 </div>
                 </a>
 
-                {/* <a href='https://www.linkedin.com/in/jaldeep-vasavada-4545602a/' target="_blank">
+                <a href='' target="_blank">
                 <div className='card'>
                   <img src={user.src} className='profile'/>
-                  <h3>Jaldeep Vasavada <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
-                  <p>Sr.SDE at Microsoft</p>
+                  <h3>To Be Announced Soon</h3>
+                  {/* 
+                  <h3><FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
+                  <p></p>
+                  */}
                 </div>
-                </a> */}
+                </a> 
                 {/* 
                 <a href='https://www.linkedin.com/in/jay-shah-delivery/' target="_blank">
                 <div className='card'>

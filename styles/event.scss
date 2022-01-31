@@ -29,6 +29,11 @@
 #mobile {
     display: none !important;
 }
+.comingSoon{
+    letter-spacing: 1vw;
+    margin: 5vw;
+    text-align: center;
+}
 .carousel, .carousel2 {
     width: 100%;
     h1 {
@@ -36,10 +41,7 @@
         font-weight: 600;
         margin: 0;
     }
-    .comingSoon{
-        margin: 10vw;
-        text-align: center;
-    }
+    
     .slideshow {
         width: 100%;
         height: 70vh !important;
@@ -387,6 +389,10 @@
     #mobile {
         display: flex !important;
     }
+    .comingSoon{
+        margin: 10vw;
+        text-align: center;
+
     .carousel, .carousel2 {
         width: 100%;
         h1 {
@@ -395,9 +401,7 @@
             font-weight: 600;
             margin: 0;
         }
-        .comingSoon{
-            margin: 10vw;
-            text-align: center;
+        
         }
         .slideshow {
             width: 100%;
