@@ -25,13 +25,19 @@ export default function Contact() {
   }
 
   const submitForm = () => {
-    axios.post(`https://apis.mined2022.tech/api/contact`, details)
-    .then(res => {
-      alert(res.data.message)
-    })
-    .catch(err => {
-      alert(err.response ? err.response.data.message : "Something Went Wrong!")
-    })
+    if (details.email.value != /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/)
+    {
+      alert(err.response ? err.response.data.message : "Invalid Email format")
+    }
+    else{
+      axios.post(`https://apis.mined2022.tech/api/contact`, details)
+      .then(res => {
+        alert(res.data.message)
+      })
+      .catch(err => {
+        alert(err.response ? err.response.data.message : "Something Went Wrong!")
+      })
+    }
   }
 
   useEffect(() => {

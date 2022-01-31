@@ -157,6 +157,7 @@ export default function Team() {
                   <a href='https://www.linkedin.com/in/priyank-thakkar-4701689b/' target="_blank">
                   <img src={priyankthakker.src} className='profile'></img>
                   <h3>Priyank Thakkar <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3>                  
+                  <h5>Coordinator</h5>
                   </a>
                 </div>
 

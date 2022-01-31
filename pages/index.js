@@ -216,6 +216,7 @@ export default function Home() {
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
               <h1>A Chance to Win Prizes worth Rs 1,00,000+</h1>
+              <h1>March 3 - March 5</h1>
               {/* <h1>Last Year's Registratons - 632</h1> */}
               <button onClick={() => {
                 setup(true);

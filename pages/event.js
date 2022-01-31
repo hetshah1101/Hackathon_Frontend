@@ -164,7 +164,7 @@ export default function Event() {
                 </div>
 
                 <div className='item'>
-                  <h3>Applied ML for Manufacturing Industry's Problem by JK Laxmi</h3><img src={ai.src} /><br/>
+                  <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3><img src={ai.src} /><br/>
                   <span>The manufacturing process can be time-consuming and expensive for companies that don't have the right tools in place to develop their products. In recent years, machine learning (ML) has become more prevalent in building and assembling items, using advanced technology to reduce the length and cost of manufacturing.</span>
                 </div>
 
@@ -228,7 +228,7 @@ export default function Event() {
                 </div>
 
                 <div className='item'>
-                  <h3>Applied ML for Manufacturing Industry's Problem by JK Laxmi</h3><img src={ai.src} /><br/>
+                  <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3><img src={ai.src} /><br/>
                   <span>The manufacturing process can be time-consuming and expensive for companies that don't have the right tools in place to develop their products. In recent years, machine learning (ML) has become more prevalent in building and assembling items, using advanced technology to reduce the length and cost of manufacturing.</span>
                 </div>
 
@@ -445,7 +445,7 @@ export default function Event() {
                 <div className='item track'>
                   <img src={cactusLogo.src} /><br/>
                   <span>
-                    <h3>Healthcare by Hops</h3>
+                    <h3>Making scientific research accessible using AI and Big data by cactus</h3>
                     <ul>
                       <li>First prize is &#8377;15000</li>
                       <li>Second prize &#8377;10000</li>
@@ -458,7 +458,7 @@ export default function Event() {
                 <div className='item track'>
                 <img src={JklcLogo.src} /><br/>
                   <span>
-                    <h3>Healthcare by Hops</h3>
+                    <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3>
                     <ul>
                       <li>First prize is &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
