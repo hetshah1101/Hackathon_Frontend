@@ -121,7 +121,7 @@ export default function Home() {
       Question: "What is the procedure to cancel the registration ?",
       Answer:
       
-          "If you feel that you will not be able to participate in the event after registering, just throw an email to coe.ds@nirmauni.ac.in stating the same.",
+          "If you feel that you will not be able to participate in the event after registering, just throw an email at minedhackathon2k22@gmail.com stating the same.",
       
     },
     {
@@ -165,7 +165,7 @@ export default function Home() {
         "My query is not listed in this FAQs section. What should I do ?",
       Answer:
       
-          "Please write to us at coe.ds@nirmauni.ac.in or join us on our social media platform.",
+          "Please write to us at minedhackathon2k22@gmail.com or join us on our social media platform.",
       
     },
   ];
@@ -308,7 +308,9 @@ export default function Home() {
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
+            
             <div className="faq">
+            <h1>FAQs</h1> <br/>
               {faqs.map(item => {
                 return (<div className='faq-Item'>
                   <h3>{item.Question}</h3>
