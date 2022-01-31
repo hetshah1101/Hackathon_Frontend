@@ -136,7 +136,7 @@ export default function Event() {
                 */}
 
                 <div className='item'>
-                  <h3>Healthcare by ops</h3><img src={health.src} /><br/>
+                  <h3>Healthcare by Hops</h3><img src={health.src} /><br/>
                   <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
                 </div>
                 {/* 
@@ -200,7 +200,7 @@ export default function Event() {
                 )}
               >
                 <div className='item'>
-                  <h3>Healthcare by ops</h3><img src={health.src} /><br/>
+                  <h3>Healthcare by Hops</h3><img src={health.src} /><br/>
                   <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
                 </div>
                 {/* 
@@ -407,6 +407,76 @@ export default function Event() {
                   <p>&#36;200</p>
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section id="desktop" style={{
+            transform: `translateY(-${position*80}vh)`
+          }}>
+            <div className='carousel'>
+              <h1>Track Prizes</h1>
+              <Carousel
+                className='slideshow'
+                slidesToShow={3}
+                slidesToScroll={2}
+                speed={1000}
+                id="desktop"
+                wrapAround
+                renderCenterLeftControls={({ previousSlide }) => (
+                  <button className='sliderOptions' onClick={previousSlide}>&lt;</button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                  <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
+                )}
+              >
+                
+                <div className='item'>
+                  <img src={HopsLogo.src} /><br/>
+                  <span>
+                    <h3>Healthcare by Hops</h3>
+                    <ul>
+                      <li>First prize is &#8377;10000</li>
+                      <li>Second prize &#8377;5000</li>
+                    </ul>
+                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                   </span> 
+                </div>
+               
+                <div className='item'>
+                  <img src={cactusLogo.src} /><br/>
+                  <span>
+                    <h3>Healthcare by Hops</h3>
+                    <ul>
+                      <li>First prize is &#8377;15000</li>
+                      <li>Second prize &#8377;10000</li>
+                      <li>Third prize (Honorary) &#8377;5000</li>
+                    </ul>
+                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                   </span> 
+                </div>
+
+                <div className='item'>
+                <img src={JklcLogo.src} /><br/>
+                  <span>
+                    <h3>Healthcare by Hops</h3>
+                    <ul>
+                      <li>First prize is &#8377;10000</li>
+                      <li>Second prize &#8377;5000</li>
+                    </ul>
+                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                   </span> 
+                </div>
+
+                <div className='item'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span>coming soon !</span>
+                </div>
+
+                <div className='item'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span>coming soon !</span>
+                </div>
+              </Carousel>
             </div>
           </section>
 
