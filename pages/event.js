@@ -592,7 +592,9 @@ export default function Event() {
                 <th colSpan='3'>Partners</th>
               </tr>
               
-                <h1 className='comingSoon'>Coming Soon!</h1>
+                <tr>
+                  <h1 className='comingSoon'>Coming Soon!</h1>
+                </tr>
               
               {/* 
               <tr>
