@@ -69,7 +69,7 @@ export default function Contact() {
 
                   <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' /> {/* add mail icon */}
                   
-                  <a className="email" href="mailto:coe.ds@nirmauni.ac.in" > <span className='bold'> coe.ds@nirmauni.ac.in </span> </a>
+                  <a className="email" href="mailto:minedhackathon2k22@gmail.com" > <span className='bold'> minedhackathon2k22@gmail.com</span> </a>
                   <br/><br/>
                 </div>
 

@@ -197,47 +197,43 @@ export default function Event() {
                 {/* Day 1 Table */}
                 <table className="table">
                   <tbody>
-                  <th colSpan='2'>Day 1 - 3rd March</th>
+                  <th colSpan='2'>3rd March (Day 1)</th>
                     <tr>
-                      <td className="time">8:40 AM</td>
-                      <td className="content">On Site Registration</td>
+                      <td className="time">9:00 AM to 10:00 AM</td>
+                      <td className="content">Inauguration ceremony</td>
                     </tr>
                     <tr>
-                      <td className="time">9:00 AM - 9:30 AM</td>
-                      <td className="content">Opening ceremony</td>
+                      <td className="time">10:00 AM to 11:00 AM</td>
+                      <td className="content">Keynote Session</td>
                     </tr>
                     <tr>
-                      <td className="time">9:30 AM - 10:00 PM</td>
-                      <td className="content">Keynote Sessions </td>
+                      <td className="time">11:00 AM onwards</td>
+                      <td className="content">Hackathon begins...</td>
                     </tr>
                     <tr>
-                      <td className="time">10:00 AM</td>
-                      <td className="content">The Hack Starts!</td>
+                      <td className="time">11:00 AM to 12:00 PM</td>
+                      <td className="content">Industry slot to describe problems</td>
                     </tr>
                     <tr>
-                      <td className="time">1:30 PM - 2:30 PM</td>
-                      <td className="content">Lunch</td>
+                      <td className="time">12:00 PM to 1:00 PM</td>
+                      <td className="content">Track selection by participating teams</td>
                     </tr>
                     <tr>
-                      <td className="time">2:30 PM - 5:30 PM</td>
-                      <td className="content">Hacking Continues</td>
+                      <td className="time">1:00 PM to 4:00 PM</td>
+                      <td className="content">Hacking continues... </td>
                     </tr>
                     <tr>
-                      <td className="time">5:30 PM - 6:30 PM</td>
-                      <td className="content">First Round of Mentorship!</td>
+                      <td className="time">4:00 PM to 5:00 PM</td>
+                      <td className="content">Industry interaction slot</td>
                     </tr>
                     <tr>
-                      <td className="time">5:30 PM - 8:30 PM</td>
-                      <td className="content">Hacking Continues</td>
-                    </tr>
-                    <tr>
-                      <td className="time">8:30 PM - 9:30 PM</td>
-                      <td className="content">Dinner!</td>
+                      <td className="time">5:00 PM to 6:00 PM</td>
+                      <td className="content">Mentoring session</td>
                     </tr>
 
                     <tr>
-                      <td className="time">9:30 PM - 12:00 AM</td>
-                      <td className="content">Hacking Continues</td>
+                      <td className="time">6:00 PM to 12:00 AM</td>
+                      <td className="content">Hacking Continues...</td>
                     </tr>
                   </tbody>
                 </table>
@@ -245,128 +241,73 @@ export default function Event() {
                 {/* Day 2 Table */}
                 <table className="table">
                   <tbody>
-                    <th colSpan='2'>Day 2 - 4th March</th>
+                    <th colSpan='2'>4th March (Day 2)</th>
                     <tr>
-                      <td className="time">12:00 AM - 1:00 AM</td>
-                      <td className="content">Fun Activity</td>
+                      <td className="time">12:00 AM to 11:00 AM</td>
+                      <td className="content">Hacking Continues...</td>
                     </tr>
                     <tr>
-                      <td className="time">1:00 AM - 8:45 AM</td>
-                      <td className="content">Hacking Continues</td>
+                      <td className="time">11:00 AM to 12:00 PM</td>
+                      <td className="content">Industry interaction slot</td>
                     </tr>
                     <tr>
-                      <td className="time">8:45 AM - 9:30 AM</td>
-                      <td className="content">Breakfast</td>
+                      <td className="time">12:00 PM to 4:00 PM</td>
+                      <td className="content">Hacking continues..</td>
                     </tr>
                     <tr>
-                      <td className="time">9:30 AM - 1:30 PM</td>
-                      <td className="content">Hacking Continues</td>
+                      <td className="time">4:00 PM to 5:00 PM</td>
+                      <td className="content">Industry interaction slot</td>
+                    </tr>
+                    
+                    <tr>
+                      <td className="time">5:00 PM to 6:00 PM</td>
+                      <td className="content">Mentoring Session</td>
                     </tr>
                     <tr>
-                      <td className="time">1:30 PM - 2:30 PM</td>
-                      <td className="content">Lunch</td>
+                      <td className="time">6:00 PM to 12:00 AM</td>
+                      <td className="content">Hacking continues...</td>
                     </tr>
-                    <tr>
-                      <td className="time">2:30 PM - 3:00 PM</td>
-                      <td className="content">Final Submittion</td>
-                    </tr>
-                    <tr>
-                      <td className="time">3:00 PM - 4:00 PM</td>
-                      <td className="content">First Judging round</td>
-                    </tr>
-                    <tr>
-                      <td className="time">4:00 PM - 5:00 PM</td>
-                      <td className="content">High Tea and Discussion</td>
-                    </tr>
-                    {/*
-                    <tr>
-                      <td className="time">12:00 AM - 1:00 AM</td>
-                      <td className="content">Fun Activity</td>
-                    </tr>
-                    <tr>
-                      <td className="time">1:00 AM - 8:45 AM</td>
-                      <td className="content">Hacking Continues</td>
-                    </tr>
-                    <tr>
-                      <td className="time">8:45 AM - 9:30 AM</td>
-                      <td className="content">Breakfast</td>
-                    </tr>
-                    <tr>
-                      <td className="time">9:30 AM - 1:30 PM</td>
-                      <td className="content">Hacking Continues</td>
-                    </tr>
-                    <tr>
-                      <td className="time">1:30 PM - 2:30 PM</td>
-                      <td className="content">Lunch</td>
-                    </tr>
-                    <tr>
-                      <td className="time">2:30 PM - 3:00 PM</td>
-                      <td className="content">Final Submittion</td>
-                    </tr>
-                    <tr>
-                      <td className="time">3:00 PM - 4:00 PM</td>
-                      <td className="content">First Judging round</td>
-                    </tr>
-                    <tr>
-                      <td className="time">4:00 PM - 5:00 PM</td>
-                      <td className="content">High Tea and Discussion</td>
-                    </tr>
-
-                    <tr>
-                      <td className="time">5:00 PM onwards</td>
-                      <td className="content">
-                        Final Presentation, Winner's Anouncement and Prize
-                        Distribution
-                      </td>
-                    </tr>
-                    */}
+                    
                   </tbody>
                 </table>  
 
                 {/* Day 3 Table */}
                 <table className="table">
                   <tbody>
-                    <th colSpan='2'>Day 3 - 5th March</th>
+                    <th colSpan='2'>5th March (Day 3)</th>
                     <tr>
-                      <td className="time">12:00 AM - 1:00 AM</td>
-                      <td className="content">Fun Activity</td>
+                      <td className="time">12:00 AM to 11:00 AM</td>
+                      <td className="content">Hacking Continues...</td>
                     </tr>
                     <tr>
-                      <td className="time">1:00 AM - 8:45 AM</td>
-                      <td className="content">Hacking Continues</td>
+                      <td className="time">11:00 AM</td>
+                      <td className="content">Hackathon ends...</td>
                     </tr>
                     <tr>
-                      <td className="time">8:45 AM - 9:30 AM</td>
-                      <td className="content">Breakfast</td>
+                      <td className="time">11:00 AM to 12:00 PM</td>
+                      <td className="content">Final Submission on portal</td>
                     </tr>
                     <tr>
-                      <td className="time">9:30 AM - 1:30 PM</td>
-                      <td className="content">Hacking Continues</td>
+                      <td className="time">12:30 pm to 3:00 pm</td>
+                      <td className="content">First round of evaluation begins (Project Presentation of all teams)</td>
                     </tr>
                     <tr>
-                      <td className="time">1:30 PM - 2:30 PM</td>
-                      <td className="content">Lunch</td>
+                      <td className="time">3:45 pm to 4:00 pm</td>
+                      <td className="content">Track winners Announcement</td>
                     </tr>
                     <tr>
-                      <td className="time">2:30 PM - 3:00 PM</td>
-                      <td className="content">Final Submittion</td>
+                      <td className="time">4:30 pm onwards</td>
+                      <td className="content">Final round of evaluation (Project Presentation of top selected teams)</td>
                     </tr>
                     <tr>
-                      <td className="time">3:00 PM - 4:00 PM</td>
-                      <td className="content">First Judging round</td>
+                      <td className="time">7:30 pm to 8:00 PM</td>
+                      <td className="content">Announcement of Grand Prize Winner</td>
                     </tr>
                     <tr>
-                      <td className="time">4:00 PM - 5:00 PM</td>
-                      <td className="content">High Tea and Discussion</td>
+                      <td className="time">8:00 pm to 9:00 pm</td>
+                      <td className="content">Concluding Remarks and valedictory session</td>
                     </tr>
 
-                    <tr>
-                      <td className="time">5:00 PM onwards</td>
-                      <td className="content">
-                        Final Presentation, Winner's Anouncement and Prize
-                        Distribution
-                      </td>
-                    </tr>
                   </tbody>
                 </table>  
               </Carousel>
