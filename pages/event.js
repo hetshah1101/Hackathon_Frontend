@@ -10,6 +10,7 @@ import agriculture from '../public/Track/plant.png';
 import service from '../public/Track/service1.png';
 import automation from '../public/Track/Automation_2.png';
 import transport from '../public/Track/shipped.png';
+import openinnovation from '../public/Track/INNOVATION_ic.png';
 import ai from '../public/Track/ai.png';
 import comingsoon from '../public/Track/comingsoon.png';
 import first from '../public/prizes/gold-medal1.png'; 
@@ -75,20 +76,26 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='center'> 
-              <h1>About Event</h1>
+              <h1>About the Event</h1>
               <p className='quote'>
                 &ldquo;Our intelligence is what makes us human, and AI is an extension of
                 that quality.&rdquo;  — Yann LeCun.
               </p>
               <p>
                 The Center of Excellence in Data Science, CSE department, Institute of Technology, Nirma University
-                presents 48 hours long hackathon that offers opportunities to
+                presents 48 hours long hackathon from March 3 to March 5 2022. The hackathon will allow students
+                to work on industry-level problems in the domains of Smart Healthcare, Applied Machine Learning for 
+                Manufacturing Industry, AI &#38; Big Data, Computer Vision and Deep Learning, Internet Of Things, Natural
+                Language Processing etc. 
+                {/*
+                that offers opportunities to
                 participants to serve the nation by developing innovative and
                 smart solutions in the field of Healthcare, Agriculture,
                 Transportation System, Industry Automation, Defense, Education, etc.
                 using Artificial Intelligence, Machine Learning, Deep Learning,
                 Computer Vision, Natural Language Processing, Internet of Things,
                 Blockchain, etc. for betterment of human being.
+                */}
               </p>
             </div>
           </section>
@@ -112,28 +119,6 @@ export default function Event() {
                   <button className='sliderOptions' onClick={nextSlide}>&gt;</button>
                 )}
               >
-                {/* 
-                <div className='item'>
-                  <h3>Healthcare</h3><img src={health.src} /><br/>
-                  <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
-                </div>
-                <div className='item'>
-                  <h3>Agriculture</h3><img src={agriculture.src} /><br/>
-                  <span>Agriculture is playing a vital role in India's economy. Bringing the technological solution in the framing industry can improve the cultivation and productivity of crops. Recently, innovation in the filed of Bio-Technologies and Artificial intelligence brings resolution in the farming industry.</span>
-                </div>
-                <div className='item'>
-                  <h3>Service to Society</h3><img src={service.src} /><br/>
-                  <span>Bring the technologies in to real like can solve many societal problems. A country like India is facing many challenges like person/woman safety and better living for the elderly and handicaps. Find out a solution that makes the life of every human being better.</span>
-                </div>
-                <div className='item'>
-                  <h3>Automation</h3><img src={automation.src} /><br/>
-                  <span>In the emerging era of industry 4.0, industrial manufacturing companies are facing strong demand to increase their productivity using AI and data science-based automated solutions, which helps to produce fast, essential and accurate products. Technologies like CPS, AI, CV, NLP IoT &#38; cognitive computing help to design a better manufacturing process for any industry.</span>
-                </div>
-                <div className='item'>
-                  <h3>Intelligent Transportation Systems</h3><img src={transport.src} /><br/>
-                  <span>An intelligent transportation system (ITS) is one of the crucial parts of building smart cities. This process includes sensing, analysis, communication with internal and external resources and decision making to improve safety, mobility and efficiency.  A self-driving car and hyperloops are examples of ITS.</span>
-                </div>
-                */}
 
                 <div className='item'>
                   <h3>Healthcare by Hops</h3><img src={health.src} /><br/>
@@ -159,18 +144,18 @@ export default function Event() {
                 </div>
                   */}
                 <div className='item'>
-                  <h3>Making scientific research accessible using AI and Big data by cactus</h3><img src={automation.src} /><br/>
+                  <h3>Making Scientific Research accessible using AI &#38; Big Data by Cactus Global</h3><img src={automation.src} /><br/>
                   <span>AI can identify data types, find possible connections among datasets, and recognize knowledge using natural language processing. It can be used to automate and accelerate data preparation tasks, including the generation of data models, and assist in data exploration.</span>
                 </div>
 
                 <div className='item'>
-                  <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3><img src={ai.src} /><br/>
+                  <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi Pvt. Ltd.</h3><img src={ai.src} /><br/>
                   <span>The manufacturing process can be time-consuming and expensive for companies that don't have the right tools in place to develop their products. In recent years, machine learning (ML) has become more prevalent in building and assembling items, using advanced technology to reduce the length and cost of manufacturing.</span>
                 </div>
 
                 <div className='item'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span>coming soon !</span>
+                  <h3>Open Innovation</h3><img src={openinnovation.src} /><br/>
+                  <span>Every individual has creative solutions to problems faced in the real world. If you'd like to demonstrate a brilliant idea, but you feel that the idea does not suit other tracks, Open Track is ideal for you.</span>
                 </div>
 
                 <div className='item'>
@@ -223,18 +208,18 @@ export default function Event() {
                 </div>
                   */}
                 <div className='item'>
-                  <h3>Making scientific research accessible using AI and Big data by cactus</h3><img src={automation.src} /><br/>
+                  <h3>Making Scientific Research accessible using AI &#38; Big Data by Cactus Global</h3><img src={automation.src} /><br/>
                   <span>AI can identify data types, find possible connections among datasets, and recognize knowledge using natural language processing. It can be used to automate and accelerate data preparation tasks, including the generation of data models, and assist in data exploration.</span>
                 </div>
 
                 <div className='item'>
-                  <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3><img src={ai.src} /><br/>
+                  <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi Pvt. Ltd.</h3><img src={ai.src} /><br/>
                   <span>The manufacturing process can be time-consuming and expensive for companies that don't have the right tools in place to develop their products. In recent years, machine learning (ML) has become more prevalent in building and assembling items, using advanced technology to reduce the length and cost of manufacturing.</span>
                 </div>
 
                 <div className='item'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span></span>
+                  <h3>Open Innovation</h3><img src={openinnovation.src} /><br/>
+                  <span>Every individual has creative solutions to problems faced in the real world. If you'd like to demonstrate a brilliant idea, but you feel that the idea does not suit other tracks, Open Track is ideal for you.</span>
                 </div>
 
                 <div className='item'>
@@ -439,7 +424,7 @@ export default function Event() {
                       <li>Second prize &#8377;5000</li>
                     </ul>
                     <br/>
-                    <p>&#42; If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                    <p>&#42; If the solution/submission will be found exceptionally good, then the concerned will be considered for an internship opportunity.</p>
                    </span> 
                 </div>
                
@@ -453,7 +438,7 @@ export default function Event() {
                       <li>Third prize (Honorary) &#8377;5000</li>
                     </ul>
                     <br/>
-                    <p>&#42; If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                    <p>&#42; If the solution/submission will be found exceptionally good, then the concerned will be considered for an internship opportunity.</p>
                    </span> 
                 </div>
 
@@ -510,32 +495,33 @@ export default function Event() {
                       <li>First prize is &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
-                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                    <br/>
+                    <p>&#42; If the solution/submission will be found exceptionally good, then the concerned will be considered for an internship opportunity.</p>
                    </span> 
                 </div>
                
                 <div className='item track'>
                   <img src={cactusLogo.src} /><br/>
                   <span>
-                    <h3>Healthcare by Hops</h3>
+                    <h3>Making scientific research accessible using AI and Big data by cactus</h3>
                     <ul>
                       <li>First prize is &#8377;15000</li>
                       <li>Second prize &#8377;10000</li>
                       <li>Third prize (Honorary) &#8377;5000</li>
                     </ul>
-                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                    <br/>
+                    <p>&#42; If the solution/submission will be found exceptionally good, then the concerned will be considered for an internship opportunity.</p>
                    </span> 
                 </div>
 
                 <div className='item track'>
                 <img src={JklcLogo.src} /><br/>
                   <span>
-                    <h3>Healthcare by Hops</h3>
+                    <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3>
                     <ul>
                       <li>First prize is &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
-                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
                    </span> 
                 </div>
 

@@ -44,7 +44,7 @@ export default function Home() {
     },
     {
       Question: "Is this Hackathon online or offline ?",
-      Answer: "This version of Hackathon is online only." 
+      Answer: "This Hackathon is in online mode only." 
     },
     {
       Question: "Who can participate in this event ?",
@@ -228,7 +228,7 @@ export default function Home() {
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
               <h1>A Chance to Win Prizes worth Rs 1,00,000+</h1>
-              <h1>March 3 - March 5</h1>
+              <h1>March 3 - March 5 2022</h1>
               {/* <h1>Last Year's Registratons - 632</h1> */}
               <button onClick={() => {
                 setup(true);
@@ -275,7 +275,7 @@ export default function Home() {
               <img src={NULogo.src} className='nopad' ></img>
               <div><p><a href="http://nirmauni.ac.in" target="_blank">
                 Nirma University
-              </a>{" "}
+              </a>{""}
               , Ahmedabad is a research-oriented, student-centric,
               multidisciplinary, not-for-profit state private university. Within
               a short period of its existence, it has emerged as a nationally
@@ -289,9 +289,9 @@ export default function Home() {
               Artificial Intelligence and Deep Learning, Internet of Things,
               Data Science, Cloud Computing, Networking and Cyber Security. We
               at the Department of Computer Science and Engineering, Institute
-              of Technology, Nirma University have recently established the
-              Centre of Excellence in Data Science (CoE - DS) in collaborated
-              with SUNY Binghamton University, USA.</p>
+              of Technology, Nirma University have established the
+              Centre of Excellence in Data Science (CoE - DS) in collaboration
+              with SUNY Binghamton University, USA in 2020.</p>
               </div>
             </div>
             <div className='bottom'>
