@@ -118,11 +118,13 @@
             font-size: 2vw;
             font-weight: 500;
             margin-bottom: 0.5vw;
+            text-align: justify;
         }
         p, li {
             list-style: none;
             font-size: 1.2vw;
             line-height: 110%;
+            text-align: justify;
         }
     }
 }
@@ -242,9 +244,11 @@
             h3 {
                 font-size: 3.4vw;
                 margin-bottom: 0.5vw;
+                text-align: justify;
             }
             p, li {
                 font-size: 2vw;
+                text-align: justify;
             }
         }
     }

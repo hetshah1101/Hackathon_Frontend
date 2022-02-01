@@ -61,14 +61,14 @@ export default function Home() {
       Question: "Do I need to register for participating in this event ?",
       Answer:
       
-          "Yes, ofcourse. You need to register with your team details and the track for which you would be participating.",
+          "Currently you need to register individually. Later, once the team registration is enabled, you need to register with your team details and the track for which you would be participating.",
       
     },
     {
       Question: "Should I have a team formed prior to registration ?",
       Answer:
       
-          "No. It's not mandatory but it is good for you if team members are already known to you",
+          "No. It's not mandatory but it is good for you if team members are already known to you.",
       
     },
     {
@@ -89,13 +89,14 @@ export default function Home() {
         "Only students that belong to same College/ Branch can form a team ?",
       Answer:
       
-          "No. A team can consist of members belonging to any college as well as any discipline. Though every team member needs to be individually registered before forming a team.",
+          "No. A team can consist of members belonging to any college as well as any discipline. However every team member needs to be individually registered before forming a team.",
       
     },
     {
       Question: "Can I register for more than one tracks ?",
       Answer: "No, one team can register only for a single track." 
     },
+    /*
     {
       Question: "Can I change the track after the registration ?",
       Answer:
@@ -103,13 +104,15 @@ export default function Home() {
           "No, discuss with all team members and choose the track wisely before submitting your registration details.",
       
     },
+    */
     {
       Question: "Will I get any certificate of participation ?",
       Answer:
       
-          "Yes, e-certificates will be issued to all participants of this event who appear for the event.",
+          "Yes, e-certificates will be issued to all active participants of the event who submit and present their solution on the last day of the event.",
       
     },
+    /*
     {
       Question: "When will the problem definitions be provided ?",
       Answer:
@@ -117,6 +120,7 @@ export default function Home() {
           "Problem definitions specific to various tracks will be available from 20th February onwards.",
       
     },
+    */
     {
       Question: "What is the procedure to cancel the registration ?",
       Answer:
@@ -158,6 +162,14 @@ export default function Home() {
       Answer:
       
           "Yes, you can be part of multiple teams from different tracks. But only one team will be eligible for price.",
+      
+    },
+    {
+      Question:
+        "What if I don't have a team?",
+      Answer:
+      
+          "Don't worry! You can send team joining request to public teams and become part of them. If this doesn't works our team assignment algorithm will assign you a team before the event starts!",
       
     },
     {

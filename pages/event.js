@@ -250,7 +250,7 @@ export default function Event() {
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='carousel2'> 
-            <h1>Schedule</h1>
+            <h1>Tentative Schedule</h1>
             <Carousel
                 className='slideshow'
                 slidesToShow={1}
