@@ -72,6 +72,14 @@ export default function Home() {
       
     },
     {
+      Question:
+        "What if I don't have a team?",
+      Answer:
+      
+          "Don't worry! You can send team joining request to public teams and become part of them. If this doesn't works our team assignment algorithm will assign you a team before the event starts!",
+      
+    },
+    {
       Question: "What is the registration fee ?",
       Answer:
        "There is no registration fee for participating in this event.",
@@ -162,14 +170,6 @@ export default function Home() {
       Answer:
       
           "Yes, you can be part of multiple teams from different tracks. But only one team will be eligible for price.",
-      
-    },
-    {
-      Question:
-        "What if I don't have a team?",
-      Answer:
-      
-          "Don't worry! You can send team joining request to public teams and become part of them. If this doesn't works our team assignment algorithm will assign you a team before the event starts!",
       
     },
     {
