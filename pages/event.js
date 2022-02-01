@@ -438,7 +438,8 @@ export default function Event() {
                       <li>First prize is &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
-                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                    <br/>
+                    <p>&#42; If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
                    </span> 
                 </div>
                
@@ -451,7 +452,8 @@ export default function Event() {
                       <li>Second prize &#8377;10000</li>
                       <li>Third prize (Honorary) &#8377;5000</li>
                     </ul>
-                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
+                    <br/>
+                    <p>&#42; If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
                    </span> 
                 </div>
 
@@ -463,7 +465,6 @@ export default function Event() {
                       <li>First prize is &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
-                    <p>If submission is found exceptionally well then the concerned will be considered  for an internship opportunity.</p>
                    </span> 
                 </div>
 
