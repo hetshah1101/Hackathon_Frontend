@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
 
 import parth from '../public/profiles/Parth_mentor.jpg';
+import deepaksharma from '../public/profiles/deepak.jpg';
 import jaldeep from '../public/profiles/mentor_jaldeep_vasavadajpg.jpg';
 import user from '../public/profiles/user.png'
 import rnpatel from '../public/profiles/dr_rn_patel.jpg';
@@ -18,7 +19,7 @@ import pooja_shah from '../public/profiles/pooja_shah.jpg';
 import ankitthakkar from '../public/profiles/ankit_thakkar.jpg';
 import gaurangraval from '../public/profiles/gaurang_raval.jpg';
 import zunnunnarmawala from '../public/profiles/zunnun_narmawala.jpg';
-import jaiprakashverma from '../public/profiles/jai_prakash_varma.jpg';
+
 
 import hetshah from '../public/developers/HetShah.jpg';
 import janmejayshastri from '../public/developers/janmejayshastri.jpg';
@@ -75,14 +76,12 @@ export default function Team() {
             <div className='mentors'> 
               <h1>Mentors</h1>
               <div className='div'>
-                <a href='' target="_blank">
+                <a href='https://www.linkedin.com/in/deepak-sharma-a528b015/' target="_blank">
                 <div className='card'>
-                  <img src={user.src} className='profile'/>
-                  <h3>To Be Announced Soon</h3>
-                  {/* 
-                  <h3><FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
-                  <p></p>
-                  */}
+                  <img src={deepaksharma.src} className='profile'/>
+                  <h3>Deepak Sharma<FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
+                  <p>Manager (IT) and Research Coordinator, <br/> JK Lakshmi Cement Ltd.</p>
+                  
                 </div>
                 </a> 
 
