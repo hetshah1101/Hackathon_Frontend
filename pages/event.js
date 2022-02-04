@@ -27,7 +27,7 @@ import WolframLogo from "../public/sponsors/wolfram.png";
 import DoLogo from "../public/sponsors/DO_Logo_Horizontal_Blue.png";
 import EchoARLogo from "../public/sponsors/echoAR_-_Logo_2020_-_Dark.png";
 import InterviewCakeLogo from "../public/sponsors/interview_cake.png";
-import GMCLogo from "../public/Logos/GMC_logo.png";
+import GMCLogo from "../public/sponsors/GMC_logo.png";
 import VoiceFlowLogo from "../public/sponsors/voiceflow.png";
 
 
@@ -38,7 +38,7 @@ export default function Event() {
   useEffect(() => {
     setposition(0)
     setcurrent(1)
-    setsections(6)
+    setsections(7)
     setSwipe(true)
   }, [])
 
@@ -579,11 +579,7 @@ export default function Event() {
                 <th colSpan='3'>Partners</th>
               </tr>
               
-                <tr>
-                  <h1 className='comingSoon'>Coming Soon!</h1>
-                </tr>
-              
-              {/* 
+                
               <tr>
                 <td><a href="https://www.wolfram.com/" target="_blank">
                   <img src={WolframLogo.src} alt="Wolfram Logo"></img></a>
@@ -591,6 +587,11 @@ export default function Event() {
                 <td><a href="https://www.digitalocean.com/" target="_blank">
                   <img src={DoLogo.src} alt="Do Logo"></img></a>
                 </td>
+               
+                <td><a href="https://givemycertificate.com/" target="_blank">
+                  <img src={GMCLogo.src} alt="GMC Logo"></img></a>
+                </td>
+              {/* 
                 <td><a href="https://www.echoar.xyz/" target="_blank">
                   <img src={EchoARLogo.src} alt="EchoAR Logo"></img></a>
                 </td>
@@ -600,23 +601,18 @@ export default function Event() {
                 <td><a href="https://www.interviewcake.com/" target="_blank">
                   <img src={InterviewCakeLogo.src} alt="Interview Cake Logo"></img></a>
                 </td>
-                <td><a href="https://givemycertificate.com/" target="_blank">
-                  <img src={GMCLogo.src} alt="GMC Logo"></img></a>
-                </td>
-              </tr>
               */}
+              </tr>
+              
             </table>
 
             </div>
           </section>
-          {/* 
+          
           <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
             <div className='carousel'>
-
-              <h1 className='comingSoon'>Perks</h1><br/>
-              <h1 className='comingSoon'> Coming Soon ! </h1>
               
               <Carousel
                 className='slideshow'
@@ -654,7 +650,7 @@ export default function Event() {
                   <span>
                     <h3>For Winners</h3>
                     <ul>
-                      <li>&#36;1000 credits for the first winner and $500 credits for the second winner digital ocean account.</li>
+                      <li>&#36; A total of $2,000 in credits to the winning teams. </li>
                     </ul>
                     <h3>For All Participants</h3>
                     <ul>
@@ -663,6 +659,12 @@ export default function Event() {
                   </span>                
                 </div>
 
+                <div className='perks'>
+                  <h3></h3><img src={comingsoon.src} /><br/>
+                  <span>coming soon !</span>
+                </div>
+
+                  {/*
                 <div className='perks'>
                   <img src={EchoARLogo.src} /><br/>
                   <span>
@@ -700,11 +702,12 @@ export default function Event() {
                     </ul>
                   </span>
                 </div>
+                */}
               </Carousel>
               
             </div>
           </section>
-          */}
+          
           {/* <section style={{
             transform: `translateY(-${position*80}vh)`
           }}>
