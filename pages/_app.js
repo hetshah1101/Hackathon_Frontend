@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion";
 
+import * as gtag from '../lib/gtag';
+
 // Importing stylesheets
 import '../styles/main.scss'
 import '../styles/navbar.scss'
@@ -15,6 +17,22 @@ import '../styles/register.scss'
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+{/* 
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url)
+    }
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+*/}
   /*
   ----------------------------------
   Arrow Key / Swipe Control
