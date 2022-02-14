@@ -324,8 +324,8 @@ export default function Home() {
             
             <div className="faq">
             <h1>FAQs</h1> <br/>
-              {faqs.map(item => {
-                return (<div className='faq-Item'>
+              {faqs.map((item,index) => {
+                return (<div className='faq-Item' key={index}>
                   <h3>{item.Question}</h3>
                   <p>{item.Answer}</p>
                   {item.ListAnswer ? item.ListAnswer.map(lst => <li>

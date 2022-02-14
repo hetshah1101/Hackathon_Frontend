@@ -6,7 +6,7 @@ import Slider from '../components/Slider'
 import axios from 'axios'
 import NirmaLogo from "../public/Contact Us/nirma_logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact() {
 
@@ -85,17 +85,17 @@ export default function Contact() {
                 </div>
 
                 <div className="column">
-                  <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' />{/* add phone icon */}
+                  <FontAwesomeIcon icon={faPhoneAlt} className='icon' />{/* add phone icon */}
                   <label className='bold'>Dvijesh Bhatt: </label>
                   <a href="tel:9725985288" > <span className='bold'> 9725985288 </span> </a>
                   <br/><br/>
 
-                  <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' />{/* add phone icon */}
+                  <FontAwesomeIcon icon={faPhoneAlt} className='icon' />{/* add phone icon */}
                   <label className='bold'>Sapan Mankad: </label>
                   <a href="tel:9824149256" > <span className='bold'> 9824149256 </span> </a>
                   <br/><br/>
 
-                  <FontAwesomeIcon icon={FaPhoneAlt} class='Logo' /> {/* add mail icon */}
+                  <FontAwesomeIcon icon={faEnvelope} className='icon' /> {/* add mail icon */}
                   
                   <a className="email" href="mailto:minedhackathon2k22@gmail.com" > <span className='bold'> minedhackathon2k22@gmail.com</span> </a>
                   <br/><br/>
