@@ -146,14 +146,16 @@ export default function MyApp({ Component, pageProps }) {
   const [touchEnd, setTouchEnd] = React.useState(0);
 
   const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
+    console.log(e)
+    setTouchStart(e.targetTouches[0].clientY);
   }
 
   const handleTouchMove = (e) => {
-      setTouchEnd(e.targetTouches[0].clientX);
+      setTouchEnd(e.targetTouches[0].clientY);
   }
   
   const handleTouchEnd = e => {
+    console.log(e)
     var yDiff = touchStart - touchEnd;
       
     if(yDiff < -150) {
@@ -175,6 +177,10 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence>
       <motion.div
+        tabIndex="0"
+        onWheel={scrollFunc}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         key={router.route}
         initial="initial"
         animate="animate"

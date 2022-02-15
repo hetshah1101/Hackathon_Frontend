@@ -194,11 +194,10 @@ export default function Home() {
   return (
     <div 
       onKeyDown={handleKeyPress}
-      tabIndex="0"
-      onTouchStart={handleTouchStart}
-      // onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      onWheel={scrollFunc}
+      // tabIndex="0"
+      // onWheel={scrollFunc}
+      // onTouchStart={handleTouchStart}
+      // onTouchEnd={handleTouchEnd}
     >
       <Head>
         <title>MINeD | Home</title>
