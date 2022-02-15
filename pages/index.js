@@ -13,7 +13,7 @@ import BULogo from '../public/Logos/Binghamton_University_logo.png';
 
 export default function Home() {
 
-  const { setcurrent, handleTouchStart, handleTouchMove, scrollFunc, setSwipe, setsections, setposition, position, handleKeyPress } = useContext(SiteContext);
+  const { setcurrent, handleTouchStart, handleTouchEnd, scrollFunc, setSwipe, setsections, setposition, position, handleKeyPress } = useContext(SiteContext);
   const [up, setup] = useState(false)
 
   useEffect(() => {
@@ -194,10 +194,10 @@ export default function Home() {
   return (
     <div 
       onKeyDown={handleKeyPress}
-      tabIndex="0"
-      onWheel={scrollFunc}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
+      // tabIndex="0"
+      // onWheel={scrollFunc}
+      // onTouchStart={handleTouchStart}
+      // onTouchEnd={handleTouchEnd}
     >
       <Head>
         <title>MINeD | Home</title>
@@ -335,8 +335,8 @@ export default function Home() {
             
             <div className="faq">
             <h1>FAQs</h1> <br/>
-              {faqs.map(item => {
-                return (<div className='faq-Item'>
+              {faqs.map((item,index) => {
+                return (<div className='faq-Item' key={index}>
                   <h3>{item.Question}</h3>
                   <p>{item.Answer}</p>
                   {item.ListAnswer ? item.ListAnswer.map(lst => <li>

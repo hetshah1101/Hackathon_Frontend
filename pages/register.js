@@ -23,7 +23,7 @@ export default function FormValidation(props) {
           email: "",
           //wantAutoTeamAssign: "",
           mobile: "",
-          collegeName: "",
+          collageName: "",
           collageCity: "",
           collageState: "",
           degree: "",
@@ -41,7 +41,7 @@ export default function FormValidation(props) {
         lastName: Yup.string()
             .max(50, "Must be 50 characters or less")
             .required("Required"),
-        collegeName: Yup.string()
+        collageName: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
         /*
@@ -250,23 +250,23 @@ export default function FormValidation(props) {
                             className={
                                 "form-control " +
                                 `${
-                                  formik.touched.collegeName &&
-                                  formik.errors.collegeName
+                                  formik.touched.collageName &&
+                                  formik.errors.collageName
                                     ? "is-invalid"
                                     : ""
                                 }`
                               }
                               placeholder="College Name"
-                              name="collegeName"
+                              name="collageName"
                               onChange={formik.handleChange}
-                              value={formik.values.collegeName}
+                              value={formik.values.collageName}
                               onBlur={formik.handleBlur}
                             />
                             
                               <div className="invalid-feedback">
-                            {formik.touched.collegeName &&
-                            formik.errors.collegeName ? (
-                                formik.errors.collegeName
+                            {formik.touched.collageName &&
+                            formik.errors.collageName ? (
+                                formik.errors.collageName
                             ) : null} 
                               </div>
                         </div>
