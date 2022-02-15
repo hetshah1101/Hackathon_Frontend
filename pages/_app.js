@@ -180,6 +180,7 @@ export default function MyApp({ Component, pageProps }) {
         tabIndex="0"
         onWheel={scrollFunc}
         onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         key={router.route}
         initial="initial"
