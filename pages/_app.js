@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion";
 
-import * as gtag from '../lib/gtag';
-
 // Importing stylesheets
 import '../styles/main.scss'
 import '../styles/navbar.scss'
