@@ -1,5 +1,5 @@
 import SiteContext from '../components/SiteContext'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -101,45 +101,75 @@ export default function MyApp({ Component, pageProps }) {
     },2000)
   },[position])
 
-  const getTouches = e => {
-    return e.touches || e.originalEvent.touches
-  }
+  // const getTouches = e => {
+  //   return e.touches || e.originalEvent.touches
+  // }
 
-  const handleTouchStart = e => {
-    const first = getTouches(e)[0]
-    var xDown = first.clientX
-    var yDown = first.clientY
-  }
-  const handleTouchMove = e => {
-    const first = getTouches(e)[0]
-    var xDown = first.clientX
-    var yDown = first.clientY
-    if ( ! xDown || ! yDown ) {
-        return;
-    }
+  // const handleTouchStart = e => {
+  //   const first = getTouches(e)[0]
+  //   var xDown = first.clientX
+  //   var yDown = first.clientY
+  // }
+  // const handleTouchMove = e => {
+  //   const first = getTouches(e)[0]
+  //   var xDown = first.clientX
+  //   var yDown = first.clientY
+  //   if ( ! xDown || ! yDown ) {
+  //       return;
+  //   }
 
-    var xUp = e.touches[0].clientX;                                    
-    var yUp = e.touches[0].clientY;
+  //   var xUp = e.touches[0].clientX;                                    
+  //   var yUp = e.touches[0].clientY;
 
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
+  //   var xDiff = xDown - xUp;
+  //   var yDiff = yDown - yUp;
                                                                         
-    if ( Math.abs( yDiff ) > Math.abs( xDiff ) ) {
-      if(yDiff > 0) {
-        if(position>0) {
-          setposition(position-1)
-        }
-        setscroll(false)
+  //   if ( Math.abs( yDiff ) > Math.abs( xDiff ) ) {
+  //     if(yDiff > 0) {
+  //       if(position>0) {
+  //         setposition(position-1)
+  //       }
+  //       setscroll(false)
+  //     }
+  //     else if(yDiff < 0) {
+  //       if(position<sections-1) {
+  //         setposition(position+1)
+  //       }
+  //       setscroll(false)
+  //     }                       
+  //   }
+  //   xDown = null;
+  //   yDown = null;      
+  // }
+
+  const [touchStart, setTouchStart] = React.useState(0);
+  const [touchEnd, setTouchEnd] = React.useState(0);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  }
+
+  const handleTouchMove = (e) => {
+      setTouchEnd(e.targetTouches[0].clientX);
+  }
+  
+  const handleTouchEnd = e => {
+    var yDiff = touchStart - touchEnd;
+      
+    if(yDiff < -150) {
+      if(position>0) {
+        setposition(position-1)
       }
-      else if(yDiff < 0) {
-        if(position<sections-1) {
-          setposition(position+1)
-        }
-        setscroll(false)
-      }                       
+      setscroll(false)
     }
-    xDown = null;
-    yDown = null;      
+    else if(yDiff > 150) {
+      if(position<sections-1) {
+        setposition(position+1)
+      }
+      setscroll(false)
+    }
+    setTouchEnd(0)
+    setTouchStart(0) 
   }
 
   return (
@@ -176,7 +206,8 @@ export default function MyApp({ Component, pageProps }) {
           scrollFunc,
           setscroll,
           handleTouchMove,
-          handleTouchStart
+          handleTouchStart,
+          handleTouchEnd
         }} >
           <Component {...pageProps} />
         </SiteContext.Provider>
