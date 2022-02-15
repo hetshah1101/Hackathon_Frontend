@@ -585,7 +585,7 @@ export default function FormValidation(props) {
                         </div>
                       */}
                         <div className="form-group">
-                            <label className="label">Linkedin</label>
+                            <label className="label">Linkedin Link</label>
                             <input 
                             type="text" 
                             className={
@@ -597,7 +597,7 @@ export default function FormValidation(props) {
                                     : ""
                                 }`
                                 }
-                                placeholder="LinkedIn"
+                                placeholder="LinkedIn Link"
                                 name="linkedIn"
                                 onChange={formik.handleChange}
                                 value={formik.values.linkedIn}
@@ -613,7 +613,7 @@ export default function FormValidation(props) {
                         </div>
 
                         <div className="form-group">
-                            <label className="label">Github</label>
+                            <label className="label">Github Link</label>
                             <input 
                             type="text" 
                             className={
@@ -625,7 +625,7 @@ export default function FormValidation(props) {
                                     : ""
                                 }`
                                 }
-                                placeholder="GitHub "
+                                placeholder="GitHub Link"
                                 name="github"
                                 onChange={formik.handleChange}
                                 value={formik.values.github}
