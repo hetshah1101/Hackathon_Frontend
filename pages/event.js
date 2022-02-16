@@ -22,6 +22,7 @@ import BULogo from "../public/Logos/Binghamton_University_logo.png";
 import cactusLogo from "../public/sponsors/cactusglobal.png";
 import HopsLogo from "../public/sponsors/hops_logo.png";
 import JklcLogo from "../public/sponsors/JKLC.png";
+import V360logo from "../public/sponsors/LOGO_B2.png";
 
 import WolframLogo from "../public/sponsors/wolfram.png";
 import DoLogo from "../public/sponsors/DO_Logo_Horizontal_Blue.png";
@@ -420,7 +421,7 @@ export default function Event() {
                   <span>
                     <h3>Healthcare by Hops</h3>
                     <ul>
-                      <li>First prize is &#8377;10000</li>
+                      <li>First prize &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
                     <br/>
@@ -433,7 +434,7 @@ export default function Event() {
                   <span>
                     <h3>Making scientific research accessible using AI and Big data by cactus</h3>
                     <ul>
-                      <li>First prize is &#8377;15000</li>
+                      <li>First prize &#8377;15000</li>
                       <li>Second prize &#8377;10000</li>
                       <li>Third prize (Honorary) &#8377;5000</li>
                     </ul>
@@ -447,15 +448,24 @@ export default function Event() {
                   <span>
                     <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3>
                     <ul>
-                      <li>First prize is &#8377;10000</li>
+                      <li>First prize &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
                    </span> 
                 </div>
 
                 <div className='item track'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span>coming soon !</span>
+                  <img className='image-bg' src={V360logo.src} /><br/>
+                  <span>
+                    <h3>V360 Technology Inc</h3>
+                    <ul>
+                      <li>First prize &#8377;20000</li>
+                      <li>First prize &#8377;10000</li>
+                      <li>Third prize &#8377;5000</li>
+                    </ul>
+                    <br/>
+                    <p>&#42; Prize money distribution is based on the quality of solution/submission</p>
+                   </span> 
                 </div>
 
                 <div className='item track'>
@@ -492,7 +502,7 @@ export default function Event() {
                   <span>
                     <h3>Healthcare by Hops</h3>
                     <ul>
-                      <li>First prize is &#8377;10000</li>
+                      <li>First prize &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
                     <br/>
@@ -505,7 +515,7 @@ export default function Event() {
                   <span>
                     <h3>Making scientific research accessible using AI and Big data by cactus</h3>
                     <ul>
-                      <li>First prize is &#8377;15000</li>
+                      <li>First prize &#8377;15000</li>
                       <li>Second prize &#8377;10000</li>
                       <li>Third prize (Honorary) &#8377;5000</li>
                     </ul>
@@ -519,7 +529,7 @@ export default function Event() {
                   <span>
                     <h3>Applied ML for Manufacturing Industry's Problem by JK Lakshmi</h3>
                     <ul>
-                      <li>First prize is &#8377;10000</li>
+                      <li>First prize &#8377;10000</li>
                       <li>Second prize &#8377;5000</li>
                     </ul>
                    </span> 

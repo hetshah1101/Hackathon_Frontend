@@ -178,7 +178,7 @@ export default function MyApp({ Component, pageProps }) {
     <AnimatePresence>
       <motion.div
         tabIndex="0"
-        onWheel={scrollFunc}
+        // onWheel={scrollFunc}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
