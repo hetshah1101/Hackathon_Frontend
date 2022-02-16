@@ -213,6 +213,17 @@ export default function Home() {
         <meta 
           name="description" 
           content="MINeD is a national level Hackathon organized by Centre of Excellence in Data Science at Nirma University in collabration with SUNY Binghamton University where you can participate, innovate and win exciting prizes."></meta>
+
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-72D98JZ206"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-72D98JZ206');
+        </script>
+
       </Head>
 
       {/* Navigation Bar */}
