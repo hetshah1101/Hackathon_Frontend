@@ -536,8 +536,17 @@ export default function Event() {
                 </div>
 
                 <div className='item track'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span>coming soon !</span>
+                  <img className='image-bg' src={V360logo.src} /><br/>
+                  <span>
+                    <h3>V360 Technology Inc</h3>
+                    <ul>
+                      <li>First prize &#8377;20000</li>
+                      <li>First prize &#8377;10000</li>
+                      <li>Third prize &#8377;5000</li>
+                    </ul>
+                    <br/>
+                    <p>&#42; Prize money distribution is based on the quality of solution/submission</p>
+                   </span> 
                 </div>
 
                 <div className='item track'>
