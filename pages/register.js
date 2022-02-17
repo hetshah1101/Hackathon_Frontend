@@ -30,8 +30,8 @@ export default function FormValidation(props) {
           branch: "",
           semester: "",
           nameOnCertificate: "",
-          linkedIn: "",
-          github: "",
+          linkedin: "",
+          githubLink: "",
           discordId: "",
         },
         validationSchema: Yup.object({
@@ -90,10 +90,10 @@ export default function FormValidation(props) {
         nameOnCertificate: Yup.string()
             .max(100, "Must be 100 characters or less")
             .required("Required"),
-        linkedIn: Yup.string()
+        linkedin: Yup.string()
             .min(3, "Must be 3 characters or more")
             .required("Required"),
-        github: Yup.string()
+        githubLink: Yup.string()
             .min(3, "Must be 3 characters or more")
             .required("Required"),
         discordId: Yup.string()
@@ -122,8 +122,8 @@ export default function FormValidation(props) {
           //formik.errors.wantAutoTeamAssign = "";
           //formik.errors.password = "";
           //formik.errors.repassword = "";
-          formik.errors.linkedIn = "";
-          formik.errors.github = "";
+          formik.errors.linkedin = "";
+          formik.errors.githubLink = "";
           formik.errors.discordId = "";
           setPreviousClicked(false);
         } else {
@@ -591,23 +591,23 @@ export default function FormValidation(props) {
                             className={
                                 "form-control " +
                                 `${
-                                    formik.touched.linkedIn &&
-                                    formik.errors.linkedIn
+                                    formik.touched.linkedin &&
+                                    formik.errors.linkedin
                                     ? "is-invalid"
                                     : ""
                                 }`
                                 }
                                 placeholder="LinkedIn Link"
-                                name="linkedIn"
+                                name="linkedin"
                                 onChange={formik.handleChange}
-                                value={formik.values.linkedIn}
+                                value={formik.values.linkedin}
                                 onBlur={formik.handleBlur}
                             />
                             
                                 <div className="invalid-feedback">
-                            {formik.touched.linkedIn &&
-                            formik.errors.linkedIn ? (
-                                formik.errors.linkedIn
+                            {formik.touched.linkedin &&
+                            formik.errors.linkedin ? (
+                                formik.errors.linkedin
                             ) : null} 
                                 </div>
                         </div>
@@ -619,23 +619,23 @@ export default function FormValidation(props) {
                             className={
                                 "form-control " +
                                 `${
-                                    formik.touched.github &&
-                                    formik.errors.github
+                                    formik.touched.githubLink &&
+                                    formik.errors.githubLink
                                     ? "is-invalid"
                                     : ""
                                 }`
                                 }
                                 placeholder="GitHub Link"
-                                name="github"
+                                name="githubLink"
                                 onChange={formik.handleChange}
-                                value={formik.values.github}
+                                value={formik.values.githubLink}
                                 onBlur={formik.handleBlur}
                             />
                             
                                 <div className="invalid-feedback">
-                            {formik.touched.github &&
-                            formik.errors.github ? (
-                                formik.errors.github
+                            {formik.touched.githubLink &&
+                            formik.errors.githubLink ? (
+                                formik.errors.githubLink
                             ) : null} 
                                 </div>
                         </div>
