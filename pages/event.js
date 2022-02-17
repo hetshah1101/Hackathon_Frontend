@@ -590,7 +590,7 @@ export default function Event() {
                 <td><a href="https://www.jklakshmicement.com/" target="_blank">
                   <img className='nopad' src={JklcLogo.src} alt="JKLC Logo"></img></a>
                 </td>
-                <td><a href="#">
+                <td><a href="https://v360.in">
                   <img className='nopad image-bg' src={V360logo.src} alt="V360 Logo"></img></a>
                 </td>
               </tr>

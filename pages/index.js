@@ -229,7 +229,7 @@ export default function Home() {
             <div className='header'>
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
-              <h1>A Chance to Win Prizes worth Rs 1,00,000+</h1>
+              <h1>A Chance to Win Prizes worth Rs 1,65,000+</h1>
               <h1>March 3 - March 5, 2022</h1>
               {/* <h1>Last Year's Registratons - 632</h1> */}
               <button onClick={() => {
