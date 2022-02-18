@@ -215,15 +215,6 @@ export default function Home() {
           content="MINeD is a national level Hackathon organized by Centre of Excellence in Data Science at Nirma University in collabration with SUNY Binghamton University where you can participate, innovate and win exciting prizes."></meta>
 
         
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-72D98JZ206"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-72D98JZ206');
-        </script>
-
       </Head>
 
       {/* Navigation Bar */}
@@ -238,7 +229,7 @@ export default function Home() {
             <div className='header'>
               {/* <img src={header.src} /> */}
               <img src={logo.src} />
-              <h1>A Chance to Win Prizes worth Rs 1,00,000+</h1>
+              <h1>A Chance to Win Prizes worth Rs 1,65,000+</h1>
               <h1>March 3 - March 5, 2022</h1>
               {/* <h1>Last Year's Registratons - 632</h1> */}
               <button onClick={() => {
