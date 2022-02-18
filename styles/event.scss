@@ -78,14 +78,15 @@
             }
             span {
                 margin: 0 auto;
-                width: 90%;
+                width: 100%;
                 font-size: 1vw;
                 height: 15vw;
+                overflow-y: auto;
             }
             img {
                 margin: 0 auto;
                 width: 5vw;
-                height: 5vw;
+                height: 4vw;
                 object-fit: contain;
                 display: flex;
                 align-items: center;

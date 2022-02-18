@@ -123,7 +123,7 @@ export default function Event() {
 
                 <div className='item'>
                   <h3>V360 Technology Inc</h3><img src={V360logo.src} /><br/>
-                  <span>Background removal from diamond images using Image Processing or ML techniques.<br/>Image segmentation has helped to solve a variety of difficult problems. One such problem is separating the diamond from the image. We have over 2.3 million images in our dataset that contain diamonds at various angles. The shiny reflecting cuts of the diamond, as well as the shadow beneath it, make this a difficult but fascinating problem to solve.</span>
+                  <span>Background removal from diamond images using Image Processing or ML techniques. Image segmentation has helped to solve a variety of difficult problems. One such problem is separating the diamond from the image. We have over 2.3 million images in our dataset that contain diamonds at various angles. The shiny reflecting cuts of the diamond, as well as the shadow beneath it, make this a difficult but fascinating problem to solve.</span>
                 </div>
 
                 <div className='item'>
@@ -192,9 +192,9 @@ export default function Event() {
               >
                 <div className='item'>
                   <h3>V360 Technology Inc</h3><img src={V360logo.src} /><br/>
-                  <span>Background removal from diamond images using Image Processing or ML techniques.<br/>Image segmentation has helped to solve a variety of difficult problems. One such problem is separating the diamond from the image. We have over 2.3 million images in our dataset that contain diamonds at various angles. The shiny reflecting cuts of the diamond, as well as the shadow beneath it, make this a difficult but fascinating problem to solve.</span>
+                  <span>Background removal from diamond images using Image Processing or ML techniques. Image segmentation has helped to solve a variety of difficult problems. One such problem is separating the diamond from the image. We have over 2.3 million images in our dataset that contain diamonds at various angles. The shiny reflecting cuts of the diamond, as well as the shadow beneath it, make this a difficult but fascinating problem to solve.</span>
                 </div>
-                
+
                 <div className='item'>
                   <h3>Healthcare by Hops</h3><img src={health.src} /><br/>
                   <span>Health is an essential component of any human being. Healthy and fit citizens can lead any nation on a global platform. Lack of information, time-consuming process and newly introduced virus/diseases are some of the parameters which need digital and smart strategical solution to produce a healthier future.</span>
