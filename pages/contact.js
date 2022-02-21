@@ -97,7 +97,7 @@ export default function Contact() {
 
                   <FontAwesomeIcon icon={faEnvelope} className='icon' /> {/* add mail icon */}
                   
-                  <a className="email" href="mailto:minedhackathon2k22@gmail.com" > <span className='bold'> minedhackathon2k22@gmail.com</span> </a>
+                  <a className="email" href="mailto:support@mined2022.tech" > <span className='bold'> support@mined2022.tech</span> </a>
                   <br/><br/>
                 </div>
 

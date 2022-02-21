@@ -133,7 +133,7 @@ export default function Home() {
       Question: "What is the procedure to cancel the registration ?",
       Answer:
       
-          "If you feel that you will not be able to participate in the event after registering, just throw an email at minedhackathon2k22@gmail.com stating the same.",
+          "If you feel that you will not be able to participate in the event after registering, just throw an email at support@mined2022.tech stating the same.",
       
     },
     {
@@ -177,7 +177,7 @@ export default function Home() {
         "My query is not listed in this FAQs section. What should I do ?",
       Answer:
       
-          "Please write to us at minedhackathon2k22@gmail.com or join us on our social media platform.",
+          "Please write to us at support@mined2022.tech or join us on our social media platform.",
       
     },
   ];
