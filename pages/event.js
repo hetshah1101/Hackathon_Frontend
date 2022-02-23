@@ -150,7 +150,7 @@ export default function Event() {
                 </div>
                   */}
                 <div className='item'>
-                  <h3>Making Scientific Research accessible using AI &#38; Big Data by Cactus Global</h3><img src={automation.src} /><br/>
+                  <h3>Making Scientific Research accessible using AI &#38; Big Data by CACTUS Communications</h3><img src={cactusLogo.src} /><br/>
                   <span>AI can identify data types, find possible connections among datasets, and recognize knowledge using natural language processing. It can be used to automate and accelerate data preparation tasks, including the generation of data models, and assist in data exploration.</span>
                 </div>
 
@@ -219,7 +219,7 @@ export default function Event() {
                 </div>
                   */}
                 <div className='item'>
-                  <h3>Making Scientific Research accessible using AI &#38; Big Data by Cactus Global</h3><img src={automation.src} /><br/>
+                  <h3>Making Scientific Research accessible using AI &#38; Big Data by CACTUS Communications</h3><img src={cactusLogo.src} /><br/>
                   <span>AI can identify data types, find possible connections among datasets, and recognize knowledge using natural language processing. It can be used to automate and accelerate data preparation tasks, including the generation of data models, and assist in data exploration.</span>
                 </div>
 
@@ -456,7 +456,7 @@ export default function Event() {
                 <div className='item track'>
                   <img src={cactusLogo.src} /><br/>
                   <span>
-                    <h3>Making scientific research accessible using AI and Big data by cactus</h3>
+                    <h3>Making scientific research accessible using AI and Big data by CACTUS Communications</h3>
                     <ul>
                       <li>First prize &#8377;15000</li>
                       <li>Second prize &#8377;10000</li>
@@ -537,7 +537,7 @@ export default function Event() {
                 <div className='item track'>
                   <img src={cactusLogo.src} /><br/>
                   <span>
-                    <h3>Making scientific research accessible using AI and Big data by cactus</h3>
+                    <h3>Making scientific research accessible using AI and Big data by CACTUS Communications</h3>
                     <ul>
                       <li>First prize &#8377;15000</li>
                       <li>Second prize &#8377;10000</li>
