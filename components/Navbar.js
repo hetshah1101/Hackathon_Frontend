@@ -27,6 +27,7 @@ const Navbar = () => {
                     <li>Tw</li>
                 </ul> */}
                 <button className='register'><Link href="/register">Register</Link></button>
+                <button className='register'><a href="https://console.mined2022.tech/login">Login</a></button>
             </nav>
             {swipe ? <div id="swipeNav">
                 <div className='buttons'>
