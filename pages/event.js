@@ -164,10 +164,6 @@ export default function Event() {
                   <span>Every individual has creative solutions to problems faced in the real world. If you'd like to demonstrate a brilliant idea, but you feel that the idea does not suit other tracks, Open Track is ideal for you.</span>
                 </div>
 
-                <div className='item'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span>coming soon !</span>
-                </div>
               </Carousel>
             </div>
           </section>
@@ -231,11 +227,6 @@ export default function Event() {
                 <div className='item'>
                   <h3>Open Innovation</h3><img src={openinnovation.src} /><br/>
                   <span>Every individual has creative solutions to problems faced in the real world. If you'd like to demonstrate a brilliant idea, but you feel that the idea does not suit other tracks, Open Track is ideal for you.</span>
-                </div>
-
-                <div className='item'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span></span>
                 </div>
                 
               </Carousel>
@@ -478,10 +469,6 @@ export default function Event() {
                    </span> 
                 </div>
 
-                <div className='item track'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span>coming soon !</span>
-                </div>
               </Carousel>
             </div>
           </section>
@@ -559,10 +546,6 @@ export default function Event() {
                    </span> 
                 </div>
 
-                <div className='item track'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span>coming soon !</span>
-                </div>
               </Carousel>
             </div>
           </section>
@@ -689,11 +672,6 @@ export default function Event() {
                       <li>&#36;100, 60-day free trial for all attendees</li>
                     </ul>
                   </span>                
-                </div>
-
-                <div className='perks'>
-                  <h3></h3><img src={comingsoon.src} /><br/>
-                  <span>coming soon !</span>
                 </div>
 
                   {/*
