@@ -71,6 +71,22 @@ nav {
             background: $light;
         }
     }
+    button.login {
+        animation: glowing 1200ms infinite;
+        width: 10%;
+        padding: 0.5vw 2vw;
+        font-size: 1.2vw;
+        border-radius: 0.5vw;
+        border: none;
+        background: none;
+        color: $blue;
+        border: 0.01vw solid $blue;
+        cursor: pointer;
+        &:hover {
+            color: $dark;
+            background: $blue;
+        }
+    }
 }
 
 #swipeNav {
@@ -186,7 +202,23 @@ nav {
             &:hover {
                 color: $dark;
                 background: $light;
-            }
+            }    
+        }
+        button.login {
+            animation: glowing 1200ms infinite;
+            width: 18%;
+            padding: 0.5vw 2vw;
+            font-size: 3vw;
+            border-radius: 0.5vw;
+            border: none;
+            background: none;
+            color: $blue;
+            border: 0.01vw solid $blue;
+            cursor: pointer;
+            &:hover {
+                color: $dark;
+                background: $blue;
+            }    
         }
     }
     
