@@ -26,6 +26,7 @@ nav {
         }
     }
     ul {
+        margin: 10vw;
         width: 40%;
         list-style: none;
         display: flex;
@@ -160,6 +161,7 @@ nav {
             }
         }
         ul {
+            margin:1vw;
             width: 60%;
             list-style: none;
             display: flex;
@@ -168,7 +170,7 @@ nav {
             align-items: center;
             font-size: 3vw;
             li {
-                padding: 2vw;
+                padding: 0.5vw;
                 &:hover {
                     border-bottom: 0.01vw solid $light;
                 }
@@ -191,8 +193,9 @@ nav {
         button.register {
             animation: glowing 1200ms infinite;
             width: 18%;
-            padding: 0.5vw 2vw;
-            font-size: 3vw;
+            padding: 0.5vw 1vw;
+            margin: 1vw;
+            font-size: 2.5vw;
             border-radius: 0.5vw;
             border: none;
             background: none;
@@ -208,7 +211,8 @@ nav {
             animation: glowing 1200ms infinite;
             width: 18%;
             padding: 0.5vw 2vw;
-            font-size: 3vw;
+            margin: 1vw;
+            font-size: 2.5vw;
             border-radius: 0.5vw;
             border: none;
             background: none;
