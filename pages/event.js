@@ -256,40 +256,31 @@ export default function Event() {
                   <tbody>
                   <th colSpan='2'>3rd March (Day 1)</th>
                     <tr>
-                      <td className="time">9:00 AM to 10:00 AM</td>
+                      <td className="time">9.30 AM to 11.00 AM</td>
                       <td className="content">Inauguration ceremony</td>
-                    </tr>
-                    <tr>
-                      <td className="time">10:00 AM to 11:00 AM</td>
-                      <td className="content">Keynote Session</td>
                     </tr>
                     <tr>
                       <td className="time">11:00 AM onwards</td>
                       <td className="content">Hackathon begins...</td>
                     </tr>
                     <tr>
-                      <td className="time">11:00 AM to 12:00 PM</td>
-                      <td className="content">Industry slot to describe problems</td>
+                      <td className="time">11:00 AM to 12:00 noon</td>
+                      <td className="content">Industry sponsors will describe the problem statements</td>
                     </tr>
                     <tr>
-                      <td className="time">12:00 PM to 1:00 PM</td>
-                      <td className="content">Track selection by participating teams</td>
+                      <td className="time">12 noon to 1.00 PM</td>
+                      <td className="content">Track selection by participating teams and finalising it on event portal</td>
                     </tr>
                     <tr>
-                      <td className="time">1:00 PM to 4:00 PM</td>
+                      <td className="time">1:00 PM to 5:00 PM</td>
                       <td className="content">Hacking continues... </td>
-                    </tr>
-                    <tr>
-                      <td className="time">4:00 PM to 5:00 PM</td>
-                      <td className="content">Industry interaction slot</td>
                     </tr>
                     <tr>
                       <td className="time">5:00 PM to 6:00 PM</td>
                       <td className="content">Mentoring session</td>
                     </tr>
-
                     <tr>
-                      <td className="time">6:00 PM to 12:00 AM</td>
+                      <td className="time">6:00 PM to 00:00 AM</td>
                       <td className="content">Hacking Continues...</td>
                     </tr>
                   </tbody>
@@ -300,7 +291,7 @@ export default function Event() {
                   <tbody>
                     <th colSpan='2'>4th March (Day 2)</th>
                     <tr>
-                      <td className="time">12:00 AM to 11:00 AM</td>
+                      <td className="time">00:00 AM to 11:00 AM</td>
                       <td className="content">Hacking Continues...</td>
                     </tr>
                     <tr>
@@ -313,7 +304,7 @@ export default function Event() {
                     </tr>
                     <tr>
                       <td className="time">4:00 PM to 5:00 PM</td>
-                      <td className="content">Industry interaction slot</td>
+                      <td className="content">Industry interaction slot (Cactus Comm.)</td>
                     </tr>
                     
                     <tr>
@@ -321,7 +312,7 @@ export default function Event() {
                       <td className="content">Mentoring Session</td>
                     </tr>
                     <tr>
-                      <td className="time">6:00 PM to 12:00 AM</td>
+                      <td className="time">6:00 PM to 00:00 AM</td>
                       <td className="content">Hacking continues...</td>
                     </tr>
                     
@@ -333,7 +324,7 @@ export default function Event() {
                   <tbody>
                     <th colSpan='2'>5th March (Day 3)</th>
                     <tr>
-                      <td className="time">12:00 AM to 11:00 AM</td>
+                      <td className="time">00:00 AM to 11:00 AM</td>
                       <td className="content">Hacking Continues...</td>
                     </tr>
                     <tr>
