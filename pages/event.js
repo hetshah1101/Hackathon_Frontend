@@ -251,12 +251,56 @@ export default function Event() {
                 )}
               >
 
+                <table className="table">
+                  <tbody>
+                    <tr>
+                      <th colSpan='2'>Schedule of Inauguration Function</th>
+                    </tr>
+                    <tr>
+                      <th colSpan='2' className='meetLink'> <a href="https://nirmauni.webex.com/nirmauni/j.php?MTID=m865bfda067c89f85e4ab74ec23e055b3">Join here: https://nirmauni.webex.com/nirmauni/j.php?MTID=m865bfda067c89f85e4ab74ec23e055b3</a></th>
+                    </tr>
+                    <tr>
+                      <td className="time">9:30 AM to 9:35 AM</td>
+                      <td className="content">Welcome of the dignitaries</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:35 AM to 9:38 AM</td>
+                      <td className="content">Prayer</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:38 AM to 9:45 AM</td>
+                      <td className="content">Nirma University Video</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:45 AM to 9:50 AM</td>
+                      <td className="content">Welcome Address by HOC, CSE, IT-NU</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:50 AM to 9:55 AM</td>
+                      <td className="content">Presidential Address by Director, IT-NU (chief guest)</td>
+                    </tr>
+                    <tr>
+                      <td className="time">9:55 AM to 9:58 AM</td>
+                      <td className="content">Binghamton University Video</td>
+                    </tr>
+                    <tr>
+                      <td className="time">10:00 AM to 10:30 AM</td>
+                      <td className="content">Keynote Address from Binghamton University</td>
+                    </tr>
+                    <tr>
+                      <td className="time">10:30 AM to 11:00 AM</td>
+                      <td className="content">Introduction of the event (by coordinators)</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+
                 {/* Day 1 Table */}
                 <table className="table">
                   <tbody>
                   <th colSpan='2'>3rd March (Day 1)</th>
                     <tr>
-                      <td className="time">9.30 AM to 11.00 AM</td>
+                      <td className="time">9:30 AM to 11:00 AM</td>
                       <td className="content">Inauguration ceremony</td>
                     </tr>
                     <tr>
@@ -268,7 +312,7 @@ export default function Event() {
                       <td className="content">Industry sponsors will describe the problem statements</td>
                     </tr>
                     <tr>
-                      <td className="time">12 noon to 1.00 PM</td>
+                      <td className="time">12 noon to 1:00 PM</td>
                       <td className="content">Track selection by participating teams and finalising it on event portal</td>
                     </tr>
                     <tr>
