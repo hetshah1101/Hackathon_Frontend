@@ -380,23 +380,23 @@ export default function Event() {
                       <td className="content">Final Submission on portal</td>
                     </tr>
                     <tr>
-                      <td className="time">12:30 pm to 3:00 pm</td>
+                      <td className="time">12:30 pm to 3:30 pm</td>
                       <td className="content">First round of evaluation begins (Project Presentation of all teams)</td>
                     </tr>
                     <tr>
-                      <td className="time">3:45 pm to 4:00 pm</td>
+                      <td className="time">4:00 pm to 5:00 pm</td>
                       <td className="content">Track winners Announcement</td>
                     </tr>
                     <tr>
-                      <td className="time">4:30 pm onwards</td>
+                      <td className="time">5:30 pm onwards</td>
                       <td className="content">Final round of evaluation (Project Presentation of top selected teams)</td>
                     </tr>
                     <tr>
-                      <td className="time">7:30 pm to 8:00 PM</td>
+                      <td className="time">8:30 pm to 9:00 PM</td>
                       <td className="content">Announcement of Grand Prize Winner</td>
                     </tr>
                     <tr>
-                      <td className="time">8:00 pm to 9:00 pm</td>
+                      <td className="time">9:00 pm to 9:30 pm</td>
                       <td className="content">Concluding Remarks and valedictory session</td>
                     </tr>
 

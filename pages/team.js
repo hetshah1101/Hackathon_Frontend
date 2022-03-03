@@ -19,6 +19,7 @@ import pooja_shah from '../public/profiles/pooja_shah.jpg';
 import ankitthakkar from '../public/profiles/ankit_thakkar.jpg';
 import gaurangraval from '../public/profiles/gaurang_raval.jpg';
 import zunnunnarmawala from '../public/profiles/zunnun_narmawala.jpg';
+import tirth from '../public/profiles/tirth.jpg'
 
 
 import hetshah from '../public/developers/HetShah.jpg';
@@ -94,10 +95,11 @@ export default function Team() {
                 </div>
                 </a>
 
-                <a href='' target="_blank">
+                <a href='https://www.linkedin.com/in/tirth-patel-861303171/' target="_blank">
                 <div className='card'>
-                  <img src={user.src} className='profile'/>
-                  <h3>To Be Announced Soon</h3>
+                  <img src={tirth.src} className='profile'/>
+                  <h3>Tirth Patel <FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
+                  <p>ML intern at D360 Technology Inc.</p>
                   {/* 
                   <h3><FontAwesomeIcon icon={faLinkedin} className='logo' /></h3> 
                   <p></p>
